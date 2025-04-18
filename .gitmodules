@@ -1,0 +1,3 @@
+[submodule "slib"]
+	path = slib
+	url = https://github.com/sagsango/slib.git
