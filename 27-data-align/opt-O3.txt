@@ -1,0 +1,78 @@
+01.c:34:4: missed:   not inlinable: main/26 -> pthread_join/31, function body not available
+01.c:31:4: missed:   not inlinable: main/26 -> pthread_create/30, function body not available
+01.c:30:4: missed:   not inlinable: main/26 -> pthread_mutex_init/29, function body not available
+01.c:23:4: missed:   not inlinable: tf/25 -> pthread_mutex_unlock/28, function body not available
+01.c:21:4: missed:   not inlinable: tf/25 -> pthread_mutex_lock/27, function body not available
+Unit growth for small function inlining: 34->34 (0%)
+
+Inlined 0 calls, eliminated 0 functions
+
+01.c:20:2: missed: couldn't vectorize loop
+01.c:21:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:18:1: note: vectorized 0 loops in function.
+01.c:21:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:21:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:23:4: missed: statement clobbers memory: pthread_mutex_unlock (_1);
+01.c:33:2: missed: couldn't vectorize loop
+01.c:34:4: missed: statement clobbers memory: pthread_join (_4, 0B);
+01.c:29:2: missed: couldn't vectorize loop
+01.c:30:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:28:5: note: vectorized 0 loops in function.
+01.c:30:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:34:4: missed: statement clobbers memory: pthread_join (_4, 0B);
+01.c:30:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:31:4: missed: statement clobbers memory: pthread_create (_3, 0B, tf, i.0_2);
+01.c:34:4: missed: statement clobbers memory: pthread_join (_4, 0B);
+01.c:34:4: missed:   not inlinable: main/26 -> pthread_join/31, function body not available
+01.c:31:4: missed:   not inlinable: main/26 -> pthread_create/30, function body not available
+01.c:30:4: missed:   not inlinable: main/26 -> pthread_mutex_init/29, function body not available
+01.c:23:4: missed:   not inlinable: tf/25 -> pthread_mutex_unlock/28, function body not available
+01.c:21:4: missed:   not inlinable: tf/25 -> pthread_mutex_lock/27, function body not available
+Unit growth for small function inlining: 34->34 (0%)
+
+Inlined 0 calls, eliminated 0 functions
+
+01.c:20:2: missed: couldn't vectorize loop
+01.c:21:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:18:1: note: vectorized 0 loops in function.
+01.c:21:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:21:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:23:4: missed: statement clobbers memory: pthread_mutex_unlock (_1);
+01.c:33:2: missed: couldn't vectorize loop
+01.c:34:4: missed: statement clobbers memory: pthread_join (_4, 0B);
+01.c:29:2: missed: couldn't vectorize loop
+01.c:30:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:28:5: note: vectorized 0 loops in function.
+01.c:30:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:34:4: missed: statement clobbers memory: pthread_join (_4, 0B);
+01.c:30:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:31:4: missed: statement clobbers memory: pthread_create (_3, 0B, tf, i.0_2);
+01.c:34:4: missed: statement clobbers memory: pthread_join (_4, 0B);
+01.c:30:2: optimized:   Inlining printf/15 into main/26 (always_inline).
+01.c:36:4: missed:   not inlinable: main/26 -> pthread_join/31, function body not available
+01.c:33:4: missed:   not inlinable: main/26 -> pthread_create/30, function body not available
+01.c:32:4: missed:   not inlinable: main/26 -> pthread_mutex_init/29, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed:   not inlinable: main/26 -> __printf_chk/32, function body not available
+01.c:24:4: missed:   not inlinable: tf/25 -> pthread_mutex_unlock/28, function body not available
+01.c:22:4: missed:   not inlinable: tf/25 -> pthread_mutex_lock/27, function body not available
+Unit growth for small function inlining: 40->40 (0%)
+
+Inlined 1 calls, eliminated 0 functions
+
+01.c:21:2: missed: couldn't vectorize loop
+01.c:22:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:19:1: note: vectorized 0 loops in function.
+01.c:22:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:22:4: missed: statement clobbers memory: pthread_mutex_lock (_1);
+01.c:24:4: missed: statement clobbers memory: pthread_mutex_unlock (_1);
+01.c:35:2: missed: couldn't vectorize loop
+01.c:36:4: missed: statement clobbers memory: pthread_join (_4, 0B);
+01.c:31:2: missed: couldn't vectorize loop
+01.c:32:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:29:5: note: vectorized 0 loops in function.
+01.c:32:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:36:4: missed: statement clobbers memory: pthread_join (_4, 0B);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "%d, %d, %d\n", 0, 8, 48);
+01.c:32:4: missed: statement clobbers memory: pthread_mutex_init (_1, 0B);
+01.c:33:4: missed: statement clobbers memory: pthread_create (_3, 0B, tf, i.0_2);
+01.c:36:4: missed: statement clobbers memory: pthread_join (_4, 0B);
