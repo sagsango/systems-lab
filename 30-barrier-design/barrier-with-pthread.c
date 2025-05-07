@@ -1,11 +1,11 @@
-#include <stdio.h>
 #include <pthread.h>
+#include <stdlib.h>
 
 struct barrier {
     pthread_cond_t threshold;
-    pthread_mutex_lock mtx;
+    pthread_mutex_t mtx;
     int count, n;
-}
+};
 
 struct barrier * new_barrier(int n) {
     struct barrier * b = (struct barrier *) malloc(sizeof(struct barrier));
@@ -13,7 +13,7 @@ struct barrier * new_barrier(int n) {
         exit(1);
     }
     pthread_mutex_init(&b->mtx, 0);
-    pthread_cond_init(&b->mtx, 0, 0);
+    pthread_cond_init(&b->threshold, 0);
 }
 
 int barrier_wait(struct barrier * b) {
