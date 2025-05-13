@@ -1,4 +1,72 @@
 /*
+ * 
+ * There are 2 ways: spsc to implement
+ * M1: only have read & write pointers
+ * 		read will be r by porducer w by consumer 
+ *      write will be w by producer r by consumer
+ * 			There is no w/w conflict in read or write
+ * 
+ * 		when producer see the queue is not full,
+ * 		(by reading the r & w pointer)
+ *      at that time if consumer removes some item
+ *      queue still is going to be not full so 
+ * 		its safe for the producer to still progrress
+ * 		if he saw the queue was not full.
+ * 
+ * 
+ * 		when consumer see queue is not empty
+ *      (by reading the r & w pointer) it can 
+ *      proceed further because if producer has put
+ *      more data meanwhile, it still remains non empty
+ *      
+ * 
+ * 		No cas is needed only visibility (memory-relase and aquire)
+ * 		Producer will release 
+ * 		Consumer will aquire
+ * 
+ * 		Downside : We will be having one empty slot always in the queue
+ * 		so memory sizeof(data) will be wasted.
+ * 
+ * TODO: Implement it!!! <<<=================
+ * 		But method 2 is slow because we are duing CAS (locking the cacheline)
+ * M2: In this senario we will be having size as a member
+ * 	   whenre producer and consumer both sync on it.
+ * 
+ *     as size can be updated by both end at the same time we need
+ *     CAS.
+ * 
+ * 	   lets say producer reads size : s
+ * 			now size if not full (s != capacity)
+ * 			meanwhile if size get changed by consumer as it will
+ * 			decrement then also it would not be full, so same to proceed
+ *          now we have to do 2 things:
+ * 				write the data at data[w]
+ * 				increment the w to w + 1 & size to by 1
+ *          
+ * 			as there is only one writer so it is safe,
+ * 			to first do data[w] = value and then do w = w + 1 & size += 1
+ * 
+ * 					data[w] = val;
+ * 					write = write + 1;
+ * 					atmoic_fetch_add_explicit(&size, 1, memory_order_release); // lock the cacheline then increment the value 
+ *
+ * 
+ *		
+ * .   similarily for cosumer side:
+ *                 if size != 0
+ *                    //aquired sementics to get the data from the producer
+ *                    val = data[read];
+ *                    read = read + 1
+ *                 atmoic_fetch_sub_explicit(&size, 1, memory_order_relaxed); // lock the cacheline then increment the value 
+ *                 // this time nothing to show to the producer except the size. so relaxed semantic!!! :)
+ * 			
+ *           
+ *            
+ * 			
+ * 		
+ * 							  
+ *      
+ * 
  *
  * We dont need to use any kind of syncronization machanish for the
  * write_pointer & read_pointer.
