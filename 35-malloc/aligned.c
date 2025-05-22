@@ -23,5 +23,12 @@ int main() {
         addr = c;
     }
 
+    /*
+     * 
+     * 
+     * TODO:
+     *  free() the memeory to avoid memory leaks
+    */
+
    // int x = rdtscp();
 }

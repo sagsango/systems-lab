@@ -5,6 +5,13 @@
 #include <pthread.h>
 
 
+
+/*
+ * XXX:
+ * https://cplusplus.com/reference/atomic/atomic_compare_exchange_strong_explicit/
+ * bool atomic_compare_exchange_strong_explicit (volatile A* obj, T* expected, T val, memory_order success, memory_order failure)
+*/
+
 #define N_LOOP 10000000
 #define N_THREADS 10
 
