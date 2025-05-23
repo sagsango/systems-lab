@@ -69,4 +69,13 @@ int main() {
 
     printf("[main] Successfully wrote '%c' to %p\n", *ptr, ptr);
     return 0;
+
+
+
+
+   // sigaction(int sig, const struct sigaction *restrict act, struct sigaction *restrict oact)
+    // sigaltstack(const stack_t *restrict ss, stack_t *restrict oss)
+    // sigprocmask(int how, const sigset_t *restrict set, sigset_t *restrict oset)
+    
+
 }
