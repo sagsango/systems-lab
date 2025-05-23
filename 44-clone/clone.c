@@ -10,6 +10,7 @@
 #include <sys/syscall.h>    /* Definition of SYS_* constants */
 #include <unistd.h>
 
+
 int main() {
 
 /*
@@ -26,6 +27,8 @@ clone:
                  );
 
 */
+
+
 
 
  struct clone_args args;
