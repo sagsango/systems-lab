@@ -17,6 +17,11 @@ all: $(EXECS)
 %: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
+
+trace: all
+	ltrace -S -n 20 -o ltrace.out ./piped-cmds
+	strace -f --stack-traces -s 128 -o strace.out ./piped-cmds
+
 # Clean up
 clean:
 	rm -f $(EXECS)

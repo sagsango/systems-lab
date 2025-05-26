@@ -1,0 +1,78 @@
+SYS_brk(0)                                                                                                                                                                           = 0x555555559000
+SYS_arch_prctl(0x3001, 0x7fffffffdd10, 0x7ffff7fe23c0, 1)                                                                                                                            = -22
+SYS_mmap(0, 8192, 3, 34)                                                                                                                                                             = 0x7ffff7fbb000
+SYS_access("/etc/ld.so.preload", 04)                                                                                                                                                 = -2
+SYS_openat(0xffffff9c, 0x7ffff7ff121b, 0x80000, 0)                                                                                                                                   = 3
+SYS_newfstatat(3, 0x7ffff7ff1ee9, 0x7fffffffce60, 4096)                                                                                                                              = 0
+SYS_mmap(0, 0x145ff, 1, 2)                                                                                                                                                           = 0x7ffff7fa6000
+SYS_close(3)                                                                                                                                                                         = 0
+SYS_openat(0xffffff9c, 0x7ffff7fbb4b0, 0x80000, 0)                                                                                                                                   = 3
+SYS_read(3, "\177ELF\002\001\001\003", 832)                                                                                                                                          = 832
+SYS_pread(3, 0x7fffffffcca0, 784, 64)                                                                                                                                                = 784
+SYS_pread(3, 0x7fffffffcc60, 48, 848)                                                                                                                                                = 48
+SYS_pread(3, 0x7fffffffcc10, 68, 896)                                                                                                                                                = 68
+SYS_newfstatat(3, 0x7ffff7ff1ee9, 0x7fffffffcf30, 4096)                                                                                                                              = 0
+SYS_pread(3, 0x7fffffffcb70, 784, 64)                                                                                                                                                = 784
+SYS_mmap(0, 0x228e50, 1, 2050)                                                                                                                                                       = 0x7ffff7d7d000
+SYS_mprotect(0x7ffff7da5000, 2023424, 0)                                                                                                                                             = 0
+SYS_mmap(0x7ffff7da5000, 0x195000, 5, 2066)                                                                                                                                          = 0x7ffff7da5000
+SYS_mmap(0x7ffff7f3a000, 0x58000, 1, 2066)                                                                                                                                           = 0x7ffff7f3a000
+SYS_mmap(0x7ffff7f93000, 0x6000, 3, 2066)                                                                                                                                            = 0x7ffff7f93000
+SYS_mmap(0x7ffff7f99000, 0xce50, 3, 50)                                                                                                                                              = 0x7ffff7f99000
+SYS_close(3)                                                                                                                                                                         = 0
+SYS_mmap(0, 0x3000, 3, 34)                                                                                                                                                           = 0x7ffff7d7a000
+SYS_arch_prctl(4098, 0x7ffff7d7a740, 0xffff800008284eb0, 34)                                                                                                                         = 0
+SYS_set_tid_address(0x7ffff7d7aa10, 0x7ffff7d7a740, 0x7ffff7ffe0d8, 34)                                                                                                              = 0x1135c6
+SYS_set_robust_list(0x7ffff7d7aa20, 24, 0x7ffff7ffe0d8, 34)                                                                                                                          = 0
+SYS_334(0x7ffff7d7b0e0, 32, 0, 0x53053053)                                                                                                                                           = 0
+SYS_mprotect(0x7ffff7f93000, 16384, 1)                                                                                                                                               = 0
+SYS_mprotect(0x555555557000, 4096, 1)                                                                                                                                                = 0
+SYS_mprotect(0x7ffff7ffb000, 8192, 1)                                                                                                                                                = 0
+SYS_prlimit64(0, 3, 0, 0x7fffffffda70)                                                                                                                                               = 0
+SYS_munmap(0x7ffff7fa6000, 83455)                                                                                                                                                    = 0
+pipe(0x7fffffffdd60 <unfinished ...>
+                    SYS_pipe2(0x7fffffffdd60, 0, 0, 0x7ffff7fc3908)                                                                                                                  = 0
+<... pipe resumed> )                                                                                                                                                                 = 0
+pipe(0x7fffffffdd68 <unfinished ...>
+                    SYS_pipe2(0x7fffffffdd68, 0, 8, 0x7ffff7fc3908)                                                                                                                  = 0
+<... pipe resumed> )                                                                                                                                                                 = 0
+fork( <unfinished ...>
+                    SYS_clone(0x1200011, 0, 0, 0x7ffff7d7aa10)                                                                                                                       = 0x1135c7
+<... fork resumed> )                                                                                                                                                                 = 1127879
+fork( <unfinished ...>
+                    SYS_clone(0x1200011, 0, 0, 0x7ffff7d7aa10)                                                                                                                       = 0x1135c8
+<... fork resumed> )                                                                                                                                                                 = 1127880
+fork( <unfinished ...>
+                    SYS_clone(0x1200011, 0, 0, 0x7ffff7d7aa10)                                                                                                                       = 0x1135c9
+<... fork resumed> )                                                                                                                                                                 = 1127881
+close(2 <unfinished ...>
+                    SYS_close(2)                                                                                                                                                     = 0
+<... close resumed> )                                                                                                                                                                = 0
+close(3 <unfinished ...>
+                    SYS_close(3)                                                                                                                                                     = 0
+<... close resumed> )                                                                                                                                                                = 0
+close(4 <unfinished ...>
+                    SYS_close(4)                                                                                                                                                     = 0
+<... close resumed> )                                                                                                                                                                = 0
+close(5 <unfinished ...>
+                    SYS_close(5)                                                                                                                                                     = 0
+<... close resumed> )                                                                                                                                                                = 0
+close(6 <unfinished ...>
+                    SYS_close(6)                                                                                                                                                     = 0
+<... close resumed> )                                                                                                                                                                = 0
+close(7 <unfinished ...>
+                    SYS_close(7)                                                                                                                                                     = -9
+<... close resumed> )                                                                                                                                                                = -1
+wait(0 <unfinished ...>
+                    SYS_wait4(0xffffffff, 0, 0, 0)                                                                                                                                   = 0x1135c7
+--- SIGCHLD (Child exited) ---
+<... wait resumed> )                                                                                                                                                                 = 1127879
+wait(0 <no return ...>
+--- SIGCHLD (Child exited) ---
+                    SYS_wait4(0xffffffff, 0, 0, 0)                                                                                                                                   = 0x1135c8
+<... wait resumed> )                                                                                                                                                                 = 1127880
+wait(0 <unfinished ...>
+                    SYS_wait4(0xffffffff, 0, 0, 0)                                                                                                                                   = 0x1135c9
+<... wait resumed> )                                                                                                                                                                 = 1127881
+SYS_exit_group(0 <no return ...>
++++ exited (status 0) +++
