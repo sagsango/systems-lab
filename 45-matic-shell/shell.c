@@ -1,3 +1,16 @@
+/* Author: Sagar Singh
+ * Email: ssing214@uic.edu
+ *
+ * Minimal shell which supports:
+ * 1. Builtin command cd
+ * 2. Buildin command exit
+ * 3. Running simple cmds with args by fork() and exec()
+ *
+ * We dont support & or |
+ * Which is left for future support.
+ *
+ * To see the debug message use #define DEBUG
+ */
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -8,7 +21,7 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 
-#define DEBUG
+//#define DEBUG
 
 #define CMD_SIZE 512
 #define STACK_SIZE 512
@@ -16,21 +29,36 @@
 #define DOUBLE_QUOTE '\"'
 #define SPACE ' '
 #define TAB '\t'
+#define PROMT "$ "
+#define LINE_DELIMITER_LEN 1
 
+enum ret_status {
+	SUCCESS,
+	ERR_QUOTE_MISMATCH,
+	ERR_FORK,
+	ERR_EXEC,
+	ERR_CHILD_CMD,
+	ERR_TOO_MANY_ARGS,
+	ERR_CD,
+	ERR_EMPTY_CMD
+};
 
 char *cmd[CMD_SIZE];
 size_t n_cmd;
-bool quote_mismach;
 
 bool is_space(char c) { return c == SPACE || c == TAB; }
 bool is_quote(char c) { return c == SINGLE_QUOTE || c == DOUBLE_QUOTE; }
 
-char *get_token(char *str, size_t *start, size_t size) {
+int get_token(char *str, size_t *start, size_t size, char **ret_token) {
 	size_t l = *start, r = *start;
 	size_t start_idx, end_idx;
 	size_t token_len;
 	char * token;
 	bool is_quoted;
+	int ret_status;
+
+	ret_status = SUCCESS;
+	*ret_token = NULL;
 
 	/* Skip spaces */
 	while (l < size && is_space(str[l])) {
@@ -45,7 +73,8 @@ char *get_token(char *str, size_t *start, size_t size) {
 				r += 1;
 			}
 			if (!(r < size && str[r] == DOUBLE_QUOTE)) {
-				quote_mismach = 1;
+
+				ret_status |= ERR_QUOTE_MISMATCH;
 			}
 		}
 		if (SINGLE_QUOTE == str[r]) {
@@ -54,7 +83,8 @@ char *get_token(char *str, size_t *start, size_t size) {
 				r += 1;
 			}
 			if (!(r < size && str[r] == SINGLE_QUOTE)) {
-				quote_mismach = 1;
+
+				ret_status |= ERR_QUOTE_MISMATCH;
 			}
 		}
 	}
@@ -81,51 +111,117 @@ char *get_token(char *str, size_t *start, size_t size) {
 	// fprintf(stderr, "%ld:<%ld,%ld>", *start, l, r - 1);
 #endif
 	*start = r;
-	return token;
+	*ret_token = token;
+	return ret_status;
 }
 
-void get_cmds(char *line, size_t len) {
+int get_cmds(char *line, size_t len) {
 	char *token;
-    size_t start;
-        
+	size_t start;
+	int ret_status;
+
 	start = 0;
 	n_cmd = 0;
-	quote_mismach = false;
+	ret_status = SUCCESS;
 	while (start < len) {
-		token = get_token(line, &start, len);
+		ret_status |= get_token(line, &start, len, &token);
 #ifdef DEBUG
 		fprintf(stderr, "Token:%s\n", token ? token : "<NULL>");
 #endif 
 		if (token) {
-			if (n_cmd < CMD_SIZE - 1) {
+			if (n_cmd < CMD_SIZE - 1) { /* last arg[] will point to NULL */
 				cmd[n_cmd++] = token;
 			} else {
 				fprintf(stderr, "Too many arguments\n");
+				ret_status |= ERR_TOO_MANY_ARGS;
 				free(token);
 			}
 		}
 	}
 	cmd[n_cmd] = NULL;
+	return ret_status;
 }
 
+int cd_buildin_cmd() {
+	struct stat sb;
+	char *dir;
+	int ret_status;
+
+	ret_status = SUCCESS;
+	/* cd with no arguments goes to HOME
+	 * No Need to free the memory return by getenv()
+	 */
+	dir = (n_cmd > 1) ? cmd[1] : getenv("HOME");
+	if (!dir) {
+		fprintf(stderr, "cd: HOME not set\n");
+	} else if ((stat(dir, &sb) != 0) ||
+		   !S_ISDIR(sb.st_mode) ||
+		   (chdir(dir) != 0)) {
+		fprintf(stderr, "error: cd failed\n");
+		ret_status |= ERR_CD;
+	}
+	return ret_status;
+}
+
+void exit_buildin_cmd() {
+	exit(EXIT_SUCCESS);
+}
+
+int fork_and_exec() {
+	pid_t child;
+	int ret_status;
+
+	ret_status = SUCCESS;
+
+	switch ((child = fork())) {
+	case -1: {
+		perror("Cannot fork to run command");
+		ret_status |= ERR_FORK;
+		break;
+	}
+	case 0: {
+		execvp(cmd[0], cmd);
+		perror("execvp failed");
+		ret_status |= ERR_EXEC;
+	}
+	default: {
+		int status;
+		wait(&status);
+		/* https://www.geeksforgeeks.org/exit-status-child-process-linux/ */
+		if (status) {
+			ret_status |= ERR_CHILD_CMD;
+			fprintf(stderr, "error: command exited with code %d\n", WEXITSTATUS(status));
+		}
+	}
+	}
+	return ret_status;
+}
+
+int free_tokens() {
+	for (size_t i = 0; i < n_cmd; ++i) {
+		free(cmd[i]);
+		cmd[i] = NULL;
+	}
+	return SUCCESS;
+}
 int main() {
-    size_t line_size;
-    pid_t child;
+	size_t line_size;
 	char *token;
 	char *line;
-    char *dir;
-	struct stat sb;
-	int len;
+	int len, status;
 
-    line_size = CMD_SIZE;
-	line = malloc(CMD_SIZE); 
+	line_size = CMD_SIZE;
+	line = malloc(CMD_SIZE);
 	if (!line) {
 		perror("Cannot allocate line buffer");
 		exit(EXIT_FAILURE);
 	}
 
 	for (;;) {
-		fprintf(stderr, "# ");
+		status = SUCCESS;
+		/* XXX: 0. show the PROMT */
+		fprintf(stderr, PROMT);
+
 		/* XXX: 1. Get the input */
 		len = getline(&line, &line_size, stdin);
 		if (len < 0) {
@@ -137,59 +233,29 @@ int main() {
 			continue;
 		}
 
-		/* XXX: 2. Extract cmnd and agrs */
-		get_cmds(line, len-1); /* Skip the last char with is '\n' */
+		/* XXX: 2. Extract cmnd and agrs (tokens) */
+		status |= get_cmds(line, len - LINE_DELIMITER_LEN); /* Skip the last char with is '\n' */
 
-		if (quote_mismach) {
+		if (status & ERR_QUOTE_MISMATCH) {
 			fprintf(stderr, "error: mismatched quotes\n");
-			goto free_tokens;
+			free_tokens();
+			continue;
 		}
 
 		/* XXX: 3. Execute the cmd */
 		if (n_cmd == 0) {
+			status |= ERR_EMPTY_CMD;
 			continue;
 		}else if (strcmp(cmd[0], "cd") == 0) { /* Handle cd */
-            /* cd with no arguments goes to HOME
-			 * No Need to free the memory return by getenv()
-			 */
-			dir = (n_cmd > 1) ? cmd[1] : getenv("HOME");
-			if (!dir) {
-				fprintf(stderr, "cd: HOME not set\n");
-			} else if ((stat(dir, &sb) != 0) ||
-				   !S_ISDIR(sb.st_mode) ||
-				   (chdir(dir) != 0)) {
-				fprintf(stderr, "error: cd failed\n");
-			}
+			status |= cd_buildin_cmd();
 		} else if (strcmp(cmd[0], "exit") == 0) { /* Handle exit */
-			exit(EXIT_SUCCESS);
+			exit_buildin_cmd();
 		} else{ /* exec the binary */
-			switch ((child = fork())) {
-				case -1: {
-					perror("Cannot fork to run command");
-					break;
-				}
-				case 0: {
-					execvp(cmd[0], cmd);
-					perror("execvp failed");
-					exit(EXIT_FAILURE);
-				}
-				default: {
-					int status;
-					wait(&status);
-					/* https://www.geeksforgeeks.org/exit-status-child-process-linux/ */
-					if (status) {
-						fprintf(stderr, "error: command exited with code %d\n", WEXITSTATUS(status));
-					}
-				}
-			}
+			status |= fork_and_exec();
 		}
 
 		/* Free tokens */
-free_tokens:
-		for (size_t i = 0; i < n_cmd; ++i) {
-			free(cmd[i]);
-			cmd[i] = NULL;
-		}
+		free_tokens();
 	}
 
 	free(line);
