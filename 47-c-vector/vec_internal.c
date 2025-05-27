@@ -30,7 +30,7 @@ int vec_internal_put_at(struct vec_internal *vec, size_t index, void *data) {
 static int vec_internal_resize(struct vec_internal *vec, int capacity) {
   assert(vec->vec_data->arr_capacity);
   /* capacity and be grater or smaller than before as required */
-  vec->vec_data->arr = realloc(vec->vec_data->arr, capacity);
+  vec->vec_data->arr = realloc(vec->vec_data->arr, (capacity)* sizeof(void**));
   vec->vec_data->arr_capacity = capacity;
   assert(NULL != vec->vec_data->arr);
   return 0;

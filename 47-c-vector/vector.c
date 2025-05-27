@@ -24,6 +24,11 @@ static int vector_put_at(struct vector *vec, size_t index, void *data) {
   return vec->vec_in->put_at(vec->vec_in, index, data);
 }
 
+/*
+ * TODO:
+ * This is not how resize algorithm works.
+ * We should improve this logic
+ */
 static int vector_resize(struct vector *vec) {
   size_t size = vec->size;
   size_t capacity = vec->vec_in->get_capacity(vec->vec_in);
