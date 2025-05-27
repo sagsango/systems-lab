@@ -4,3 +4,6 @@
 [submodule "cs454-code"]
 	path = cs454-code
 	url = https://github.com/sagsango/cs454-code.git
+[submodule "cmu-csapp-lab"]
+	path = cmu-csapp-lab
+	url = https://github.com/sagsango/cmu-csapp-lab.git
