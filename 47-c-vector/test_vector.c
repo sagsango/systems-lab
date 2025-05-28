@@ -56,7 +56,7 @@ int main() {
 
     // Free memory used by vector
     v->free(v);
-    free(v); // Free the vector struct itself
+    //free(v); // No need
 
     return 0;
 }

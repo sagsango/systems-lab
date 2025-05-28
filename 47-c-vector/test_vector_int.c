@@ -55,7 +55,7 @@ int main() {
     }
 
     vec_int->free(vec_int);
-    free(vec_int);
+    // free(vec_int); // No need
 
     return 0;
 }

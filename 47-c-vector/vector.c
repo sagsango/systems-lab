@@ -79,7 +79,7 @@ static int vector_init(struct vector *vec, size_t size) {
 
 static  int vector_free(struct vector *vec) {
   vec->vec_in->free(vec->vec_in);
-  vec->size = 0;
+  free(vec);
   return 0;
 }
 struct vector *vector_malloc() {

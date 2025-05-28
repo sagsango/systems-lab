@@ -55,6 +55,7 @@ static  int vector_int_free(struct vector_int *vec_int) {
     free(vec_int->vec->get_at(vec_int->vec, i));
   }
   vec_int->vec->free(vec_int->vec);
+  free(vec_int);
   return 0;
 }
 

@@ -40,6 +40,8 @@ static int vec_internal_free(struct vec_internal *vec) {
   free(vec->vec_data->arr);
   vec->vec_data->arr = NULL;
   vec->vec_data->arr_capacity = 0;
+  free(vec->vec_data);
+  free(vec);
   return 0;
 }
 

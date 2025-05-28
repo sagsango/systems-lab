@@ -47,7 +47,7 @@ int main() {
     }
 
     vec->free(vec);
-    free(vec);
+    //free(vec);
 
     return 0;
 }
