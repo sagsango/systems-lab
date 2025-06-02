@@ -12,6 +12,12 @@
 #define PAGE_SIZE 4096
 #define NUM_PAGES 1
 
+/*
+    XXX:
+    This demonstration gives the idea how
+    protecton key are used in folly (Single-VM model of the compound)
+*/
+
 void *region_start;
 
 static void segv_handler(int sig, siginfo_t *si, void *unused) {

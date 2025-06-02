@@ -65,7 +65,7 @@ int main(int argc, char*argv[]) {
                     shared->addr += 1;
                 }
                 sem_post(&shared->sem);
-								sched_yield();
+								sched_yield();  /* For threads we use : pthread_yield(); so that another thread from same thread group will get scheduled */
             }
 	            int status;
             wait(&status);

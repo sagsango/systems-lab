@@ -15,6 +15,18 @@ char buf[ALLOCATOR_SIZE];
    alignment = 8 Bytes
  */
 
+/*
+  TODO: Things to be casefull about:
+    1. Pointer arithmatic;
+      char * ptr; ptr += 1; will be incremented by 1 Byte
+      struct stuff * ptr; ptr += 1; will be incremented by sizeof(struct stuff)
+    2. Sentinal nodes
+    3. At worst you have to merge curretny freeing chunk with its 2 negibors
+       so O(1)
+    4. User will work on data of the chunk so we have to return data ptr not
+  header And during free we will calculate the header again
+*/
+
 #define HEADER_SIZE 16
 #define ALIGN 8
 

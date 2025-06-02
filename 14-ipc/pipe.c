@@ -1,8 +1,10 @@
 // TODO:
 
 
+#include <semaphore.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/mman.h>
 #include <unistd.h>
 #include <sys/ipc.h>
 #include <string.h>
@@ -37,4 +39,12 @@ int main() {
             wait(NULL);
         }
     }
+
+    /*
+    TODO: Use there instead; like a file
+    shm_open(const char *name, int oflag, mode_t mode);
+    sem_open(const char *name, int oflag, ...);
+    mq_open();
+*/
+
 }

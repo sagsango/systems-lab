@@ -11,6 +11,12 @@
 #define FILENAME "shm.c"
 #define SHM_SIZE (1<<10)
 
+  /*
+    TODO: Use there instead; like a file
+    shm_open(const char *name, int oflag, mode_t mode);
+    sem_open(const char *name, int oflag, ...);
+    mq_open();
+*/
 int main() {
     //int fd = shmget(key_t key, size_t size, int shmflg);
     int status;

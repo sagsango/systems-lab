@@ -3,6 +3,21 @@
 #include <string.h>
 #include "vec_internal.h"
 
+
+/*
+XXX : 1. This is very imprtant that our array is a just void *
+    2. So we can store any type of data(we will malloc / alloc is somewhere and
+                                        put the address here)
+    3. Think about the ring buffer where,
+    empty = > to_read == to_write;
+full : (to_write + 1) & (SIZE - 1) == to_write;
+Here we were wasting one index, but thats not a big issue as our ring buffer
+                                    will contains the pointer not the data !
+
+    @Apple interview Photo performance
+*/
+        
+      
 #define SIZE VEC_MIN_CAPACITY 
 int main() {
     fprintf(stderr, "Starting test\n");
