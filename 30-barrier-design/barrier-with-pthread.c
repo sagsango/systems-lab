@@ -1,6 +1,11 @@
 #include <pthread.h>
 #include <stdlib.h>
 
+/* XXX:
+ *
+ * Barrier get resets eveytime,
+ * that functionality wqe have to support
+ */
 struct barrier {
     pthread_cond_t threshold;
     pthread_mutex_t mtx;
