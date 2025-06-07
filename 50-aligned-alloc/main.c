@@ -12,16 +12,21 @@ struct header {
  * alignment is a power of 2
  */
 void * aligned_malloc(const size_t alignmnet, const size_t size) {
-	void * ptr = malloc(alignment * 4 + size);
+	void * ptr = malloc(alignment * 2 + size); /* XXX: why 2 times of alignmnet */
 	void * ret;
-	size_t rem = ptr & (alignmnet * 2);
+    size_t rem = ptr & (alignmnet - 1);
 	if (rem == 0) {
 		ret = ptr;
 	} else {
-		ret = ptr + (alignment * 2 - rem);
+		ret = ptr + (alignment - rem); /* 1st alignmnt may go here */
 	}
 
-	ret += alignment;
+    /*
+     * NOW we are aligned but we need the header
+     * so we will put it on the first (alignmnet) size
+     * and give then next on to the user
+     */
+	ret += alignment; /* 2nd alignmnet may go here */
 
 	struct header * h = (char*)ret - HEADER;
 	h->malloced_ptr = ptr;
