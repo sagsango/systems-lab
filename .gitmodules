@@ -7,3 +7,18 @@
 [submodule "cmu-csapp-lab"]
 	path = cmu-csapp-lab
 	url = https://github.com/sagsango/cmu-csapp-lab.git
+[submodule "shypervisor"]
+	path = shypervisor
+	url = https://github.com/sagsango/shypervisor.git
+[submodule "svcontrol"]
+	path = svcontrol
+	url = https://github.com/sagsango/svcontrol.git
+[submodule "sgdb"]
+	path = sgdb
+	url = https://github.com/sagsango/sgdb.git
+[submodule "sloader"]
+	path = sloader
+	url = https://github.com/sagsango/sloader.git
+[submodule "sgrind"]
+	path = sgrind
+	url = https://github.com/sagsango/sgrind.git
