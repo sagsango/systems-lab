@@ -22,3 +22,9 @@
 [submodule "sgrind"]
 	path = sgrind
 	url = https://github.com/sagsango/sgrind.git
+[submodule "skernel"]
+	path = skernel
+	url = https://github.com/sagsango/skernel.git
+[submodule "sdyninst"]
+	path = sdyninst
+	url = https://github.com/sagsango/sdyninst.git
