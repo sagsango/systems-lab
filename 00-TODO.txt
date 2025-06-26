@@ -1,0 +1,5 @@
+1. Add sub repo by creating a new project for dynamic 
+   instrumentation from the scratch, like (dyninst).
+2. We will name it sinst.
+3. Read the design of dynint & the other instrumentation
+   tools.
