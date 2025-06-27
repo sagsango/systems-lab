@@ -1,0 +1,11 @@
+00400000-00401000 r--p 00000000 103:02 6695838                           /home/sagar/tmp/elf-test/statically-linked/uic
+00401000-0047f000 r-xp 00001000 103:02 6695838                           /home/sagar/tmp/elf-test/statically-linked/uic
+0047f000-004a5000 r--p 0007f000 103:02 6695838                           /home/sagar/tmp/elf-test/statically-linked/uic
+004a5000-004aa000 r--p 000a4000 103:02 6695838                           /home/sagar/tmp/elf-test/statically-linked/uic
+004aa000-004ac000 rw-p 000a9000 103:02 6695838                           /home/sagar/tmp/elf-test/statically-linked/uic
+004ac000-004b2000 rw-p 00000000 00:00 0 
+15614000-15636000 rw-p 00000000 00:00 0                                  [heap]
+7c79409d4000-7c79409d8000 r--p 00000000 00:00 0                          [vvar]
+7c79409d8000-7c79409da000 r-xp 00000000 00:00 0                          [vdso]
+7ffe4f605000-7ffe4f626000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

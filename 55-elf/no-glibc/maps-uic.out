@@ -1,0 +1,7 @@
+00400000-00401000 r--p 00000000 103:02 6695843                           /home/sagar/tmp/elf-test/no-glibc/uic
+00401000-00402000 r-xp 00001000 103:02 6695843                           /home/sagar/tmp/elf-test/no-glibc/uic
+00402000-00403000 r--p 00002000 103:02 6695843                           /home/sagar/tmp/elf-test/no-glibc/uic
+7c63b097e000-7c63b0982000 r--p 00000000 00:00 0                          [vvar]
+7c63b0982000-7c63b0984000 r-xp 00000000 00:00 0                          [vdso]
+7fff58dff000-7fff58e20000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

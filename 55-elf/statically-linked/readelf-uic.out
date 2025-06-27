@@ -1,0 +1,2384 @@
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 03 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - GNU
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           Advanced Micro Devices X86-64
+  Version:                           0x1
+  Entry point address:               0x401790
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          783568 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         10
+  Size of section headers:           64 (bytes)
+  Number of section headers:         28
+  Section header string table index: 27
+
+Section Headers:
+  [Nr] Name              Type            Address          Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            0000000000000000 000000 000000 00      0   0  0
+  [ 1] .note.gnu.property NOTE            0000000000400270 000270 000030 00   A  0   0  8
+  [ 2] .note.gnu.build-id NOTE            00000000004002a0 0002a0 000024 00   A  0   0  4
+  [ 3] .note.ABI-tag     NOTE            00000000004002c4 0002c4 000020 00   A  0   0  4
+  [ 4] .rela.plt         RELA            00000000004002e8 0002e8 000210 18  AI  0  20  8
+  [ 5] .init             PROGBITS        0000000000401000 001000 00001b 00  AX  0   0  4
+  [ 6] .plt              PROGBITS        0000000000401020 001020 000160 00  AX  0   0 16
+  [ 7] .text             PROGBITS        0000000000401180 001180 07d6e0 00  AX  0   0 64
+  [ 8] .fini             PROGBITS        000000000047e860 07e860 00000d 00  AX  0   0  4
+  [ 9] .rodata           PROGBITS        000000000047f000 07f000 01c174 00   A  0   0 32
+  [10] .stapsdt.base     PROGBITS        000000000049b174 09b174 000001 00   A  0   0  1
+  [11] rodata.cst32      PROGBITS        000000000049b180 09b180 000060 20  AM  0   0 32
+  [12] .eh_frame         PROGBITS        000000000049b1e0 09b1e0 0094b8 00   A  0   0  8
+  [13] .gcc_except_table PROGBITS        00000000004a4698 0a4698 0000f8 00   A  0   0  1
+  [14] .tdata            PROGBITS        00000000004a5f50 0a4f50 000018 00 WAT  0   0  8
+  [15] .tbss             NOBITS          00000000004a5f68 0a4f68 000040 00 WAT  0   0  8
+  [16] .init_array       INIT_ARRAY      00000000004a5f68 0a4f68 000008 08  WA  0   0  8
+  [17] .fini_array       FINI_ARRAY      00000000004a5f70 0a4f70 000010 08  WA  0   0  8
+  [18] .data.rel.ro      PROGBITS        00000000004a5f80 0a4f80 003fc8 00  WA  0   0 32
+  [19] .got              PROGBITS        00000000004a9f48 0a8f48 000090 00  WA  0   0  8
+  [20] .got.plt          PROGBITS        00000000004a9fe8 0a8fe8 0000c8 08  WA  0   0  8
+  [21] .data             PROGBITS        00000000004aa0c0 0a90c0 001a00 00  WA  0   0 32
+  [22] .bss              NOBITS          00000000004abac0 0aaac0 005788 00  WA  0   0 32
+  [23] .comment          PROGBITS        0000000000000000 0aaac0 00002b 01  MS  0   0  1
+  [24] .note.stapsdt     NOTE            0000000000000000 0aaaec 0015a0 00      0   0  4
+  [25] .symtab           SYMTAB          0000000000000000 0ac090 00bbe0 18     26 713  8
+  [26] .strtab           STRTAB          0000000000000000 0b7c70 00774e 00      0   0  1
+  [27] .shstrtab         STRTAB          0000000000000000 0bf3be 00010c 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  R (retain), D (mbind), l (large), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr           PhysAddr           FileSiz  MemSiz   Flg Align
+  LOAD           0x000000 0x0000000000400000 0x0000000000400000 0x0004f8 0x0004f8 R   0x1000
+  LOAD           0x001000 0x0000000000401000 0x0000000000401000 0x07d86d 0x07d86d R E 0x1000
+  LOAD           0x07f000 0x000000000047f000 0x000000000047f000 0x025790 0x025790 R   0x1000
+  LOAD           0x0a4f50 0x00000000004a5f50 0x00000000004a5f50 0x005b70 0x00b2f8 RW  0x1000
+  NOTE           0x000270 0x0000000000400270 0x0000000000400270 0x000030 0x000030 R   0x8
+  NOTE           0x0002a0 0x00000000004002a0 0x00000000004002a0 0x000044 0x000044 R   0x4
+  TLS            0x0a4f50 0x00000000004a5f50 0x00000000004a5f50 0x000018 0x000058 R   0x8
+  GNU_PROPERTY   0x000270 0x0000000000400270 0x0000000000400270 0x000030 0x000030 R   0x8
+  GNU_STACK      0x000000 0x0000000000000000 0x0000000000000000 0x000000 0x000000 RW  0x10
+  GNU_RELRO      0x0a4f50 0x00000000004a5f50 0x00000000004a5f50 0x0040b0 0x0040b0 R   0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .note.gnu.property .note.gnu.build-id .note.ABI-tag .rela.plt 
+   01     .init .plt .text .fini 
+   02     .rodata .stapsdt.base rodata.cst32 .eh_frame .gcc_except_table 
+   03     .tdata .init_array .fini_array .data.rel.ro .got .got.plt .data .bss 
+   04     .note.gnu.property 
+   05     .note.gnu.build-id .note.ABI-tag 
+   06     .tdata .tbss 
+   07     .note.gnu.property 
+   08     
+   09     .tdata .init_array .fini_array .data.rel.ro .got 
+
+There is no dynamic section in this file.
+
+Relocation section '.rela.plt' at offset 0x2e8 contains 22 entries:
+    Offset             Info             Type               Symbol's Value  Symbol's Name + Addend
+00000000004aa0a8  0000000000000025 R_X86_64_IRELATIVE                        4440e0
+00000000004aa0a0  0000000000000025 R_X86_64_IRELATIVE                        4122a0
+00000000004aa098  0000000000000025 R_X86_64_IRELATIVE                        468190
+00000000004aa090  0000000000000025 R_X86_64_IRELATIVE                        468110
+00000000004aa088  0000000000000025 R_X86_64_IRELATIVE                        412040
+00000000004aa080  0000000000000025 R_X86_64_IRELATIVE                        444150
+00000000004aa078  0000000000000025 R_X86_64_IRELATIVE                        4695f0
+00000000004aa070  0000000000000025 R_X86_64_IRELATIVE                        412140
+00000000004aa068  0000000000000025 R_X86_64_IRELATIVE                        473ba0
+00000000004aa060  0000000000000025 R_X86_64_IRELATIVE                        444060
+00000000004aa058  0000000000000025 R_X86_64_IRELATIVE                        443f80
+00000000004aa050  0000000000000025 R_X86_64_IRELATIVE                        444220
+00000000004aa048  0000000000000025 R_X86_64_IRELATIVE                        412ba0
+00000000004aa040  0000000000000025 R_X86_64_IRELATIVE                        443f00
+00000000004aa038  0000000000000025 R_X86_64_IRELATIVE                        412230
+00000000004aa030  0000000000000025 R_X86_64_IRELATIVE                        443ff0
+00000000004aa028  0000000000000025 R_X86_64_IRELATIVE                        444310
+00000000004aa020  0000000000000025 R_X86_64_IRELATIVE                        469580
+00000000004aa018  0000000000000025 R_X86_64_IRELATIVE                        411e40
+00000000004aa010  0000000000000025 R_X86_64_IRELATIVE                        411f40
+00000000004aa008  0000000000000025 R_X86_64_IRELATIVE                        4442a0
+00000000004aa000  0000000000000025 R_X86_64_IRELATIVE                        4680a0
+No processor specific unwind information to decode
+
+Symbol table '.symtab' contains 2004 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crt1.o
+     2: 00000000004002c4    32 OBJECT  LOCAL  DEFAULT    3 __abi_tag
+     3: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS ioputs.o
+     4: 0000000000401180    83 FUNC    LOCAL  DEFAULT    7 _IO_puts.cold
+     5: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS libc_fatal.o
+     6: 00000000004011d3     5 FUNC    LOCAL  DEFAULT    7 __libc_message_impl.cold
+     7: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS fileops.o
+     8: 0000000000484d90    19 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+     9: 00000000004011d8    84 FUNC    LOCAL  DEFAULT    7 _IO_new_file_underflow.cold
+    10: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS loadmsgcat.o
+    11: 00000000004b0d90    16 OBJECT  LOCAL  DEFAULT   22 lock.0
+    12: 0000000000401239     5 FUNC    LOCAL  DEFAULT    7 _nl_load_domain.cold
+    13: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS abort.o
+    14: 00000000004b0df0    16 OBJECT  LOCAL  DEFAULT   22 lock
+    15: 00000000004b0e00     4 OBJECT  LOCAL  DEFAULT   22 stage
+    16: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS iofclose.o
+    17: 00000000004013e1    81 FUNC    LOCAL  DEFAULT    7 _IO_new_fclose.cold
+    18: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS iofputs.o
+    19: 0000000000401432    81 FUNC    LOCAL  DEFAULT    7 _IO_fputs.cold
+    20: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS iofwrite.o
+    21: 0000000000401483    81 FUNC    LOCAL  DEFAULT    7 _IO_fwrite.cold
+    22: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS iogetdelim.o
+    23: 00000000004014d4    81 FUNC    LOCAL  DEFAULT    7 __getdelim.cold
+    24: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wfileops.o
+    25: 000000000043f820   254 FUNC    LOCAL  DEFAULT    7 adjust_wide_data
+    26: 0000000000485170    20 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+    27: 0000000000401525   107 FUNC    LOCAL  DEFAULT    7 _IO_wfile_underflow.cold
+    28: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS pthread_once.o
+    29: 0000000000442b10   328 FUNC    LOCAL  DEFAULT    7 __pthread_once_slow
+    30: 0000000000442ca0    72 FUNC    LOCAL  DEFAULT    7 clear_once_control
+    31: 0000000000442c60    49 FUNC    LOCAL  DEFAULT    7 __pthread_cleanup_combined_routine_voidptr
+    32: 0000000000401590    56 FUNC    LOCAL  DEFAULT    7 __pthread_once_slow.cold
+    33: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_fp.o
+    34: 0000000000462620   308 FUNC    LOCAL  DEFAULT    7 hack_digit
+    35: 0000000000462760  8439 FUNC    LOCAL  DEFAULT    7 __printf_fp_buffer_1.isra.0
+    36: 00000000004853f0    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+    37: 00000000004015c8     5 FUNC    LOCAL  DEFAULT    7 __printf_fp_buffer_1.isra.0.cold
+    38: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_fphex.o
+    39: 0000000000464e70  3805 FUNC    LOCAL  DEFAULT    7 __printf_fphex_buffer
+    40: 0000000000485410    22 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+    41: 00000000004015cd     5 FUNC    LOCAL  DEFAULT    7 __printf_fphex_buffer.cold
+    42: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS nptl-stack.o
+    43: 00000000004015d2     5 FUNC    LOCAL  DEFAULT    7 __nptl_free_stacks.cold
+    44: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_buffer_flush.o
+    45: 0000000000485620    22 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+    46: 00000000004015d7     2 FUNC    LOCAL  DEFAULT    7 __printf_buffer_flush.cold
+    47: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wprintf_buffer_flush.o
+    48: 0000000000485640    23 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+    49: 00000000004015d9     2 FUNC    LOCAL  DEFAULT    7 __wprintf_buffer_flush.cold
+    50: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS unwind-dw2.o
+    51: 0000000000477550   124 FUNC    LOCAL  DEFAULT    7 init_dwarf_reg_size_table
+    52: 00000000004b1140    18 OBJECT  LOCAL  DEFAULT   22 dwarf_reg_size_table
+    53: 00000000004775d0   426 FUNC    LOCAL  DEFAULT    7 uw_install_context_1
+    54: 00000000004015db     5 FUNC    LOCAL  DEFAULT    7 uw_install_context_1.cold
+    55: 0000000000477780   428 FUNC    LOCAL  DEFAULT    7 read_encoded_value
+    56: 00000000004015e0     5 FUNC    LOCAL  DEFAULT    7 read_encoded_value.cold
+    57: 0000000000477930  2247 FUNC    LOCAL  DEFAULT    7 execute_stack_op
+    58: 00000000004015e5    10 FUNC    LOCAL  DEFAULT    7 execute_stack_op.cold
+    59: 0000000000478200  1085 FUNC    LOCAL  DEFAULT    7 uw_update_context_1
+    60: 00000000004015ef    10 FUNC    LOCAL  DEFAULT    7 uw_update_context_1.cold
+    61: 0000000000478640  2384 FUNC    LOCAL  DEFAULT    7 execute_cfa_program_specialized
+    62: 00000000004015f9     5 FUNC    LOCAL  DEFAULT    7 execute_cfa_program_specialized.cold
+    63: 0000000000478f90  2400 FUNC    LOCAL  DEFAULT    7 execute_cfa_program_generic
+    64: 00000000004015fe     5 FUNC    LOCAL  DEFAULT    7 execute_cfa_program_generic.cold
+    65: 00000000004798f0  1641 FUNC    LOCAL  DEFAULT    7 uw_frame_state_for
+    66: 0000000000401603     5 FUNC    LOCAL  DEFAULT    7 uw_frame_state_for.cold
+    67: 0000000000479f60   365 FUNC    LOCAL  DEFAULT    7 uw_init_context_1
+    68: 00000000004b1130     4 OBJECT  LOCAL  DEFAULT   22 once_regsizes.0
+    69: 0000000000401608     5 FUNC    LOCAL  DEFAULT    7 uw_init_context_1.cold
+    70: 000000000047a0d0   424 FUNC    LOCAL  DEFAULT    7 _Unwind_RaiseException_Phase2
+    71: 000000000040160d     5 FUNC    LOCAL  DEFAULT    7 _Unwind_RaiseException_Phase2.cold
+    72: 000000000047a280   534 FUNC    LOCAL  DEFAULT    7 _Unwind_ForcedUnwind_Phase2
+    73: 0000000000401612     5 FUNC    LOCAL  DEFAULT    7 _Unwind_ForcedUnwind_Phase2.cold
+    74: 0000000000401617     9 FUNC    LOCAL  DEFAULT    7 _Unwind_GetGR.cold
+    75: 0000000000401620     9 FUNC    LOCAL  DEFAULT    7 _Unwind_SetGR.cold
+    76: 000000000047a6d0     5 FUNC    LOCAL  DEFAULT    7 _Unwind_DebugHook
+    77: 0000000000401629     5 FUNC    LOCAL  DEFAULT    7 _Unwind_RaiseException.cold
+    78: 000000000040162e     5 FUNC    LOCAL  DEFAULT    7 _Unwind_Resume.cold
+    79: 0000000000401633     5 FUNC    LOCAL  DEFAULT    7 _Unwind_Resume_or_Rethrow.cold
+    80: 0000000000401638     5 FUNC    LOCAL  DEFAULT    7 _Unwind_Backtrace.cold
+    81: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS unwind-dw2-fde-dip.o
+    82: 000000000047b110    28 FUNC    LOCAL  DEFAULT    7 fde_unencoded_compare
+    83: 000000000047b130   191 FUNC    LOCAL  DEFAULT    7 frame_downheap
+    84: 000000000047b1f0   170 FUNC    LOCAL  DEFAULT    7 version_lock_lock_exclusive
+    85: 00000000004b1220    40 OBJECT  LOCAL  DEFAULT   22 version_lock_mutex
+    86: 00000000004b11e0    48 OBJECT  LOCAL  DEFAULT   22 version_lock_cond
+    87: 000000000047b2a0   322 FUNC    LOCAL  DEFAULT    7 read_encoded_value_with_base
+    88: 000000000040163d     9 FUNC    LOCAL  DEFAULT    7 read_encoded_value_with_base.cold
+    89: 000000000047b3f0    46 FUNC    LOCAL  DEFAULT    7 fde_unencoded_extract
+    90: 000000000047b420   733 FUNC    LOCAL  DEFAULT    7 fde_radixsort
+    91: 000000000047b700   102 FUNC    LOCAL  DEFAULT    7 version_lock_unlock_exclusive
+    92: 000000000047b770   135 FUNC    LOCAL  DEFAULT    7 btree_allocate_node
+    93: 000000000047b800   256 FUNC    LOCAL  DEFAULT    7 btree_handle_root_split.part.0
+    94: 000000000047b900  1346 FUNC    LOCAL  DEFAULT    7 btree_insert.isra.0
+    95: 0000000000401690   117 FUNC    LOCAL  DEFAULT    7 btree_release_tree_recursively
+    96: 0000000000401710    66 FUNC    LOCAL  DEFAULT    7 btree_destroy
+    97: 000000000047be50   289 FUNC    LOCAL  DEFAULT    7 get_cie_encoding
+    98: 000000000047bf80  1921 FUNC    LOCAL  DEFAULT    7 btree_remove
+    99: 000000000047c710   166 FUNC    LOCAL  DEFAULT    7 fde_mixed_encoding_extract
+   100: 0000000000401646     5 FUNC    LOCAL  DEFAULT    7 fde_mixed_encoding_extract.cold
+   101: 000000000047c7c0   865 FUNC    LOCAL  DEFAULT    7 classify_object_over_fdes
+   102: 000000000040164b     5 FUNC    LOCAL  DEFAULT    7 classify_object_over_fdes.cold
+   103: 000000000047cb30   136 FUNC    LOCAL  DEFAULT    7 get_pc_range
+   104: 000000000047cbc0   130 FUNC    LOCAL  DEFAULT    7 __deregister_frame_info_bases.part.0
+   105: 00000000004b1190    24 OBJECT  LOCAL  DEFAULT   22 registered_objects
+   106: 00000000004b11b0    24 OBJECT  LOCAL  DEFAULT   22 registered_frames
+   107: 00000000004b1188     1 OBJECT  LOCAL  DEFAULT   22 in_shutdown
+   108: 0000000000401650     5 FUNC    LOCAL  DEFAULT    7 __deregister_frame_info_bases.part.0.cold
+   109: 000000000047cc50   163 FUNC    LOCAL  DEFAULT    7 fde_single_encoding_extract
+   110: 0000000000401655     5 FUNC    LOCAL  DEFAULT    7 fde_single_encoding_extract.cold
+   111: 000000000047cd00   155 FUNC    LOCAL  DEFAULT    7 fde_single_encoding_compare
+   112: 000000000040165a     5 FUNC    LOCAL  DEFAULT    7 fde_single_encoding_compare.cold
+   113: 000000000047cda0   240 FUNC    LOCAL  DEFAULT    7 fde_mixed_encoding_compare
+   114: 000000000040165f     5 FUNC    LOCAL  DEFAULT    7 fde_mixed_encoding_compare.cold
+   115: 000000000047ce90   685 FUNC    LOCAL  DEFAULT    7 add_fdes.isra.0
+   116: 0000000000401664     5 FUNC    LOCAL  DEFAULT    7 add_fdes.isra.0.cold
+   117: 000000000047d140   717 FUNC    LOCAL  DEFAULT    7 linear_search_fdes
+   118: 0000000000401669     5 FUNC    LOCAL  DEFAULT    7 linear_search_fdes.cold
+   119: 0000000000401760    41 FUNC    LOCAL  DEFAULT    7 release_registered_frames
+   120: 00000000004b1160    40 OBJECT  LOCAL  DEFAULT   22 object_mutex
+   121: 000000000049b138     8 OBJECT  LOCAL  DEFAULT    9 terminator.1
+   122: 000000000040166e     5 FUNC    LOCAL  DEFAULT    7 _Unwind_Find_FDE.cold
+   123: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS unwind-c.o
+   124: 000000000047e3e0    85 FUNC    LOCAL  DEFAULT    7 base_of_encoded_value
+   125: 0000000000401673     9 FUNC    LOCAL  DEFAULT    7 base_of_encoded_value.cold
+   126: 000000000047e440   322 FUNC    LOCAL  DEFAULT    7 read_encoded_value_with_base
+   127: 000000000040167c     9 FUNC    LOCAL  DEFAULT    7 read_encoded_value_with_base.cold
+   128: 0000000000401685     5 FUNC    LOCAL  DEFAULT    7 __gcc_personality_v0.cold
+   129: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+   130: 000000000049b220     0 OBJECT  LOCAL  DEFAULT   12 __EH_FRAME_BEGIN__
+   131: 00000000004017d0     0 FUNC    LOCAL  DEFAULT    7 deregister_tm_clones
+   132: 0000000000401800     0 FUNC    LOCAL  DEFAULT    7 register_tm_clones
+   133: 0000000000401840     0 FUNC    LOCAL  DEFAULT    7 __do_global_dtors_aux
+   134: 00000000004abac0     1 OBJECT  LOCAL  DEFAULT   22 completed.1
+   135: 00000000004a5f70     0 OBJECT  LOCAL  DEFAULT   17 __do_global_dtors_aux_fini_array_entry
+   136: 0000000000401880     0 FUNC    LOCAL  DEFAULT    7 frame_dummy
+   137: 00000000004abae0    48 OBJECT  LOCAL  DEFAULT   22 object.0
+   138: 00000000004a5f68     0 OBJECT  LOCAL  DEFAULT   16 __frame_dummy_init_array_entry
+   139: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS uic.c
+   140: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS libc-start.o
+   141: 00000000004018e0    67 FUNC    LOCAL  DEFAULT    7 call_fini
+   142: 0000000000401930   382 FUNC    LOCAL  DEFAULT    7 handle_zhaoxin
+   143: 0000000000401ab0   709 FUNC    LOCAL  DEFAULT    7 handle_amd
+   144: 0000000000401d80    21 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_prefer_map_32bit_exec
+   145: 0000000000401da0   148 FUNC    LOCAL  DEFAULT    7 __libc_start_call_main
+   146: 0000000000401e40   399 FUNC    LOCAL  DEFAULT    7 get_common_indices.constprop.0
+   147: 0000000000401fd0  1117 FUNC    LOCAL  DEFAULT    7 get_common_cache_info.constprop.0
+   148: 0000000000402430   714 FUNC    LOCAL  DEFAULT    7 intel_check_word.constprop.0
+   149: 000000000047f240   544 OBJECT  LOCAL  DEFAULT    9 intel_02_known
+   150: 0000000000484d50    17 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   151: 0000000000402700   213 FUNC    LOCAL  DEFAULT    7 handle_intel.constprop.0
+   152: 00000000004027e0  1477 FUNC    LOCAL  DEFAULT    7 update_active.constprop.0
+   153: 0000000000402db0  4011 FUNC    LOCAL  DEFAULT    7 init_cpu_features.constprop.0
+   154: 000000000047f160   193 OBJECT  LOCAL  DEFAULT    9 CSWTCH.86
+   155: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS libc-tls.o
+   156: 00000000004abfa0  1040 OBJECT  LOCAL  DEFAULT   22 static_slotinfo
+   157: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS cxa_atexit.o
+   158: 0000000000481600    13 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   159: 0000000000484d70    18 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   160: 00000000004ac3e0  1040 OBJECT  LOCAL  DEFAULT   22 initial
+   161: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS genops.o
+   162: 0000000000407e40   275 FUNC    LOCAL  DEFAULT    7 flush_cleanup
+   163: 00000000004ac810     8 OBJECT  LOCAL  DEFAULT   22 run_fp
+   164: 00000000004ac820    16 OBJECT  LOCAL  DEFAULT   22 list_all_lock
+   165: 0000000000407f60   522 FUNC    LOCAL  DEFAULT    7 save_for_backup
+   166: 0000000000408170   870 FUNC    LOCAL  DEFAULT    7 _IO_un_link.part.0
+   167: 00000000004ac80c     4 OBJECT  LOCAL  DEFAULT   22 stdio_needs_locking
+   168: 00000000004ac800     8 OBJECT  LOCAL  DEFAULT   22 freeres_list
+   169: 00000000004ac808     1 OBJECT  LOCAL  DEFAULT   22 dealloc_buffers
+   170: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS stdfiles.o
+   171: 00000000004ac830    16 OBJECT  LOCAL  DEFAULT   22 _IO_stdfile_2_lock
+   172: 00000000004aa220   232 OBJECT  LOCAL  DEFAULT   21 _IO_wide_data_2
+   173: 00000000004ac840    16 OBJECT  LOCAL  DEFAULT   22 _IO_stdfile_1_lock
+   174: 00000000004aa400   232 OBJECT  LOCAL  DEFAULT   21 _IO_wide_data_1
+   175: 00000000004ac850    16 OBJECT  LOCAL  DEFAULT   22 _IO_stdfile_0_lock
+   176: 00000000004aa5e0   232 OBJECT  LOCAL  DEFAULT   21 _IO_wide_data_0
+   177: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strops.o
+   178: 000000000040ac50   437 FUNC    LOCAL  DEFAULT    7 enlarge_userbuf
+   179: 0000000000484db0    16 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   180: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS malloc.o
+   181: 000000000040b8b0    16 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_arena_max
+   182: 00000000004aa720   136 OBJECT  LOCAL  DEFAULT   21 mp_
+   183: 000000000040b8c0    16 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_arena_test
+   184: 000000000040b8d0    63 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_tcache_max
+   185: 000000000040b910    25 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_tcache_count
+   186: 000000000040b930    16 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_tcache_unsorted_limit
+   187: 000000000040b940    21 FUNC    LOCAL  DEFAULT    7 malloc_printerr
+   188: 000000000040b960   281 FUNC    LOCAL  DEFAULT    7 int_mallinfo
+   189: 00000000004aa7c0  2200 OBJECT  LOCAL  DEFAULT   21 main_arena
+   190: 000000000040ba80    49 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_mxfast
+   191: 00000000004b08b8     1 OBJECT  LOCAL  DEFAULT   22 global_max_fast
+   192: 000000000040bac0    26 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_trim_threshold
+   193: 000000000040bae0    26 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_top_pad
+   194: 000000000040bb00    26 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_mmap_threshold
+   195: 000000000040bb20    25 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_mmaps_max
+   196: 000000000040bb40    15 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_perturb_byte
+   197: 00000000004b08b4     4 OBJECT  LOCAL  DEFAULT   22 perturb_byte
+   198: 000000000040bb50    28 FUNC    LOCAL  DEFAULT    7 alloc_perturb
+   199: 000000000040bb70    94 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_hugetlb
+   200: 000000000040bbd0    35 FUNC    LOCAL  DEFAULT    7 detach_arena.part.0
+   201: 00000000004826b0    13 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.4
+   202: 000000000040bc00   348 FUNC    LOCAL  DEFAULT    7 get_free_list
+   203: 0000000000000030     8 TLS     LOCAL  DEFAULT   15 thread_arena
+   204: 00000000004b08a8     8 OBJECT  LOCAL  DEFAULT   22 free_list
+   205: 00000000004b08b0     4 OBJECT  LOCAL  DEFAULT   22 free_list_lock
+   206: 00000000004826c0    14 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.3
+   207: 000000000040bd60   155 FUNC    LOCAL  DEFAULT    7 munmap_chunk
+   208: 0000000000482660    13 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.13
+   209: 000000000040be00  1570 FUNC    LOCAL  DEFAULT    7 __malloc_info.part.0
+   210: 000000000040c430   229 FUNC    LOCAL  DEFAULT    7 systrim.constprop.0
+   211: 00000000004b08b9     1 OBJECT  LOCAL  DEFAULT   22 __always_fail_morecore
+   212: 000000000040c520   210 FUNC    LOCAL  DEFAULT    7 unlink_chunk.isra.0
+   213: 000000000040c600   440 FUNC    LOCAL  DEFAULT    7 malloc_consolidate
+   214: 000000000040c7c0  1153 FUNC    LOCAL  DEFAULT    7 _int_free_maybe_consolidate
+   215: 00000000004b0898     8 OBJECT  LOCAL  DEFAULT   22 aligned_heap_area
+   216: 00000000004aa700     4 OBJECT  LOCAL  DEFAULT   21 may_shrink_heap.12
+   217: 0000000000482670    10 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.11
+   218: 0000000000484dc0    28 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.10
+   219: 000000000040cc50   553 FUNC    LOCAL  DEFAULT    7 ptmalloc_init.part.0
+   220: 00000000004b0890     8 OBJECT  LOCAL  DEFAULT   22 tcache_key
+   221: 00000000004b08a0     1 OBJECT  LOCAL  DEFAULT   22 __malloc_initialized
+   222: 000000000040ce80   468 FUNC    LOCAL  DEFAULT    7 _int_free_merge_chunk
+   223: 000000000040d060  1027 FUNC    LOCAL  DEFAULT    7 _int_free
+   224: 0000000000000020     8 TLS     LOCAL  DEFAULT   15 tcache
+   225: 000000000040d470   587 FUNC    LOCAL  DEFAULT    7 alloc_new_heap
+   226: 000000000040d6c0   247 FUNC    LOCAL  DEFAULT    7 sysmalloc_mmap_fallback.constprop.0
+   227: 000000000040d7c0  1229 FUNC    LOCAL  DEFAULT    7 arena_get2.part.0
+   228: 00000000004b0888     8 OBJECT  LOCAL  DEFAULT   22 narenas_limit.2
+   229: 00000000004aa708     8 OBJECT  LOCAL  DEFAULT   21 narenas
+   230: 00000000004b0880     8 OBJECT  LOCAL  DEFAULT   22 next_to_use.5
+   231: 0000000000484df0    22 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.6
+   232: 00000000004b08a4     4 OBJECT  LOCAL  DEFAULT   22 list_lock
+   233: 000000000040dc90   154 FUNC    LOCAL  DEFAULT    7 arena_get_retry
+   234: 000000000040dd30   355 FUNC    LOCAL  DEFAULT    7 sysmalloc_mmap.isra.0
+   235: 0000000000482680    15 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.9
+   236: 000000000040dea0  6319 FUNC    LOCAL  DEFAULT    7 _int_malloc
+   237: 00000000004826a0    12 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.7
+   238: 0000000000482690    10 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.8
+   239: 000000000040f750   320 FUNC    LOCAL  DEFAULT    7 tcache_init.part.0
+   240: 000000000040f890   636 FUNC    LOCAL  DEFAULT    7 _int_realloc
+   241: 0000000000482630    13 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.16
+   242: 000000000040fb10   664 FUNC    LOCAL  DEFAULT    7 _int_memalign
+   243: 0000000000482610    14 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.18
+   244: 0000000000000028     1 TLS     LOCAL  DEFAULT   15 tcache_shutting_down
+   245: 00000000004826d0    14 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   246: 00000000004102e0   944 FUNC    LOCAL  DEFAULT    7 _mid_memalign.isra.0
+   247: 0000000000482620    14 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.17
+   248: 0000000000484e10    30 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   249: 0000000000482650    15 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.14
+   250: 0000000000482640    13 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.15
+   251: 0000000000482600    14 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.19
+   252: 000000000047f82e     6 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.20
+   253: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS memcpy.o
+   254: 0000000000411e40   246 FUNC    LOCAL  DEFAULT    7 __new_memcpy_ifunc
+   255: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS memmove.o
+   256: 0000000000411f40   246 FUNC    LOCAL  DEFAULT    7 __libc_memmove_ifunc
+   257: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS mempcpy.o
+   258: 0000000000412040   246 FUNC    LOCAL  DEFAULT    7 __mempcpy_ifunc
+   259: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS memset.o
+   260: 0000000000412140   237 FUNC    LOCAL  DEFAULT    7 memset_ifunc
+   261: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strchrnul.o
+   262: 0000000000412230   112 FUNC    LOCAL  DEFAULT    7 __strchrnul_ifunc
+   263: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strlen.o
+   264: 00000000004122a0   112 FUNC    LOCAL  DEFAULT    7 strlen_ifunc
+   265: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strstr.o
+   266: 0000000000412310  1272 FUNC    LOCAL  DEFAULT    7 two_way_long_needle
+   267: 0000000000412ba0    66 FUNC    LOCAL  DEFAULT    7 __libc_strstr_ifunc
+   268: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wcsmbsload.o
+   269: 00000000004a83c0   104 OBJECT  LOCAL  DEFAULT   18 to_wc
+   270: 00000000004a8340   104 OBJECT  LOCAL  DEFAULT   18 to_mb
+   271: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS getpagesize.o
+   272: 0000000000482750    14 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   273: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS getsysstats.o
+   274: 0000000000419700   502 FUNC    LOCAL  DEFAULT    7 read_sysfs_file
+   275: 00000000004827d8    10 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   276: 0000000000419900   114 FUNC    LOCAL  DEFAULT    7 __get_nprocs_sched
+   277: 0000000000419980   554 FUNC    LOCAL  DEFAULT    7 get_nproc_stat
+   278: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS setvmaname.o
+   279: 00000000004ab05c     4 OBJECT  LOCAL  DEFAULT   21 prctl_supported.0
+   280: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS malloc-hugepages.o
+   281: 0000000000484e70    24 OBJECT  LOCAL  DEFAULT    9 mode_always.2
+   282: 0000000000484e50    24 OBJECT  LOCAL  DEFAULT    9 mode_madvise.1
+   283: 0000000000484e30    24 OBJECT  LOCAL  DEFAULT    9 mode_never.0
+   284: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-load.o
+   285: 000000000041a750   199 FUNC    LOCAL  DEFAULT    7 is_dst
+   286: 000000000041a820   626 FUNC    LOCAL  DEFAULT    7 is_trusted_path_normalize
+   287: 000000000041aaa0   851 FUNC    LOCAL  DEFAULT    7 open_verify.constprop.0
+   288: 000000000041ae00   984 FUNC    LOCAL  DEFAULT    7 open_verify.constprop.1
+   289: 000000000041b1e0   273 FUNC    LOCAL  DEFAULT    7 add_path.constprop.0.isra.0
+   290: 000000000041b300  1410 FUNC    LOCAL  DEFAULT    7 open_path.isra.0
+   291: 00000000004b0900     8 OBJECT  LOCAL  DEFAULT   22 max_dirnamelen
+   292: 000000000041b890   224 FUNC    LOCAL  DEFAULT    7 add_name_to_object.isra.0
+   293: 0000000000484ed0    19 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.5
+   294: 000000000041bbb0   381 FUNC    LOCAL  DEFAULT    7 expand_dynamic_string_token
+   295: 0000000000484ef0    28 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.8
+   296: 000000000041bd30   613 FUNC    LOCAL  DEFAULT    7 fillin_rpath.isra.0
+   297: 000000000041bfa0   462 FUNC    LOCAL  DEFAULT    7 decompose_rpath
+   298: 0000000000485e00    66 OBJECT  LOCAL  DEFAULT    9 system_dirs
+   299: 0000000000482e60    15 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.9
+   300: 000000000041c720  5836 FUNC    LOCAL  DEFAULT    7 _dl_map_object_from_fd.constprop.0
+   301: 0000000000484eb0    23 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   302: 0000000000484e90    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   303: 000000000047f004     4 OBJECT  LOCAL  DEFAULT    9 dummy_bucket.6
+   304: 0000000000482e50    15 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.7
+   305: 0000000000485de0    16 OBJECT  LOCAL  DEFAULT    9 expected.3
+   306: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-misc.o
+   307: 0000000000485e60   120 OBJECT  LOCAL  DEFAULT    9 primes.0
+   308: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-origin.o
+   309: 0000000000482e98    15 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   310: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-printf.o
+   311: 000000000041f600  1755 FUNC    LOCAL  DEFAULT    7 _dl_debug_vdprintf
+   312: 0000000000484f10    19 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   313: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-setup_hash.o
+   314: 0000000000482ef8    15 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   315: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-tls.o
+   316: 0000000000420180   162 FUNC    LOCAL  DEFAULT    7 _dl_resize_dtv
+   317: 0000000000484f70    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.2
+   318: 0000000000484f50    22 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   319: 0000000000484f30    20 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   320: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-tunables.o
+   321: 0000000000421050   265 FUNC    LOCAL  DEFAULT    7 do_tunable_update_val
+   322: 0000000000421160   650 FUNC    LOCAL  DEFAULT    7 parse_tunables
+   323: 00000000004a8480  5576 OBJECT  LOCAL  DEFAULT   18 tunable_list
+   324: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-cache.o
+   325: 00000000004b0920     8 OBJECT  LOCAL  DEFAULT   22 cache
+   326: 00000000004b0910     8 OBJECT  LOCAL  DEFAULT   22 cachesize
+   327: 00000000004b0918     8 OBJECT  LOCAL  DEFAULT   22 cache_new
+   328: 0000000000484f90    22 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   329: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-support.o
+   330: 0000000000483228    13 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.4
+   331: 00000000004ab200  1208 OBJECT  LOCAL  DEFAULT   21 _dl_main_map
+   332: 00000000004a5fa0    24 OBJECT  LOCAL  DEFAULT   18 rfv.0
+   333: 0000000000485ee0   446 OBJECT  LOCAL  DEFAULT    9 unsecure_envvars.3
+   334: 0000000000483218    11 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.2
+   335: 0000000000484e90    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   336: 00000000004ab150     8 OBJECT  LOCAL  DEFAULT   21 __compound_literal.3
+   337: 00000000004ab6c0    24 OBJECT  LOCAL  DEFAULT   21 __compound_literal.0
+   338: 00000000004ab6b8     8 OBJECT  LOCAL  DEFAULT   21 __compound_literal.1
+   339: 00000000004b0c70     8 OBJECT  LOCAL  DEFAULT   22 __compound_literal.2
+   340: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-sysdep.o
+   341: 0000000000484fb0    23 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   342: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS gconv_db.o
+   343: 0000000000423dc0   167 FUNC    LOCAL  DEFAULT    7 free_derivation
+   344: 0000000000423e70    61 FUNC    LOCAL  DEFAULT    7 derivation_compare
+   345: 0000000000423eb0    35 FUNC    LOCAL  DEFAULT    7 __gconv_release_step.part.0
+   346: 0000000000484fd0    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   347: 0000000000423ee0   992 FUNC    LOCAL  DEFAULT    7 free_modules_db
+   348: 00000000004242c0  3254 FUNC    LOCAL  DEFAULT    7 find_derivation
+   349: 00000000004b0ca0     8 OBJECT  LOCAL  DEFAULT   22 known_derivations
+   350: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS gconv_conf.o
+   351: 00000000004256f0   955 FUNC    LOCAL  DEFAULT    7 __gconv_get_path
+   352: 0000000000485760    32 OBJECT  LOCAL  DEFAULT    9 default_gconv_path
+   353: 0000000000484ff0    17 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   354: 0000000000485cf0    16 OBJECT  LOCAL  DEFAULT    9 empty_path_elem
+   355: 0000000000425ab0   271 FUNC    LOCAL  DEFAULT    7 insert_module
+   356: 0000000000425bc0   996 FUNC    LOCAL  DEFAULT    7 add_module
+   357: 0000000000480052     4 OBJECT  LOCAL  DEFAULT    9 gconv_module_ext
+   358: 0000000000425fb0   175 FUNC    LOCAL  DEFAULT    7 add_alias2.part.0
+   359: 0000000000426060   768 FUNC    LOCAL  DEFAULT    7 read_conf_file.isra.0
+   360: 00000000004b0cc0     4 OBJECT  LOCAL  DEFAULT   22 modcounter.0
+   361: 0000000000426360   881 FUNC    LOCAL  DEFAULT    7 __gconv_read_conf
+   362: 0000000000483260    14 OBJECT  LOCAL  DEFAULT    9 gconv_conf_filename
+   363: 00000000004ab6e0   672 OBJECT  LOCAL  DEFAULT   21 builtin_modules
+   364: 00000000004861c0   999 OBJECT  LOCAL  DEFAULT    9 builtin_aliases
+   365: 00000000004b0cc4     4 OBJECT  LOCAL  DEFAULT   22 once
+   366: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS gconv_builtin.o
+   367: 0000000000485010    26 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   368: 00000000004a9aa0   384 OBJECT  LOCAL  DEFAULT   18 map
+   369: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS gconv_simple.o
+   370: 0000000000485a20    32 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.20
+   371: 0000000000485a00    32 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.19
+   372: 00000000004859c0    34 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.18
+   373: 0000000000485980    34 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.17
+   374: 00000000004850d0    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.16
+   375: 0000000000485940    33 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.15
+   376: 0000000000485900    33 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.14
+   377: 00000000004850b0    27 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.13
+   378: 00000000004858e0    32 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.12
+   379: 0000000000485090    26 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.11
+   380: 00000000004800ed     5 OBJECT  LOCAL  DEFAULT    9 inmask.9
+   381: 00000000004858c0    32 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.10
+   382: 0000000000485070    26 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.8
+   383: 00000000004858a0    32 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.7
+   384: 0000000000485050    26 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.6
+   385: 0000000000485880    32 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.5
+   386: 0000000000485030    26 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.4
+   387: 0000000000485840    39 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.3
+   388: 0000000000485800    33 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.2
+   389: 00000000004857c0    39 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   390: 0000000000485780    33 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   391: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS gconv_cache.o
+   392: 000000000042e820   227 FUNC    LOCAL  DEFAULT    7 find_module_idx
+   393: 00000000004b0cd8     8 OBJECT  LOCAL  DEFAULT   22 gconv_cache
+   394: 00000000004b0cd0     8 OBJECT  LOCAL  DEFAULT   22 cache_size
+   395: 000000000042e910   328 FUNC    LOCAL  DEFAULT    7 find_module.constprop.0
+   396: 00000000004b0cc8     4 OBJECT  LOCAL  DEFAULT   22 cache_malloced
+   397: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS gconv_dl.o
+   398: 000000000042f270    15 FUNC    LOCAL  DEFAULT    7 known_compare
+   399: 000000000042f280    43 FUNC    LOCAL  DEFAULT    7 do_release_all
+   400: 000000000042f2b0   135 FUNC    LOCAL  DEFAULT    7 do_release_shlib
+   401: 00000000004850f0    17 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   402: 00000000004b0ce0     8 OBJECT  LOCAL  DEFAULT   22 loaded
+   403: 0000000000485110    19 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   404: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS setlocale.o
+   405: 000000000042f580   739 FUNC    LOCAL  DEFAULT    7 new_composite_name
+   406: 000000000042f870   193 FUNC    LOCAL  DEFAULT    7 free_category
+   407: 00000000004a9ca0   104 OBJECT  LOCAL  DEFAULT   18 _nl_current_used
+   408: 00000000004a9c20   104 OBJECT  LOCAL  DEFAULT   18 _nl_category_postload
+   409: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS finddomain.o
+   410: 00000000004b0d40    56 OBJECT  LOCAL  DEFAULT   22 lock.0
+   411: 00000000004b0d78     8 OBJECT  LOCAL  DEFAULT   22 _nl_loaded_domains
+   412: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS localealias.o
+   413: 0000000000432d80    22 FUNC    LOCAL  DEFAULT    7 alias_compare
+   414: 0000000000432da0  1286 FUNC    LOCAL  DEFAULT    7 read_alias_file
+   415: 0000000000483450    14 OBJECT  LOCAL  DEFAULT    9 aliasfile.0
+   416: 00000000004b0db0     8 OBJECT  LOCAL  DEFAULT   22 nmap
+   417: 00000000004b0db8     8 OBJECT  LOCAL  DEFAULT   22 map
+   418: 00000000004b0da8     8 OBJECT  LOCAL  DEFAULT   22 maxmap
+   419: 00000000004b0dc8     8 OBJECT  LOCAL  DEFAULT   22 string_space_act
+   420: 00000000004b0dd0     8 OBJECT  LOCAL  DEFAULT   22 string_space
+   421: 00000000004b0dc0     8 OBJECT  LOCAL  DEFAULT   22 string_space_max
+   422: 00000000004b0dd8     4 OBJECT  LOCAL  DEFAULT   22 lock
+   423: 00000000004b0da0     8 OBJECT  LOCAL  DEFAULT   22 locale_alias_path.1
+   424: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS plural.o
+   425: 00000000004342d0  2033 FUNC    LOCAL  DEFAULT    7 new_exp.constprop.1
+   426: 0000000000434ad0    41 FUNC    LOCAL  DEFAULT    7 new_exp.constprop.0
+   427: 0000000000434b00  2219 FUNC    LOCAL  DEFAULT    7 new_exp
+   428: 0000000000485130    27 OBJECT  LOCAL  DEFAULT    9 yypact
+   429: 00000000004871e0    57 OBJECT  LOCAL  DEFAULT    9 yycheck
+   430: 0000000000487220    57 OBJECT  LOCAL  DEFAULT    9 yytable
+   431: 0000000000487260    27 OBJECT  LOCAL  DEFAULT    9 yydefact
+   432: 00000000004871a8    14 OBJECT  LOCAL  DEFAULT    9 yyr2
+   433: 00000000004801a6     3 OBJECT  LOCAL  DEFAULT    9 yypgoto
+   434: 00000000004871b8    14 OBJECT  LOCAL  DEFAULT    9 yyr1
+   435: 0000000000487259     3 OBJECT  LOCAL  DEFAULT    9 yydefgoto
+   436: 0000000000487280   263 OBJECT  LOCAL  DEFAULT    9 yytranslate
+   437: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS plural-exp.o
+   438: 00000000004873c0    32 OBJECT  LOCAL  DEFAULT    9 plvar
+   439: 00000000004873a0    32 OBJECT  LOCAL  DEFAULT    9 plone
+   440: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS qsort.o
+   441: 0000000000436040   633 FUNC    LOCAL  DEFAULT    7 do_swap
+   442: 00000000004362c0   729 FUNC    LOCAL  DEFAULT    7 msort_with_tmp.part.0
+   443: 00000000004365a0   429 FUNC    LOCAL  DEFAULT    7 indirect_msort_with_tmp
+   444: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS setenv.o
+   445: 00000000004b0e18     4 OBJECT  LOCAL  DEFAULT   22 envlock
+   446: 00000000004b0e08     8 OBJECT  LOCAL  DEFAULT   22 last_environ
+   447: 00000000004b0e10     8 OBJECT  LOCAL  DEFAULT   22 known_values
+   448: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS vfprintf-internal.o
+   449: 0000000000438170   766 FUNC    LOCAL  DEFAULT    7 outstring_converted_wide_string
+   450: 0000000000438470   234 FUNC    LOCAL  DEFAULT    7 group_number
+   451: 0000000000438560  7683 FUNC    LOCAL  DEFAULT    7 printf_positional
+   452: 0000000000485150    18 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   453: 00000000004877c0    91 OBJECT  LOCAL  DEFAULT    9 jump_table
+   454: 00000000004a5fe0   256 OBJECT  LOCAL  DEFAULT   18 step4_jumps.0
+   455: 00000000004801d6     7 OBJECT  LOCAL  DEFAULT    9 null
+   456: 00000000004a65e0   256 OBJECT  LOCAL  DEFAULT   18 step0_jumps.7
+   457: 00000000004a61e0   256 OBJECT  LOCAL  DEFAULT   18 step4_jumps.3
+   458: 00000000004a63e0   256 OBJECT  LOCAL  DEFAULT   18 step2_jumps.5
+   459: 00000000004a64e0   256 OBJECT  LOCAL  DEFAULT   18 step1_jumps.6
+   460: 00000000004a60e0   256 OBJECT  LOCAL  DEFAULT   18 step3b_jumps.2
+   461: 00000000004a62e0   256 OBJECT  LOCAL  DEFAULT   18 step3a_jumps.4
+   462: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS errname.o
+   463: 0000000000487820   268 OBJECT  LOCAL  DEFAULT    9 _sys_errnameidx
+   464: 0000000000487940  1109 OBJECT  LOCAL  DEFAULT    9 _sys_errname
+   465: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wgenops.o
+   466: 000000000043e320   595 FUNC    LOCAL  DEFAULT    7 save_for_wbackup
+   467: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS iofwide.o
+   468: 00000000004834e0    10 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   469: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS pthread_mutex_conf.o
+   470: 00000000004419f0    14 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_mutex_spin_count
+   471: 0000000000441a00    15 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_stack_cache_size
+   472: 0000000000441a10    14 FUNC    LOCAL  DEFAULT    7 _dl_tunable_set_stack_hugetlb
+   473: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS pthread_mutex_lock.o
+   474: 0000000000441aa0  1759 FUNC    LOCAL  DEFAULT    7 __pthread_mutex_lock_full
+   475: 0000000000485190    26 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   476: 00000000004851b0    22 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   477: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS pthread_mutex_unlock.o
+   478: 0000000000442480  1113 FUNC    LOCAL  DEFAULT    7 __pthread_mutex_unlock_full
+   479: 00000000004851d0    31 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   480: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS pthread_rwlock_init.o
+   481: 00000000004856a0     8 OBJECT  LOCAL  DEFAULT    9 default_rwlockattr
+   482: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS tpp.o
+   483: 00000000004851f0    30 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   484: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS memchr.o
+   485: 0000000000443f00   125 FUNC    LOCAL  DEFAULT    7 memchr_ifunc
+   486: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS memcmp.o
+   487: 0000000000443f80   112 FUNC    LOCAL  DEFAULT    7 memcmp_ifunc
+   488: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS stpcpy.o
+   489: 0000000000443ff0   112 FUNC    LOCAL  DEFAULT    7 __stpcpy_ifunc
+   490: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strcasecmp_l.o
+   491: 0000000000444060   128 FUNC    LOCAL  DEFAULT    7 __strcasecmp_l_ifunc
+   492: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strchr.o
+   493: 00000000004440e0   112 FUNC    LOCAL  DEFAULT    7 strchr_ifunc
+   494: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strcmp.o
+   495: 0000000000444150   136 FUNC    LOCAL  DEFAULT    7 strcmp_ifunc
+   496: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strncmp.o
+   497: 0000000000444220   128 FUNC    LOCAL  DEFAULT    7 strncmp_ifunc
+   498: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strnlen.o
+   499: 00000000004442a0   112 FUNC    LOCAL  DEFAULT    7 __strnlen_ifunc
+   500: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strrchr.o
+   501: 0000000000444310   112 FUNC    LOCAL  DEFAULT    7 strrchr_ifunc
+   502: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wcrtomb.o
+   503: 00000000004b0e98     8 OBJECT  LOCAL  DEFAULT   22 state
+   504: 0000000000485210    19 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   505: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wcsrtombs.o
+   506: 00000000004b0ea0     8 OBJECT  LOCAL  DEFAULT   22 state
+   507: 0000000000483760    12 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   508: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS getcwd.o
+   509: 00000000004837c8     9 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   510: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS tsearch.o
+   511: 0000000000456d80   158 FUNC    LOCAL  DEFAULT    7 trecurse
+   512: 0000000000456e20   157 FUNC    LOCAL  DEFAULT    7 trecurse_r
+   513: 0000000000456ec0   159 FUNC    LOCAL  DEFAULT    7 trecurse.constprop.1
+   514: 0000000000456f60   461 FUNC    LOCAL  DEFAULT    7 tdestroy_recurse
+   515: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-catch.o
+   516: 0000000000458240   160 FUNC    LOCAL  DEFAULT    7 fatal_error
+   517: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-exception.o
+   518: 00000000004584f0    18 FUNC    LOCAL  DEFAULT    7 length_mismatch
+   519: 0000000000483878    14 OBJECT  LOCAL  DEFAULT    9 _dl_out_of_memory
+   520: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-lookup.o
+   521: 0000000000458c10   412 FUNC    LOCAL  DEFAULT    7 check_match
+   522: 0000000000483ba0    12 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   523: 0000000000458db0  2972 FUNC    LOCAL  DEFAULT    7 do_lookup_x
+   524: 0000000000485230    20 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.2
+   525: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-reloc.o
+   526: 0000000000485a40    59 OBJECT  LOCAL  DEFAULT    9 errstring.1
+   527: 00000000004884a0    76 OBJECT  LOCAL  DEFAULT    9 msg.0
+   528: 0000000000485250    26 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.2
+   529: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-libc.o
+   530: 000000000045d7d0    70 FUNC    LOCAL  DEFAULT    7 do_dlopen
+   531: 000000000045d820   136 FUNC    LOCAL  DEFAULT    7 do_dlsym_private
+   532: 000000000045d8b0    69 FUNC    LOCAL  DEFAULT    7 do_dlsym
+   533: 000000000045d900    70 FUNC    LOCAL  DEFAULT    7 do_dlvsym
+   534: 000000000045d950     9 FUNC    LOCAL  DEFAULT    7 do_dlclose
+   535: 000000000045d960   681 FUNC    LOCAL  DEFAULT    7 free_slotinfo
+   536: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS findlocale.o
+   537: 00000000004803f2     4 OBJECT  LOCAL  DEFAULT    9 slashdot.0
+   538: 0000000000488500    52 OBJECT  LOCAL  DEFAULT    9 codeset_idx.2
+   539: 0000000000485270    16 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   540: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS loadarchive.o
+   541: 00000000004b0f40     8 OBJECT  LOCAL  DEFAULT   22 archloaded
+   542: 00000000004b1008     8 OBJECT  LOCAL  DEFAULT   22 archmapped
+   543: 00000000004b0ff0    24 OBJECT  LOCAL  DEFAULT   22 headmap
+   544: 00000000004b0f60   144 OBJECT  LOCAL  DEFAULT   22 archive_stat
+   545: 00000000004852d0    31 OBJECT  LOCAL  DEFAULT    9 archfname
+   546: 00000000004852b0    29 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   547: 0000000000485290    23 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   548: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS loadlocale.o
+   549: 0000000000488b60   104 OBJECT  LOCAL  DEFAULT    9 _nl_category_num_items
+   550: 0000000000488580    64 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_IDENTIFICATION
+   551: 0000000000488b00    76 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_COLLATE
+   552: 00000000004888e0   184 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_MONETARY
+   553: 00000000004856a8     8 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_MEASUREMENT
+   554: 0000000000488620    12 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_PAPER
+   555: 0000000000488630    20 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_MESSAGES
+   556: 0000000000488630    20 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_TELEPHONE
+   557: 0000000000488600    28 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_NAME
+   558: 00000000004885c0    52 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_ADDRESS
+   559: 0000000000488660   636 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_TIME
+   560: 00000000004889a0   344 OBJECT  LOCAL  DEFAULT    9 _nl_value_type_LC_CTYPE
+   561: 00000000004852f0    23 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   562: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS C-collate.o
+   563: 0000000000489000   256 OBJECT  LOCAL  DEFAULT    9 collseqmb
+   564: 0000000000488be0  1052 OBJECT  LOCAL  DEFAULT    9 collseqwc
+   565: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS C-ctype.o
+   566: 00000000004a6b50    24 OBJECT  LOCAL  DEFAULT   18 lc_ctype_data
+   567: 00000000004954a0  6636 OBJECT  LOCAL  DEFAULT    9 translit_from_idx
+   568: 00000000004920c0 13272 OBJECT  LOCAL  DEFAULT    9 translit_from_tbl
+   569: 00000000004906c0  6636 OBJECT  LOCAL  DEFAULT    9 translit_to_idx
+   570: 000000000048aac0 23548 OBJECT  LOCAL  DEFAULT    9 translit_to_tbl
+   571: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS C-monetary.o
+   572: 00000000004801a8     2 OBJECT  LOCAL  DEFAULT    9 not_available
+   573: 00000000004856b0     8 OBJECT  LOCAL  DEFAULT    9 conversion_rate
+   574: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dcigettext.o
+   575: 0000000000460250   518 FUNC    LOCAL  DEFAULT    7 plural_eval
+   576: 0000000000460460   118 FUNC    LOCAL  DEFAULT    7 transcmp
+   577: 00000000004b1068     4 OBJECT  LOCAL  DEFAULT   22 output_charset_cached.1
+   578: 00000000004b1060     8 OBJECT  LOCAL  DEFAULT   22 output_charset_cache.0
+   579: 00000000004b1080     4 OBJECT  LOCAL  DEFAULT   22 lock.4
+   580: 00000000004b1078     8 OBJECT  LOCAL  DEFAULT   22 freemem.3
+   581: 00000000004b1070     8 OBJECT  LOCAL  DEFAULT   22 freemem_size.2
+   582: 00000000004b1088     8 OBJECT  LOCAL  DEFAULT   22 transmem_list
+   583: 00000000004b10a0    56 OBJECT  LOCAL  DEFAULT   22 tree_lock
+   584: 00000000004b1090     8 OBJECT  LOCAL  DEFAULT   22 root
+   585: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS libc_sigaction.o
+   586: 0000000000461be0     0 FUNC    LOCAL  DEFAULT    7 __restore_rt
+   587: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS grouping_iterator.o
+   588: 0000000000485330    25 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   589: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_buffer_pad_1.o
+   590: 0000000000485350    22 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   591: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_buffer_putc_1.o
+   592: 0000000000485370    23 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   593: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_buffer_puts_1.o
+   594: 0000000000485390    23 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   595: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_buffer_to_file.o
+   596: 00000000004853b0    30 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   597: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_buffer_write.o
+   598: 00000000004853d0    22 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   599: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS reg-modifier.o
+   600: 00000000004b10e0     4 OBJECT  LOCAL  DEFAULT   22 next_bit
+   601: 00000000004b10e4     4 OBJECT  LOCAL  DEFAULT   22 lock
+   602: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS reg-printf.o
+   603: 00000000004b10f8     4 OBJECT  LOCAL  DEFAULT   22 lock
+   604: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS reg-type.o
+   605: 00000000004b1108     4 OBJECT  LOCAL  DEFAULT   22 lock
+   606: 00000000004abaa8     4 OBJECT  LOCAL  DEFAULT   21 pa_next_type
+   607: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS translated_number_width.o
+   608: 0000000000485430    26 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   609: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wprintf_buffer_putc_1.o
+   610: 0000000000485450    24 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   611: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS pthread_kill.o
+   612: 00000000004856c8     8 OBJECT  LOCAL  DEFAULT    9 sigall_set
+   613: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS memmem.o
+   614: 0000000000467a00   941 FUNC    LOCAL  DEFAULT    7 two_way_long_needle
+   615: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strcpy.o
+   616: 00000000004680a0   112 FUNC    LOCAL  DEFAULT    7 strcpy_ifunc
+   617: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strcspn.o
+   618: 0000000000468110    30 FUNC    LOCAL  DEFAULT    7 strcspn_ifunc
+   619: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS strspn.o
+   620: 0000000000468190    30 FUNC    LOCAL  DEFAULT    7 strspn_ifunc
+   621: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wcslen.o
+   622: 0000000000469580   112 FUNC    LOCAL  DEFAULT    7 __wcslen_ifunc
+   623: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wcsnlen.o
+   624: 00000000004695f0   112 FUNC    LOCAL  DEFAULT    7 __wcsnlen_ifunc
+   625: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS sysconf.o
+   626: 000000000046ad40   320 FUNC    LOCAL  DEFAULT    7 __sysconf_check_spec
+   627: 00000000004844f8    14 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   628: 0000000000485470    24 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.2
+   629: 0000000000485490    17 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   630: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-close.o
+   631: 000000000046b590   270 FUNC    LOCAL  DEFAULT    7 remove_slotinfo
+   632: 00000000004854b0    16 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   633: 000000000046b6a0  3608 FUNC    LOCAL  DEFAULT    7 _dl_close_worker.part.0
+   634: 00000000004b110c     4 OBJECT  LOCAL  DEFAULT   22 dl_close_state.2
+   635: 00000000004854c0    17 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   636: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-find_object.o
+   637: 000000000046c600   105 FUNC    LOCAL  DEFAULT    7 _dl_find_object_from_map
+   638: 000000000046c670   881 FUNC    LOCAL  DEFAULT    7 _dlfo_process_initial
+   639: 00000000004b1120    16 OBJECT  LOCAL  DEFAULT   22 _dlfo_loaded_mappings
+   640: 00000000004a9ea0     8 OBJECT  LOCAL  DEFAULT   18 _dlfo_nodelete_mappings
+   641: 00000000004a9ea8     8 OBJECT  LOCAL  DEFAULT   18 _dlfo_nodelete_mappings_size
+   642: 00000000004a9ec0    32 OBJECT  LOCAL  DEFAULT   18 _dlfo_main
+   643: 00000000004b1110     8 OBJECT  LOCAL  DEFAULT   22 _dlfo_loaded_mappings_version
+   644: 00000000004a9eb0     8 OBJECT  LOCAL  DEFAULT   18 _dlfo_nodelete_mappings_end
+   645: 0000000000485500    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.2
+   646: 00000000004854e0    25 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   647: 0000000000485a80    32 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   648: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-open.o
+   649: 000000000046d700   363 FUNC    LOCAL  DEFAULT    7 add_to_global_update
+   650: 0000000000485520    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   651: 000000000046d870    23 FUNC    LOCAL  DEFAULT    7 call_dl_init
+   652: 000000000046d890   253 FUNC    LOCAL  DEFAULT    7 dl_open_worker
+   653: 000000000046def0  2734 FUNC    LOCAL  DEFAULT    7 dl_open_worker_begin
+   654: 000000000046d990    26 FUNC    LOCAL  DEFAULT    7 add_to_global_resize_failure.isra.0
+   655: 000000000046d9b0   360 FUNC    LOCAL  DEFAULT    7 add_to_global_resize
+   656: 0000000000485580    24 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.5
+   657: 0000000000484870     9 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.4
+   658: 0000000000485560    21 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.3
+   659: 0000000000484860    14 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.2
+   660: 0000000000485540    20 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   661: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-runtime.o
+   662: 00000000004848b8    10 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   663: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-sort-maps.o
+   664: 000000000046eb70   222 FUNC    LOCAL  DEFAULT    7 dfs_traversal.part.0
+   665: 00000000004855a0    18 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   666: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-version.o
+   667: 00000000004855c0    23 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.1
+   668: 0000000000484a50    13 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   669: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS rtld_static_init.o
+   670: 00000000004a9ee0   104 OBJECT  LOCAL  DEFAULT   18 _dlfcn_hook
+   671: 00000000004855e0    19 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   672: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS gconv.o
+   673: 0000000000484a88     8 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   674: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS gconv_charset.o
+   675: 0000000000470520   344 FUNC    LOCAL  DEFAULT    7 gconv_parse_code
+   676: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS printf_buffer_as_file.o
+   677: 0000000000485600    31 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   678: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dlinfo.o
+   679: 00000000004733a0   295 FUNC    LOCAL  DEFAULT    7 dlinfo_doit
+   680: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dlmopen.o
+   681: 0000000000473530   117 FUNC    LOCAL  DEFAULT    7 dlmopen_doit
+   682: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dlopen.o
+   683: 0000000000473670   135 FUNC    LOCAL  DEFAULT    7 dlopen_doit
+   684: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dlsym.o
+   685: 00000000004737c0    42 FUNC    LOCAL  DEFAULT    7 dlsym_doit
+   686: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dlvsym.o
+   687: 00000000004738f0    46 FUNC    LOCAL  DEFAULT    7 dlvsym_doit
+   688: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS wmemchr.o
+   689: 0000000000473ba0   125 FUNC    LOCAL  DEFAULT    7 __wmemchr_ifunc
+   690: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-call-libc-early-init.o
+   691: 0000000000485660    25 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   692: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-deps.o
+   693: 0000000000474c00    71 FUNC    LOCAL  DEFAULT    7 openaux
+   694: 0000000000485680    20 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   695: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-init.o
+   696: 0000000000475df0   268 FUNC    LOCAL  DEFAULT    7 call_init.part.0
+   697: 0000000000484d08    10 OBJECT  LOCAL  DEFAULT    9 __PRETTY_FUNCTION__.0
+   698: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS dl-sym.o
+   699: 0000000000476820    63 FUNC    LOCAL  DEFAULT    7 call_dl_lookup
+   700: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+   701: 00000000004a4694     0 OBJECT  LOCAL  DEFAULT   12 __FRAME_END__
+   702: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS 
+   703: 0000000000400000     0 NOTYPE  LOCAL  DEFAULT    1 __ehdr_start
+   704: 00000000004004f8     0 NOTYPE  LOCAL  DEFAULT    4 __rela_iplt_end
+   705: 00000000004a5f80     0 NOTYPE  LOCAL  DEFAULT   17 __fini_array_end
+   706: 00000000004002e8     0 NOTYPE  LOCAL  DEFAULT    4 __rela_iplt_start
+   707: 00000000004a5f70     0 NOTYPE  LOCAL  DEFAULT   17 __fini_array_start
+   708: 00000000004a5f70     0 NOTYPE  LOCAL  DEFAULT   16 __init_array_end
+   709: 00000000004a5f68     0 NOTYPE  LOCAL  DEFAULT   15 __preinit_array_end
+   710: 00000000004a9fe8     0 OBJECT  LOCAL  DEFAULT   20 _GLOBAL_OFFSET_TABLE_
+   711: 00000000004a5f68     0 NOTYPE  LOCAL  DEFAULT   16 __init_array_start
+   712: 00000000004a5f68     0 NOTYPE  LOCAL  DEFAULT   15 __preinit_array_start
+   713: 00000000004a6860   744 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_CTYPE
+   714: 000000000041a5d0    20 FUNC    GLOBAL DEFAULT    7 __stack_chk_fail_local
+   715: 000000000045e030   781 FUNC    GLOBAL DEFAULT    7 __dl_libc_freemem
+   716: 0000000000469250   397 FUNC    GLOBAL HIDDEN     7 __strcspn_generic
+   717: 00000000004774d0   121 FUNC    GLOBAL HIDDEN     7 __sfp_handle_exceptions
+   718: 0000000000443ff0   112 IFUNC   WEAK   DEFAULT    7 stpcpy
+   719: 0000000000489520    76 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_print
+   720: 0000000000457130   974 FUNC    WEAK   DEFAULT    7 tsearch
+   721: 00000000004abb20     8 OBJECT  GLOBAL HIDDEN    22 __x86_shared_non_temporal_threshold
+   722: 0000000000451770  6233 FUNC    GLOBAL HIDDEN     7 __strncmp_sse2
+   723: 00000000004190d0   111 FUNC    WEAK   DEFAULT    7 clock_gettime
+   724: 0000000000414b00    49 FUNC    GLOBAL HIDDEN     7 __memmove_erms
+   725: 0000000000413b10  1855 FUNC    GLOBAL HIDDEN     7 __memcpy_avx512_no_vzeroupper
+   726: 000000000046b520    77 FUNC    GLOBAL HIDDEN     7 __getdtablesize
+   727: 000000000040a740    60 FUNC    GLOBAL DEFAULT    7 _IO_remove_marker
+   728: 0000000000470980    27 FUNC    WEAK   DEFAULT    7 secure_getenv
+   729: 0000000000461bf0   440 FUNC    GLOBAL HIDDEN     7 __libc_sigaction
+   730: 00000000004680a0   112 IFUNC   GLOBAL HIDDEN     7 strcpy
+   731: 000000000043f110   874 FUNC    GLOBAL HIDDEN     7 _IO_wdefault_xsgetn
+   732: 000000000045d3e0   427 FUNC    GLOBAL HIDDEN     7 __thread_gscope_wait
+   733: 0000000000476860   796 FUNC    GLOBAL HIDDEN     7 _dl_vsym
+   734: 00000000004200a0   211 FUNC    GLOBAL HIDDEN     7 _dl_setup_hash
+   735: 0000000000408500   864 FUNC    GLOBAL HIDDEN     7 _IO_link_in
+   736: 000000000047d790  3148 FUNC    GLOBAL HIDDEN     7 _Unwind_Find_FDE
+   737: 0000000000436f40   269 FUNC    WEAK   DEFAULT    7 unsetenv
+   738: 000000000041fce0   159 FUNC    GLOBAL HIDDEN     7 _dl_debug_printf
+   739: 0000000000461b40    65 FUNC    WEAK   DEFAULT    7 gsignal
+   740: 0000000000409ab0   125 FUNC    GLOBAL HIDDEN     7 _IO_sputbackc
+   741: 0000000000489760    72 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_upper
+   742: 0000000000409a10   141 FUNC    GLOBAL HIDDEN     7 _IO_default_finish
+   743: 0000000000443f80   112 IFUNC   WEAK   DEFAULT    7 bcmp
+   744: 000000000046f1a0  2839 FUNC    GLOBAL HIDDEN     7 _dl_check_map_versions
+   745: 000000000047a550    28 FUNC    GLOBAL HIDDEN     7 _Unwind_GetIPInfo
+   746: 000000000044c360   572 FUNC    GLOBAL HIDDEN     7 __strchr_avx2
+   747: 000000000042a5b0  4207 FUNC    GLOBAL DEFAULT    7 __gconv_transform_utf8_internal
+   748: 00000000004b0c80     4 OBJECT  GLOBAL HIDDEN    22 __libc_argc
+   749: 0000000000461a80   182 FUNC    GLOBAL HIDDEN     7 __longjmp
+   750: 0000000000405f30   151 FUNC    WEAK   HIDDEN     7 _IO_file_finish
+   751: 0000000000489160    92 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_width
+   752: 0000000000464860   274 FUNC    GLOBAL HIDDEN     7 __printf_buffer_flush_fp
+   753: 0000000000456d40    50 FUNC    WEAK   DEFAULT    7 getrlimit
+   754: 0000000000432ca0   219 FUNC    GLOBAL HIDDEN     7 _nl_unload_domain
+   755: 00000000004734d0    94 FUNC    GLOBAL DEFAULT    7 __dlinfo
+   756: 0000000000472ff0   431 FUNC    WEAK   DEFAULT    7 dlerror
+   757: 0000000000413b00    13 FUNC    GLOBAL DEFAULT    7 __memcpy_chk_avx512_no_vzeroupper
+   758: 000000000047a540    12 FUNC    GLOBAL HIDDEN     7 _Unwind_GetIP
+   759: 000000000046b4c0    50 FUNC    WEAK   DEFAULT    7 fstatat
+   760: 00000000004443d0   133 FUNC    WEAK   DEFAULT    7 strtok_r
+   761: 0000000000471700   349 FUNC    GLOBAL HIDDEN     7 __mpn_impn_mul_n_basecase
+   762: 000000000043ec50   171 FUNC    GLOBAL HIDDEN     7 _IO_wdoallocbuf
+   763: 00000000004734d0    94 FUNC    WEAK   DEFAULT    7 dlinfo
+   764: 00000000004560a0    12 FUNC    GLOBAL HIDDEN     7 __getpid
+   765: 0000000000466080   345 FUNC    GLOBAL DEFAULT    7 __register_printf_modifier
+   766: 000000000040ab30   142 FUNC    GLOBAL HIDDEN     7 _IO_list_lock
+   767: 000000000046ae80  1598 FUNC    WEAK   DEFAULT    7 sysconf
+   768: 00000000004aa6d0     8 OBJECT  GLOBAL DEFAULT   21 stdout
+   769: 0000000000462570   170 FUNC    GLOBAL HIDDEN     7 __printf_buffer_write
+   770: 00000000004308b0  9185 FUNC    GLOBAL HIDDEN     7 _nl_load_domain
+   771: 0000000000443110  1045 FUNC    GLOBAL DEFAULT    7 ___pthread_rwlock_wrlock
+   772: 00000000004096e0   128 FUNC    GLOBAL HIDDEN     7 _IO_default_doallocate
+   773: 000000000046b520    77 FUNC    WEAK   DEFAULT    7 getdtablesize
+   774: 0000000000000050     8 TLS     GLOBAL DEFAULT   15 __libc_dlerror_result
+   775: 0000000000437d90    17 FUNC    WEAK   DEFAULT    7 __strtoull_l
+   776: 000000000046ac60   223 FUNC    WEAK   DEFAULT    7 fdopendir
+   777: 0000000000413400  1759 FUNC    GLOBAL HIDDEN     7 __memmove_avx_unaligned_erms_rtm
+   778: 000000000040b580    77 FUNC    GLOBAL HIDDEN     7 __libc_cleanup_push_defer
+   779: 0000000000407350   827 FUNC    GLOBAL DEFAULT    7 _IO_new_file_xsputn
+   780: 000000000045a720   219 FUNC    GLOBAL HIDDEN     7 _dl_reloc_bad_type
+   781: 0000000000466ee0    64 FUNC    GLOBAL HIDDEN     7 __printf_buffer_flush_snprintf
+   782: 000000000043e580    52 FUNC    GLOBAL HIDDEN     7 _IO_least_wmarker
+   783: 0000000000409a00     7 FUNC    GLOBAL DEFAULT    7 _IO_default_sync
+   784: 0000000000414b40    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_evex_unaligned
+   785: 000000000047d510   143 FUNC    GLOBAL HIDDEN     7 __register_frame
+   786: 0000000000414b50    56 FUNC    GLOBAL HIDDEN     7 __memmove_evex_unaligned
+   787: 0000000000406980   223 FUNC    WEAK   HIDDEN     7 _IO_file_sync
+   788: 00000000004478e0    16 FUNC    GLOBAL DEFAULT    7 __strcasecmp_avx2_rtm
+   789: 0000000000437810    23 FUNC    GLOBAL DEFAULT    7 __strtoull_internal
+   790: 00000000004668e0    51 FUNC    GLOBAL HIDDEN     7 __wprintf_buffer_to_file_init
+   791: 00000000004674c0    37 FUNC    GLOBAL HIDDEN     7 __nptl_stack_list_del
+   792: 0000000000471d70   333 FUNC    GLOBAL HIDDEN     7 __mpn_impn_sqr_n_basecase
+   793: 0000000000442cf0    21 FUNC    GLOBAL HIDDEN     7 __pthread_once
+   794: 0000000000437d90    17 FUNC    WEAK   DEFAULT    7 strtoull_l
+   795: 00000000004739a0   130 FUNC    GLOBAL DEFAULT    7 ___dlvsym
+   796: 000000000043f6e0   166 FUNC    GLOBAL DEFAULT    7 _IO_seekwmark
+   797: 00000000004727c0   186 FUNC    GLOBAL HIDDEN     7 __mpn_extract_long_double
+   798: 00000000004547e0   536 FUNC    GLOBAL HIDDEN     7 __strnlen_sse2
+   799: 0000000000423b60   144 FUNC    GLOBAL HIDDEN     7 _dl_tunable_set_x86_ibt
+   800: 00000000004a7d48   168 OBJECT  GLOBAL DEFAULT   18 _IO_wfile_jumps
+   801: 00000000004856c0     8 OBJECT  GLOBAL HIDDEN     9 _sys_errlist_internal_len
+   802: 00000000004895e0    76 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_xdigit
+   803: 0000000000442180   756 FUNC    GLOBAL HIDDEN     7 __pthread_mutex_lock
+   804: 00000000004072b0   156 FUNC    WEAK   DEFAULT    7 _IO_file_write
+   805: 000000000046db20   150 FUNC    GLOBAL DEFAULT    7 _dl_find_dso_for_object
+   806: 00000000004451c0  1023 FUNC    GLOBAL HIDDEN     7 __memcmp_avx2_movbe
+   807: 0000000000442d50   492 FUNC    WEAK   DEFAULT    7 pthread_rwlock_rdlock
+   808: 000000000044ca00   554 FUNC    GLOBAL HIDDEN     7 __strchr_sse2
+   809: 0000000000457f20    81 FUNC    GLOBAL HIDDEN     7 __init_misc
+   810: 0000000000428490  1279 FUNC    GLOBAL DEFAULT    7 __gconv_transform_ascii_internal
+   811: 0000000000472590   173 FUNC    GLOBAL HIDDEN     7 __mpn_sub_n
+   812: 0000000000418e90   218 FUNC    GLOBAL HIDDEN     7 __wcsmbs_clone_conv
+   813: 000000000040fdb0    43 FUNC    GLOBAL DEFAULT    7 __glibc_morecore
+   814: 0000000000468130    86 FUNC    WEAK   DEFAULT    7 strndup
+   815: 0000000000455f70    52 FUNC    GLOBAL HIDDEN     7 __getdents
+   816: 00000000004709a0    51 FUNC    GLOBAL HIDDEN     7 __mpn_cmp
+   817: 0000000000441620   221 FUNC    GLOBAL HIDDEN     7 __libio_codecvt_length
+   818: 0000000000443d60   192 FUNC    WEAK   DEFAULT    7 argz_add_sep
+   819: 0000000000456150    37 FUNC    GLOBAL HIDDEN     7 __sched_get_priority_max
+   820: 0000000000476e70   235 FUNC    GLOBAL HIDDEN     7 __mpn_addmul_1
+   821: 00000000004442a0   112 IFUNC   GLOBAL HIDDEN     7 __strnlen
+   822: 0000000000420f10   305 FUNC    GLOBAL HIDDEN     7 __tls_init_tp
+   823: 0000000000456b90    22 FUNC    WEAK   DEFAULT    7 stat64
+   824: 0000000000470340   476 FUNC    GLOBAL HIDDEN     7 __gconv
+   825: 0000000000411f40   246 IFUNC   GLOBAL HIDDEN     7 memmove
+   826: 000000000042b620  2263 FUNC    GLOBAL DEFAULT    7 __gconv_transform_ucs2_internal
+   827: 0000000000442d10    62 FUNC    WEAK   DEFAULT    7 pthread_rwlock_init
+   828: 00000000004b10d8     8 OBJECT  GLOBAL HIDDEN    22 __printf_modifier_table
+   829: 0000000000456c80   184 FUNC    GLOBAL HIDDEN     7 __tcgetattr
+   830: 000000000041f1a0   740 FUNC    GLOBAL HIDDEN     7 _dl_new_object
+   831: 000000000047aea0   336 FUNC    GLOBAL HIDDEN     7 _Unwind_Resume_or_Rethrow
+   832: 0000000000413b10  1855 FUNC    GLOBAL HIDDEN     7 __memmove_avx512_no_vzeroupper
+   833: 0000000000419460   160 FUNC    GLOBAL HIDDEN     7 __fcntl64_nocancel
+   834: 00000000004666c0   175 FUNC    WEAK   DEFAULT    7 snprintf
+   835: 00000000004110e0  1011 FUNC    GLOBAL DEFAULT    7 __calloc
+   836: 0000000000409220   866 FUNC    GLOBAL HIDDEN     7 _IO_default_xsgetn
+   837: 0000000000404f60   550 FUNC    GLOBAL HIDDEN     7 __libc_message_impl
+   838: 00000000004443d0   133 FUNC    GLOBAL HIDDEN     7 __strtok_r
+   839: 0000000000458530   170 FUNC    GLOBAL DEFAULT    7 _dl_exception_create
+   840: 0000000000419e70    37 FUNC    WEAK   DEFAULT    7 munmap
+   841: 00000000004560f0    37 FUNC    GLOBAL HIDDEN     7 __sched_getparam
+   842: 00000000004a9a58     8 OBJECT  GLOBAL HIDDEN    18 __libc_stack_end
+   843: 0000000000409880    57 FUNC    GLOBAL HIDDEN     7 _IO_enable_locks
+   844: 00000000004159c0  3901 FUNC    GLOBAL HIDDEN     7 __memcpy_ssse3
+   845: 00000000004560f0    37 FUNC    WEAK   DEFAULT    7 sched_getparam
+   846: 0000000000485280    16 OBJECT  GLOBAL HIDDEN     9 _nl_default_locale_path
+   847: 00000000004663f0   229 FUNC    GLOBAL HIDDEN     7 __register_printf_specifier
+   848: 00000000004ab110     4 OBJECT  GLOBAL HIDDEN    21 _dl_debug_fd
+   849: 0000000000417200   328 FUNC    GLOBAL HIDDEN     7 __memset_evex_unaligned_erms
+   850: 00000000004a6ec0   112 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_NAME
+   851: 0000000000418670  1171 FUNC    GLOBAL HIDDEN     7 __strstr_sse2_unaligned
+   852: 0000000000457130   974 FUNC    GLOBAL HIDDEN     7 __tsearch
+   853: 0000000000437200  1479 FUNC    GLOBAL HIDDEN     7 ____strtol_l_internal
+   854: 0000000000407080   289 FUNC    GLOBAL DEFAULT    7 _IO_file_seekoff_mmap
+   855: 0000000000433d40  1415 FUNC    GLOBAL HIDDEN     7 __gettext_free_exp
+   856: 00000000004aa0f8     8 OBJECT  GLOBAL HIDDEN    21 __x86_data_cache_size_half
+   857: 00000000004729a0   389 FUNC    GLOBAL DEFAULT    7 __printf_buffer_as_file_overflow
+   858: 0000000000421a10  1689 FUNC    GLOBAL HIDDEN     7 _dl_load_cache_lookup
+   859: 00000000004b10f0     8 OBJECT  WEAK   HIDDEN    22 __libc_reg_printf_freemem_ptr
+   860: 0000000000000002     0 NOTYPE  GLOBAL DEFAULT  ABS _nl_current_LC_NUMERIC_used
+   861: 0000000000419390   157 FUNC    WEAK   HIDDEN     7 __write
+   862: 000000000043dae0   246 FUNC    WEAK   DEFAULT    7 _IO_fopen64
+   863: 0000000000441450   204 FUNC    GLOBAL HIDDEN     7 __libio_codecvt_out
+   864: 0000000000435d60   259 FUNC    GLOBAL HIDDEN     7 __gettext_extract_plural
+   865: 0000000000411980   591 FUNC    WEAK   DEFAULT    7 malloc_stats
+   866: 00000000004091c0    96 FUNC    GLOBAL HIDDEN     7 _IO_sgetn
+   867: 0000000000419d80   184 FUNC    WEAK   HIDDEN     7 __mmap
+   868: 00000000004b0990    16 OBJECT  GLOBAL HIDDEN    22 _dl_stack_user
+   869: 0000000000419e40    37 FUNC    GLOBAL HIDDEN     7 __mprotect
+   870: 00000000004b1058     8 OBJECT  GLOBAL DEFAULT   22 _nl_domain_bindings
+   871: 0000000000458390   264 FUNC    GLOBAL DEFAULT    7 _dl_catch_exception
+   872: 00000000004ab058     1 OBJECT  GLOBAL HIDDEN    21 __libc_single_threaded
+   873: 00000000004b0ca8     8 OBJECT  GLOBAL HIDDEN    22 __gconv_path_envvar
+   874: 00000000004107a0   592 FUNC    GLOBAL HIDDEN     7 __malloc_arena_thread_freeres
+   875: 00000000004371c0    25 FUNC    WEAK   DEFAULT    7 strtoimax
+   876: 0000000000414bc0  1979 FUNC    GLOBAL HIDDEN     7 __memmove_evex_unaligned_erms
+   877: 000000000047a590    12 FUNC    GLOBAL HIDDEN     7 _Unwind_GetRegionStart
+   878: 0000000000436c60   612 FUNC    GLOBAL HIDDEN     7 __add_to_environ
+   879: 00000000004ab140    16 OBJECT  GLOBAL HIDDEN    21 _dl_initial_searchlist
+   880: 0000000000435fb0   140 FUNC    GLOBAL HIDDEN     7 getenv
+   881: 0000000000407240    12 FUNC    GLOBAL HIDDEN     7 _IO_file_seek
+   882: 0000000000469580   112 IFUNC   WEAK   DEFAULT    7 wcslen
+   883: 0000000000404ad0   226 FUNC    GLOBAL HIDDEN     7 _itoa_word
+   884: 0000000000414ad0    17 FUNC    GLOBAL HIDDEN     7 __mempcpy_erms
+   885: 00000000004abb18     8 OBJECT  GLOBAL HIDDEN    22 __x86_rep_movsb_stop_threshold
+   886: 0000000000000018     4 TLS     GLOBAL DEFAULT   15 errno
+   887: 0000000000442d10    62 FUNC    GLOBAL HIDDEN     7 __pthread_rwlock_init
+   888: 0000000000417380    32 FUNC    GLOBAL DEFAULT    7 __wmemset_sse2_unaligned
+   889: 0000000000457d50   453 FUNC    GLOBAL HIDDEN     7 __tdestroy
+   890: 00000000004561e0  2094 FUNC    GLOBAL HIDDEN     7 __getcwd
+   891: 0000000000468630   701 FUNC    GLOBAL HIDDEN     7 __strcpy_evex
+   892: 0000000000444700   696 FUNC    GLOBAL HIDDEN     7 __memchr_avx2_rtm
+   893: 000000000047b020   240 FUNC    GLOBAL HIDDEN     7 _Unwind_Backtrace
+   894: 0000000000418300   866 FUNC    GLOBAL HIDDEN     7 __strstr_avx512
+   895: 000000000044ab10  6198 FUNC    GLOBAL HIDDEN     7 __strcasecmp_l_sse42
+   896: 000000000040a650   239 FUNC    GLOBAL DEFAULT    7 _IO_init_marker
+   897: 0000000000467db0   744 FUNC    WEAK   HIDDEN     7 memmem
+   898: 00000000004371a0    23 FUNC    GLOBAL HIDDEN     7 __strtol_internal
+   899: 0000000000444e90   803 FUNC    GLOBAL HIDDEN     7 __memchr_sse2
+   900: 00000000004377f0    20 FUNC    WEAK   DEFAULT    7 __isoc23_strtoll_l
+   901: 00000000004865c0    13 OBJECT  GLOBAL HIDDEN     9 _nl_category_name_idxs
+   902: 0000000000455c10    13 FUNC    WEAK   DEFAULT    7 wmempcpy
+   903: 0000000000443a20   294 FUNC    GLOBAL HIDDEN     7 __pthread_current_priority
+   904: 000000000043e960   111 FUNC    GLOBAL HIDDEN     7 __woverflow
+   905: 00000000004aa320   224 OBJECT  GLOBAL DEFAULT   21 _IO_2_1_stdout_
+   906: 00000000004664e0   229 FUNC    GLOBAL DEFAULT    7 __register_printf_function
+   907: 0000000000413390    49 FUNC    GLOBAL HIDDEN     7 __memcpy_avx_unaligned_rtm
+   908: 0000000000472360   284 FUNC    GLOBAL HIDDEN     7 __mpn_mul_n
+   909: 0000000000405210    51 FUNC    GLOBAL DEFAULT    7 _IO_new_file_init
+   910: 00000000004560a0    12 FUNC    WEAK   DEFAULT    7 getpid
+   911: 00000000004196c0    52 FUNC    WEAK   DEFAULT    7 getpagesize
+   912: 0000000000443110  1045 FUNC    GLOBAL HIDDEN     7 __pthread_rwlock_wrlock
+   913: 00000000004159c0  3901 FUNC    GLOBAL HIDDEN     7 __memmove_ssse3
+   914: 000000000042ed20  1250 FUNC    GLOBAL HIDDEN     7 __gconv_lookup_cache
+   915: 0000000000456a80   264 FUNC    GLOBAL HIDDEN     7 __openat64
+   916: 000000000041eec0    78 FUNC    GLOBAL HIDDEN     7 _dl_higher_prime_number
+   917: 0000000000489400    76 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_cntrl
+   918: 0000000000436c50    12 FUNC    GLOBAL HIDDEN     7 qsort
+   919: 0000000000411d60   135 FUNC    GLOBAL DEFAULT    7 __posix_memalign
+   920: 0000000000409f20   820 FUNC    GLOBAL HIDDEN     7 _IO_flush_all_linebuffered
+   921: 0000000000458a40   383 FUNC    GLOBAL HIDDEN     7 _dl_make_stacks_executable
+   922: 000000000040b6b0    89 FUNC    GLOBAL HIDDEN     7 __lll_lock_wait
+   923: 000000000043d720   622 FUNC    WEAK   DEFAULT    7 _IO_fclose
+   924: 00000000004371a0    23 FUNC    GLOBAL DEFAULT    7 __strtoll_internal
+   925: 00000000004332b0   397 FUNC    GLOBAL DEFAULT    7 _nl_expand_alias
+   926: 00000000004b0c90     8 OBJECT  GLOBAL HIDDEN    22 __gconv_modules_db
+   927: 00000000004b0960     4 OBJECT  GLOBAL HIDDEN    22 _dl_stack_cache_lock
+   928: 00000000004402f0    75 FUNC    GLOBAL HIDDEN     7 _IO_wfile_underflow_maybe_mmap
+   929: 000000000043f920   463 FUNC    GLOBAL HIDDEN     7 _IO_wdo_write
+   930: 0000000000473610    96 FUNC    WEAK   DEFAULT    7 dlmopen
+   931: 000000000043df90   900 FUNC    GLOBAL HIDDEN     7 __getdelim
+   932: 00000000004192f0   149 FUNC    WEAK   HIDDEN     7 __read
+   933: 0000000000467740   322 FUNC    GLOBAL HIDDEN     7 __pthread_kill_internal
+   934: 00000000004ab060    40 OBJECT  GLOBAL HIDDEN    21 _dl_load_tls_lock
+   935: 0000000000467190    41 FUNC    GLOBAL HIDDEN     7 __pthread_cleanup_pop
+   936: 0000000000467190    41 FUNC    WEAK   DEFAULT    7 _pthread_cleanup_pop
+   937: 000000000041ef10   473 FUNC    GLOBAL HIDDEN     7 _dl_strtoul
+   938: 0000000000408f50    10 FUNC    GLOBAL DEFAULT    7 _IO_default_underflow
+   939: 000000000041a510   188 FUNC    GLOBAL HIDDEN     7 __fprintf_chk
+   940: 0000000000461db0    84 FUNC    WEAK   DEFAULT    7 _IO_funlockfile
+   941: 0000000000456d40    50 FUNC    WEAK   HIDDEN     7 getrlimit64
+   942: 0000000000454f40   764 FUNC    GLOBAL HIDDEN     7 __strrchr_evex
+   943: 0000000000475f00   430 FUNC    GLOBAL HIDDEN     7 _dl_init
+   944: 000000000042ea70   516 FUNC    GLOBAL HIDDEN     7 __gconv_load_cache
+   945: 0000000000411910   110 FUNC    GLOBAL DEFAULT    7 __mallinfo
+   946: 0000000000427cd0  1984 FUNC    GLOBAL DEFAULT    7 __gconv_transform_ucs4le_internal
+   947: 00000000004b0c60     8 OBJECT  GLOBAL HIDDEN    22 _dl_platformlen
+   948: 00000000004abb60     8 OBJECT  GLOBAL DEFAULT   22 _dl_tls_static_used
+   949: 000000000043ed90   130 FUNC    GLOBAL HIDDEN     7 _IO_switch_to_wget_mode
+   950: 00000000004aa0d0     8 OBJECT  GLOBAL HIDDEN    21 __x86_rep_stosb_threshold
+   951: 000000000047a4e0    12 FUNC    GLOBAL HIDDEN     7 _Unwind_GetCFA
+   952: 00000000004aa100     8 OBJECT  GLOBAL HIDDEN    21 __exit_funcs
+   953: 00000000004353b0  2465 FUNC    GLOBAL HIDDEN     7 __gettextparse
+   954: 0000000000411e40   246 IFUNC   WEAK   DEFAULT    7 memcpy
+   955: 0000000000408fc0   512 FUNC    GLOBAL HIDDEN     7 _IO_default_xsputn
+   956: 0000000000471040   275 FUNC    GLOBAL HIDDEN     7 __mpn_lshift
+   957: 0000000000414b00    49 FUNC    GLOBAL HIDDEN     7 __memcpy_erms
+   958: 0000000000417130    13 FUNC    GLOBAL DEFAULT    7 __memset_chk_erms
+   959: 00000000004abac0     0 OBJECT  GLOBAL HIDDEN    21 __TMC_END__
+   960: 000000000045fe10   916 FUNC    GLOBAL HIDDEN     7 _nl_load_locale
+   961: 000000000044cf50  1365 FUNC    GLOBAL HIDDEN     7 __strcmp_avx2
+   962: 0000000000464dc0   173 FUNC    GLOBAL DEFAULT    7 ___printf_fp
+   963: 000000000043dd90   510 FUNC    GLOBAL HIDDEN     7 _IO_fwrite
+   964: 0000000000409590   212 FUNC    GLOBAL DEFAULT    7 _IO_default_setbuf
+   965: 0000000000409b30   103 FUNC    GLOBAL DEFAULT    7 _IO_sungetc
+   966: 000000000045a500   230 FUNC    GLOBAL HIDDEN     7 _dl_try_allocate_static_tls
+   967: 00000000004669d0    34 FUNC    GLOBAL HIDDEN     7 __get_errlist
+   968: 00000000004737f0   124 FUNC    GLOBAL DEFAULT    7 __dlsym
+   969: 00000000004672b0   140 FUNC    GLOBAL HIDDEN     7 __futex_abstimed_wait64
+   970: 000000000042ea60    12 FUNC    GLOBAL DEFAULT    7 __gconv_get_cache
+   971: 000000000046fd60   123 FUNC    GLOBAL HIDDEN     7 _dl_addr_inside_object
+   972: 00000000004412d0   380 FUNC    GLOBAL DEFAULT    7 _IO_fwide
+   973: 000000000042f340   484 FUNC    GLOBAL HIDDEN     7 __gconv_find_shlib
+   974: 0000000000441a20   118 FUNC    GLOBAL HIDDEN     7 __pthread_tunables_init
+   975: 00000000004153c0    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_sse2_unaligned_erms
+   976: 00000000004377d0    17 FUNC    WEAK   DEFAULT    7 strtoll_l
+   977: 00000000004601b0   126 FUNC    GLOBAL HIDDEN     7 _nl_unload_locale
+   978: 0000000000405640   362 FUNC    GLOBAL DEFAULT    7 _IO_new_file_close_it
+   979: 00000000004b0c5c     4 OBJECT  GLOBAL HIDDEN    22 _dl_debug_mask
+   980: 0000000000440340   691 FUNC    GLOBAL HIDDEN     7 _IO_wfile_overflow
+   981: 0000000000410fa0    59 FUNC    GLOBAL HIDDEN     7 __libc_memalign
+   982: 0000000000443c10   181 FUNC    GLOBAL HIDDEN     7 __libc_scratch_buffer_set_array_size
+   983: 00000000004554e0    67 FUNC    GLOBAL DEFAULT    7 __strcasecmp_l_nonascii
+   984: 0000000000404d30   550 FUNC    WEAK   DEFAULT    7 puts
+   985: 000000000045dcb0   177 FUNC    GLOBAL DEFAULT    7 __libc_dlsym_private
+   986: 0000000000408a00   110 FUNC    GLOBAL HIDDEN     7 __overflow
+   987: 0000000000469660   485 FUNC    GLOBAL HIDDEN     7 __wcslen_avx2
+   988: 0000000000413400  1759 FUNC    GLOBAL HIDDEN     7 __memcpy_avx_unaligned_erms_rtm
+   989: 0000000000445f90   593 FUNC    GLOBAL HIDDEN     7 __stpcpy_avx2
+   990: 0000000000471160  1145 FUNC    GLOBAL HIDDEN     7 __mpn_mul
+   991: 0000000000440190   349 FUNC    GLOBAL HIDDEN     7 _IO_wfile_underflow_mmap
+   992: 0000000000466f80   196 FUNC    GLOBAL HIDDEN     7 __vsnprintf_internal
+   993: 0000000000487420   280 OBJECT  GLOBAL HIDDEN     9 __strtol_ul_max_tab
+   994: 00000000004133d0    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_avx_unaligned_erms_rtm
+   995: 0000000000422690  2742 FUNC    GLOBAL HIDDEN     7 _dl_non_dynamic_init
+   996: 0000000000404610   227 FUNC    GLOBAL HIDDEN     7 __internal_atexit
+   997: 000000000046abe0   116 FUNC    WEAK   DEFAULT    7 rewinddir
+   998: 00000000004223c0   119 FUNC    GLOBAL HIDDEN     7 _dl_cet_setup_features
+   999: 000000000045d6e0   189 FUNC    GLOBAL HIDDEN     7 _dl_runtime_resolve_xsavec
+  1000: 0000000000410fa0    59 FUNC    GLOBAL DEFAULT    7 __memalign
+  1001: 0000000000417500   484 FUNC    GLOBAL HIDDEN     7 __strchrnul_avx2
+  1002: 0000000000472640   235 FUNC    GLOBAL HIDDEN     7 __mpn_submul_1
+  1003: 00000000004072a0    12 FUNC    GLOBAL HIDDEN     7 _IO_file_close
+  1004: 0000000000443530   223 FUNC    GLOBAL HIDDEN     7 __pthread_sigmask
+  1005: 00000000004114e0   702 FUNC    GLOBAL DEFAULT    7 __malloc_trim
+  1006: 00000000004b1100     8 OBJECT  WEAK   HIDDEN    22 __libc_reg_type_freemem_ptr
+  1007: 0000000000472f90    13 FUNC    GLOBAL DEFAULT    7 __dladdr
+  1008: 00000000004abaa0     8 OBJECT  GLOBAL HIDDEN    21 _nl_current_default_domain
+  1009: 00000000004b0d80     4 OBJECT  GLOBAL DEFAULT   22 _nl_msg_cat_cntr
+  1010: 000000000040ffc0   796 FUNC    GLOBAL DEFAULT    7 malloc
+  1011: 00000000004771e0   745 FUNC    GLOBAL HIDDEN     7 __letf2
+  1012: 0000000000454ca0   664 FUNC    GLOBAL HIDDEN     7 __strrchr_avx2_rtm
+  1013: 00000000004191d0   280 FUNC    GLOBAL HIDDEN     7 __open
+  1014: 000000000040a880   111 FUNC    GLOBAL HIDDEN     7 _IO_unsave_markers
+  1015: 0000000000456b90    22 FUNC    GLOBAL DEFAULT    7 __stat
+  1016: 000000000048a7c0   768 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class
+  1017: 00000000004371e0    28 FUNC    GLOBAL HIDDEN     7 __isoc23_strtol
+  1018: 0000000000456a10    66 FUNC    WEAK   DEFAULT    7 isatty
+  1019: 00000000004ab120     8 OBJECT  GLOBAL HIDDEN    21 _dl_load_adds
+  1020: 00000000004a5fc0    32 OBJECT  GLOBAL HIDDEN    18 __gettext_germanic_plural
+  1021: 000000000046cd20   165 FUNC    GLOBAL DEFAULT    7 _dlfo_sort_mappings
+  1022: 0000000000418b10   121 FUNC    GLOBAL HIDDEN     7 __wcsmbs_getfct
+  1023: 00000000004aa500   224 OBJECT  GLOBAL DEFAULT   21 _IO_2_1_stdin_
+  1024: 0000000000426960  1478 FUNC    GLOBAL DEFAULT    7 __gconv_transform_internal_ucs4
+  1025: 0000000000474a50    86 FUNC    GLOBAL HIDDEN     7 __get_child_max
+  1026: 00000000004689e0  1571 FUNC    GLOBAL HIDDEN     7 __strcpy_sse2_unaligned
+  1027: 000000000045a6b0   109 FUNC    GLOBAL HIDDEN     7 _dl_protect_relro
+  1028: 000000000041fff0   163 FUNC    GLOBAL HIDDEN     7 _dl_fatal_printf
+  1029: 0000000000456a80   264 FUNC    WEAK   DEFAULT    7 openat64
+  1030: 00000000004561b0    37 FUNC    WEAK   DEFAULT    7 sched_setscheduler
+  1031: 0000000000452fd0  4057 FUNC    GLOBAL HIDDEN     7 __strncmp_sse42
+  1032: 0000000000476f60   181 FUNC    GLOBAL HIDDEN     7 __asprintf
+  1033: 0000000000443cd0   136 FUNC    GLOBAL HIDDEN     7 __strerror_r
+  1034: 00000000004b0980    16 OBJECT  GLOBAL HIDDEN    22 _dl_stack_cache
+  1035: 00000000004671c0   180 FUNC    GLOBAL HIDDEN     7 __lll_lock_elision
+  1036: 0000000000418b90   764 FUNC    GLOBAL HIDDEN     7 __wcsmbs_load_conv
+  1037: 000000000041a060    37 FUNC    WEAK   DEFAULT    7 sysinfo
+  1038: 0000000000467050   188 FUNC    WEAK   DEFAULT    7 vsnprintf
+  1039: 00000000004371c0    25 FUNC    WEAK   DEFAULT    7 strtoll
+  1040: 0000000000473c20   698 FUNC    GLOBAL HIDDEN     7 __wmemchr_avx2
+  1041: 0000000000471ec0  1176 FUNC    GLOBAL HIDDEN     7 __mpn_impn_sqr_n
+  1042: 0000000000462090    96 FUNC    GLOBAL HIDDEN     7 __printf_buffer_putc_1
+  1043: 00000000004545c0   535 FUNC    GLOBAL HIDDEN     7 __strnlen_evex
+  1044: 0000000000466080   345 FUNC    WEAK   DEFAULT    7 register_printf_modifier
+  1045: 00000000004a66e0   160 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_ADDRESS
+  1046: 0000000000420b60   132 FUNC    GLOBAL DEFAULT    7 _dl_deallocate_tls
+  1047: 0000000000437830    25 FUNC    WEAK   DEFAULT    7 strtoumax
+  1048: 00000000004894c0    76 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_graph
+  1049: 0000000000471860  1296 FUNC    GLOBAL HIDDEN     7 __mpn_impn_mul_n
+  1050: 0000000000470960    27 FUNC    GLOBAL HIDDEN     7 __current_locale_name
+  1051: 0000000000446ee0  2546 FUNC    GLOBAL HIDDEN     7 __strcasecmp_l_avx2
+  1052: 0000000000442d50   492 FUNC    GLOBAL HIDDEN     7 __pthread_rwlock_rdlock
+  1053: 0000000000473760    92 FUNC    GLOBAL DEFAULT    7 ___dlopen
+  1054: 00000000004897c0  1536 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_tolower
+  1055: 0000000000437830    25 FUNC    WEAK   HIDDEN     7 strtoul
+  1056: 00000000004aa0c8     0 OBJECT  GLOBAL HIDDEN    21 __dso_handle
+  1057: 0000000000444380    79 FUNC    GLOBAL HIDDEN     7 __strsep
+  1058: 0000000000415390    44 FUNC    GLOBAL HIDDEN     7 __memmove_sse2_unaligned
+  1059: 0000000000456120    37 FUNC    WEAK   DEFAULT    7 sched_getscheduler
+  1060: 000000000046b4c0    50 FUNC    GLOBAL DEFAULT    7 __fstatat
+  1061: 0000000000404500   266 FUNC    GLOBAL HIDDEN     7 __new_exitfn
+  1062: 000000000041feb0   155 FUNC    GLOBAL HIDDEN     7 _dl_printf
+  1063: 0000000000467110    72 FUNC    GLOBAL HIDDEN     7 __libc_alloca_cutoff
+  1064: 0000000000437850    28 FUNC    GLOBAL HIDDEN     7 __isoc23_strtoul
+  1065: 000000000040b750   339 FUNC    GLOBAL HIDDEN     7 __nptl_deallocate_tsd
+  1066: 000000000041a150   220 FUNC    GLOBAL HIDDEN     7 __malloc_thp_mode
+  1067: 000000000043e5c0    59 FUNC    GLOBAL HIDDEN     7 _IO_switch_to_main_wget_area
+  1068: 000000000042f550    40 FUNC    GLOBAL DEFAULT    7 __gconv_dl_freemem
+  1069: 0000000000460230    19 FUNC    GLOBAL HIDDEN     7 __dcgettext
+  1070: 0000000000000002     0 NOTYPE  GLOBAL DEFAULT  ABS _nl_current_LC_CTYPE_used
+  1071: 0000000000442f40   459 FUNC    WEAK   DEFAULT    7 pthread_rwlock_unlock
+  1072: 0000000000442d50   492 FUNC    GLOBAL DEFAULT    7 ___pthread_rwlock_rdlock
+  1073: 000000000040af60   171 FUNC    GLOBAL DEFAULT    7 _IO_str_init_readonly
+  1074: 0000000000406ad0  1448 FUNC    WEAK   HIDDEN     7 _IO_file_seekoff
+  1075: 0000000000404490    89 FUNC    GLOBAL HIDDEN     7 __libc_assert_fail
+  1076: 000000000040a260    69 FUNC    GLOBAL DEFAULT    7 __libio_freemem
+  1077: 000000000046ab90    78 FUNC    GLOBAL HIDDEN     7 _nl_cleanup_time
+  1078: 0000000000466bb0   199 FUNC    GLOBAL HIDDEN     7 __printf_buffer_flush_asprintf
+  1079: 00000000004582e0    72 FUNC    GLOBAL DEFAULT    7 _dl_signal_exception
+  1080: 00000000004203f0   243 FUNC    GLOBAL HIDDEN     7 _dl_count_modids
+  1081: 00000000004ac3c8     4 OBJECT  GLOBAL DEFAULT   22 __exit_funcs_lock
+  1082: 0000000000413380    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_avx_unaligned_rtm
+  1083: 000000000047a5f0   215 FUNC    GLOBAL HIDDEN     7 __frame_state_for
+  1084: 0000000000455fb0   227 FUNC    WEAK   DEFAULT    7 readdir
+  1085: 00000000004218b0   119 FUNC    GLOBAL HIDDEN     7 __tunable_get_val
+  1086: 00000000004abab8     8 OBJECT  GLOBAL HIDDEN    21 __nptl_stack_cache_maxsize
+  1087: 000000000043f5e0    51 FUNC    GLOBAL DEFAULT    7 _IO_adjust_wcolumn
+  1088: 0000000000421550   489 FUNC    GLOBAL HIDDEN     7 __tunables_init
+  1089: 0000000000437810    23 FUNC    GLOBAL HIDDEN     7 __strtoul_internal
+  1090: 0000000000423160     5 FUNC    GLOBAL HIDDEN     7 _dl_audit_pltexit
+  1091: 0000000000411080    93 FUNC    WEAK   DEFAULT    7 pvalloc
+  1092: 000000000040b290   656 FUNC    GLOBAL HIDDEN     7 _IO_str_seekoff
+  1093: 0000000000430590    84 FUNC    GLOBAL HIDDEN     7 __ctype_init
+  1094: 0000000000441520   204 FUNC    GLOBAL HIDDEN     7 __libio_codecvt_in
+  1095: 0000000000442f40   459 FUNC    GLOBAL HIDDEN     7 __pthread_rwlock_unlock
+  1096: 00000000004abb48     8 OBJECT  GLOBAL DEFAULT   22 _dl_tls_static_optional
+  1097: 00000000004191a0    44 FUNC    GLOBAL DEFAULT    7 __lseek64
+  1098: 00000000004053f0    56 FUNC    WEAK   HIDDEN     7 _IO_file_setbuf
+  1099: 00000000004057b0  1920 FUNC    GLOBAL DEFAULT    7 _IO_new_file_fopen
+  1100: 0000000000412040   246 IFUNC   WEAK   DEFAULT    7 mempcpy
+  1101: 0000000000411910   110 FUNC    GLOBAL DEFAULT    7 __libc_mallinfo
+  1102: 0000000000412c00    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_avx_unaligned
+  1103: 0000000000467280    38 FUNC    GLOBAL HIDDEN     7 __lll_unlock_elision
+  1104: 000000000043dae0   246 FUNC    GLOBAL DEFAULT    7 _IO_new_fopen
+  1105: 0000000000472e80    91 FUNC    GLOBAL HIDDEN     7 __wprintf_buffer_done
+  1106: 0000000000462390    64 FUNC    GLOBAL HIDDEN     7 __printf_buffer_to_file_init
+  1107: 00000000004b08c0     8 OBJECT  WEAK   DEFAULT   22 _environ
+  1108: 0000000000461f80    83 FUNC    GLOBAL HIDDEN     7 __printf_buffer_done
+  1109: 0000000000437850    28 FUNC    WEAK   DEFAULT    7 __isoc23_strtoull
+  1110: 0000000000426940    20 FUNC    GLOBAL DEFAULT    7 __gconv_btwoc_ascii
+  1111: 0000000000469580   112 IFUNC   GLOBAL DEFAULT    7 __wcslen
+  1112: 000000000040aac0     7 FUNC    GLOBAL DEFAULT    7 _IO_default_write
+  1113: 00000000004192f0   149 FUNC    GLOBAL HIDDEN     7 __libc_read
+  1114: 0000000000472f90    13 FUNC    WEAK   DEFAULT    7 dladdr
+  1115: 0000000000425100   668 FUNC    GLOBAL HIDDEN     7 __gconv_find_transform
+  1116: 000000000047e590   720 FUNC    GLOBAL HIDDEN     7 __gcc_personality_v0
+  1117: 0000000000418160   412 FUNC    GLOBAL HIDDEN     7 __strlen_sse2
+  1118: 000000000046fde0   246 FUNC    GLOBAL HIDDEN     7 __rtld_static_init
+  1119: 0000000000407260    53 FUNC    GLOBAL DEFAULT    7 _IO_file_close_mmap
+  1120: 0000000000415980    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_ssse3
+  1121: 0000000000420510   209 FUNC    GLOBAL HIDDEN     7 _dl_allocate_tls_storage
+  1122: 00000000004191a0    44 FUNC    WEAK   DEFAULT    7 lseek
+  1123: 00000000004109f0  1445 FUNC    GLOBAL HIDDEN     7 __libc_realloc
+  1124: 0000000000455bf0    13 FUNC    WEAK   DEFAULT    7 wmemcpy
+  1125: 0000000000000038     8 TLS     GLOBAL DEFAULT   15 __libc_tsd_CTYPE_TOLOWER
+  1126: 000000000042cd10  2202 FUNC    GLOBAL DEFAULT    7 __gconv_transform_ucs2reverse_internal
+  1127: 0000000000437050   142 FUNC    WEAK   DEFAULT    7 clearenv
+  1128: 00000000004abb58     8 OBJECT  GLOBAL HIDDEN    22 _dl_tls_static_align
+  1129: 000000000045d320   186 FUNC    GLOBAL HIDDEN     7 _dl_scope_free
+  1130: 00000000004542a0   764 FUNC    GLOBAL HIDDEN     7 __strnlen_avx2_rtm
+  1131: 00000000004b08c0     8 OBJECT  GLOBAL HIDDEN    22 __environ
+  1132: 000000000046a920   556 FUNC    GLOBAL HIDDEN     7 __wcsnlen_sse4_1
+  1133: 0000000000466770   115 FUNC    GLOBAL HIDDEN     7 __translated_number_width
+  1134: 0000000000414bc0  1979 FUNC    GLOBAL HIDDEN     7 __memcpy_evex_unaligned_erms
+  1135: 0000000000419d80   184 FUNC    WEAK   DEFAULT    7 mmap
+  1136: 0000000000419140    44 FUNC    WEAK   DEFAULT    7 _Exit
+  1137: 00000000004aba70    16 OBJECT  GLOBAL HIDDEN    21 __elision_aconf
+  1138: 0000000000473870   126 FUNC    GLOBAL DEFAULT    7 ___dlsym
+  1139: 00000000004377d0    17 FUNC    WEAK   DEFAULT    7 strtol_l
+  1140: 000000000045f440  2500 FUNC    GLOBAL HIDDEN     7 _nl_intern_locale_data
+  1141: 00000000004459c0   766 FUNC    GLOBAL HIDDEN     7 __memcmp_evex_movbe
+  1142: 00000000004693e0   405 FUNC    GLOBAL HIDDEN     7 __strspn_generic
+  1143: 00000000004675e0   287 FUNC    GLOBAL HIDDEN     7 __nptl_deallocate_stack
+  1144: 0000000000459950  2980 FUNC    GLOBAL HIDDEN     7 _dl_lookup_symbol_x
+  1145: 0000000000417900   471 FUNC    GLOBAL HIDDEN     7 __strchrnul_evex
+  1146: 0000000000472fd0    29 FUNC    WEAK   DEFAULT    7 dlclose
+  1147: 0000000000465d70   168 FUNC    GLOBAL HIDDEN     7 __printf_buffer_flush_fphex_to_wide
+  1148: 0000000000419070    86 FUNC    GLOBAL HIDDEN     7 _nl_cleanup_ctype
+  1149: 00000000004abb88     8 OBJECT  GLOBAL DEFAULT   22 _dl_tls_max_dtv_idx
+  1150: 000000000044c800   511 FUNC    GLOBAL HIDDEN     7 __strchr_evex
+  1151: 00000000004623d0   405 FUNC    GLOBAL HIDDEN     7 __printf_buffer_to_file_done
+  1152: 0000000000472880   287 FUNC    GLOBAL HIDDEN     7 __mpn_extract_float128
+  1153: 0000000000489280   168 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_map_toupper
+  1154: 00000000004893a0    76 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_punct
+  1155: 000000000040123e   419 FUNC    GLOBAL HIDDEN     7 abort
+  1156: 00000000004b0d00    56 OBJECT  GLOBAL HIDDEN    22 __libc_setlocale_lock
+  1157: 00000000004213f0    29 FUNC    GLOBAL HIDDEN     7 __tunable_is_initialized
+  1158: 00000000004017c0     5 FUNC    GLOBAL HIDDEN     7 _dl_relocate_static_pie
+  1159: 0000000000435f40    64 FUNC    GLOBAL DEFAULT    7 __sigjmp_save
+  1160: 00000000004aba88     4 OBJECT  GLOBAL HIDDEN    21 __sched_fifo_min_prio
+  1161: 000000000041a5d0    20 FUNC    GLOBAL DEFAULT    7 __stack_chk_fail
+  1162: 0000000000456a60    25 FUNC    GLOBAL HIDDEN     7 __lstat64
+  1163: 000000000046c530   204 FUNC    GLOBAL HIDDEN     7 _dl_close
+  1164: 0000000000415400  1362 FUNC    GLOBAL HIDDEN     7 __memmove_sse2_unaligned_erms
+  1165: 00000000004abba0  1024 OBJECT  GLOBAL DEFAULT   22 _dl_static_dtv
+  1166: 0000000000464dc0   173 FUNC    GLOBAL HIDDEN     7 __printf_fp
+  1167: 00000000004b0c30     4 OBJECT  GLOBAL HIDDEN    22 _dl_bind_not
+  1168: 00000000004ab6d8     4 OBJECT  GLOBAL HIDDEN    21 __libc_enable_secure
+  1169: 00000000004304b0   122 FUNC    GLOBAL DEFAULT    7 _nl_postload_ctype
+  1170: 0000000000477020   443 FUNC    GLOBAL HIDDEN     7 __unordtf2
+  1171: 0000000000419170    42 FUNC    WEAK   DEFAULT    7 fstat64
+  1172: 0000000000457580  1609 FUNC    WEAK   DEFAULT    7 tdelete
+  1173: 000000000043dbe0   422 FUNC    GLOBAL HIDDEN     7 _IO_fputs
+  1174: 00000000004b09c0     8 OBJECT  GLOBAL HIDDEN    22 _dl_hwcap3
+  1175: 0000000000426f30  1944 FUNC    GLOBAL DEFAULT    7 __gconv_transform_ucs4_internal
+  1176: 0000000000419580   152 FUNC    GLOBAL HIDDEN     7 __open_nocancel
+  1177: 00000000004b09e8     8 OBJECT  GLOBAL HIDDEN    22 _dl_auxv
+  1178: 0000000000401000     0 FUNC    GLOBAL HIDDEN     5 _init
+  1179: 000000000045de30   361 FUNC    GLOBAL HIDDEN     7 __libc_dlvsym
+  1180: 0000000000469fe0   865 FUNC    GLOBAL HIDDEN     7 __wcsnlen_avx2
+  1181: 0000000000489640    68 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_digit
+  1182: 000000000040b520    30 FUNC    GLOBAL HIDDEN     7 _IO_str_pbackfail
+  1183: 0000000000441080   580 FUNC    GLOBAL HIDDEN     7 _IO_wfile_xsputn
+  1184: 00000000004a8458     8 OBJECT  GLOBAL DEFAULT   18 __rseq_offset
+  1185: 00000000004b0cb0     8 OBJECT  GLOBAL DEFAULT   22 __gconv_max_path_elem_len
+  1186: 000000000040aae0     5 FUNC    GLOBAL DEFAULT    7 _IO_default_imbue
+  1187: 00000000004709e0  1623 FUNC    GLOBAL HIDDEN     7 __mpn_divrem
+  1188: 00000000004371c0    25 FUNC    WEAK   DEFAULT    7 strtoq
+  1189: 00000000004371c0    25 FUNC    WEAK   HIDDEN     7 strtol
+  1190: 00000000004a9a80     8 OBJECT  GLOBAL HIDDEN    18 _dl_vdso_clock_gettime64
+  1191: 0000000000435ed0   103 FUNC    GLOBAL HIDDEN     7 __sigsetjmp
+  1192: 00000000004191a0    44 FUNC    GLOBAL DEFAULT    7 __libc_lseek64
+  1193: 00000000004735b0    96 FUNC    GLOBAL DEFAULT    7 __dlmopen
+  1194: 0000000000450430  1614 FUNC    GLOBAL HIDDEN     7 __strncmp_avx2
+  1195: 0000000000437db0    20 FUNC    GLOBAL HIDDEN     7 __isoc23_strtoul_l
+  1196: 00000000004442a0   112 IFUNC   WEAK   DEFAULT    7 strnlen
+  1197: 00000000004860a0    36 OBJECT  GLOBAL HIDDEN     9 _dl_x86_platforms
+  1198: 0000000000416980   317 FUNC    GLOBAL HIDDEN     7 __memset_avx2_unaligned_erms
+  1199: 0000000000419500   128 FUNC    GLOBAL HIDDEN     7 __fcntl64_nocancel_adjusted
+  1200: 00000000004305f0   614 FUNC    GLOBAL HIDDEN     7 _nl_find_domain
+  1201: 00000000004760b0   967 FUNC    GLOBAL HIDDEN     7 _dl_lookup_direct
+  1202: 0000000000456b90    22 FUNC    GLOBAL HIDDEN     7 __stat64
+  1203: 000000000040aab0    12 FUNC    GLOBAL DEFAULT    7 _IO_default_read
+  1204: 000000000040b730    24 FUNC    GLOBAL HIDDEN     7 __lll_lock_wake
+  1205: 000000000047d690   131 FUNC    GLOBAL HIDDEN     7 __register_frame_table
+  1206: 000000000043ca00    51 FUNC    GLOBAL HIDDEN     7 __get_errname
+  1207: 0000000000405640   362 FUNC    WEAK   HIDDEN     7 _IO_file_close_it
+  1208: 0000000000403d60   689 FUNC    GLOBAL HIDDEN     7 __libc_start_main_impl
+  1209: 00000000004b0e60    56 OBJECT  GLOBAL HIDDEN    22 __default_pthread_attr
+  1210: 0000000000423bf0   144 FUNC    GLOBAL HIDDEN     7 _dl_tunable_set_x86_shstk
+  1211: 00000000004b0c68     8 OBJECT  GLOBAL HIDDEN    22 _dl_platform
+  1212: 0000000000467530   176 FUNC    GLOBAL HIDDEN     7 __nptl_free_stacks
+  1213: 000000000040aaf0    12 FUNC    GLOBAL HIDDEN     7 _IO_iter_begin
+  1214: 000000000048a3c0  1024 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class32
+  1215: 0000000000465e20   244 FUNC    GLOBAL HIDDEN     7 __wprintf_fphex_l_buffer
+  1216: 00000000004204f0    25 FUNC    GLOBAL DEFAULT    7 _dl_get_tls_static_info
+  1217: 0000000000470930    38 FUNC    GLOBAL HIDDEN     7 __gconv_destroy_spec
+  1218: 0000000000444310   112 IFUNC   GLOBAL HIDDEN     7 strrchr
+  1219: 00000000004b0c2c     4 OBJECT  GLOBAL HIDDEN    22 _dl_x86_feature_1
+  1220: 00000000004371c0    25 FUNC    GLOBAL DEFAULT    7 __strtol
+  1221: 0000000000430570    21 FUNC    GLOBAL DEFAULT    7 __ctype_tolower_loc
+  1222: 0000000000404020   426 FUNC    GLOBAL HIDDEN     7 __libc_check_standard_fds
+  1223: 00000000004110e0  1011 FUNC    WEAK   DEFAULT    7 calloc
+  1224: 0000000000444060   128 IFUNC   WEAK   DEFAULT    7 strcasecmp_l
+  1225: 0000000000458a10    46 FUNC    GLOBAL DEFAULT    7 _dl_exception_free
+  1226: 0000000000407250    12 FUNC    GLOBAL HIDDEN     7 _IO_file_stat
+  1227: 000000000040122c    13 FUNC    GLOBAL DEFAULT    7 _dl_start
+  1228: 0000000000442a00   270 FUNC    GLOBAL HIDDEN     7 __pthread_mutex_unlock
+  1229: 00000000004117a0    51 FUNC    WEAK   DEFAULT    7 malloc_usable_size
+  1230: 0000000000457d50   453 FUNC    WEAK   DEFAULT    7 tdestroy
+  1231: 000000000047d410   121 FUNC    GLOBAL HIDDEN     7 __register_frame_info_bases
+  1232: 0000000000440600   402 FUNC    GLOBAL HIDDEN     7 _IO_wfile_sync
+  1233: 0000000000411080    93 FUNC    GLOBAL DEFAULT    7 __libc_pvalloc
+  1234: 00000000004377d0    17 FUNC    WEAK   DEFAULT    7 __strtoll_l
+  1235: 000000000040b710    25 FUNC    GLOBAL HIDDEN     7 __lll_lock_wake_private
+  1236: 0000000000420ec0    74 FUNC    GLOBAL HIDDEN     7 __tls_pre_init_tp
+  1237: 00000000004220f0   710 FUNC    GLOBAL HIDDEN     7 _dl_cet_open_check
+  1238: 0000000000456120    37 FUNC    GLOBAL HIDDEN     7 __sched_getscheduler
+  1239: 0000000000444310   112 IFUNC   WEAK   DEFAULT    7 rindex
+  1240: 0000000000458040   512 FUNC    GLOBAL HIDDEN     7 __readonly_area
+  1241: 0000000000461fe0   170 FUNC    GLOBAL HIDDEN     7 __printf_buffer_pad_1
+  1242: 0000000000414300  1984 FUNC    GLOBAL HIDDEN     7 __memmove_avx512_unaligned_erms
+  1243: 0000000000421410   320 FUNC    GLOBAL HIDDEN     7 __tunable_set_val
+  1244: 0000000000414290    59 FUNC    GLOBAL HIDDEN     7 __memmove_avx512_unaligned
+  1245: 000000000041ff50   155 FUNC    GLOBAL HIDDEN     7 _dl_error_printf
+  1246: 0000000000419390   157 FUNC    WEAK   HIDDEN     7 write
+  1247: 0000000000473ba0   125 IFUNC   WEAK   DEFAULT    7 wmemchr
+  1248: 0000000000472fa0    39 FUNC    WEAK   DEFAULT    7 dladdr1
+  1249: 0000000000412810   912 FUNC    GLOBAL HIDDEN     7 __strstr_generic
+  1250: 0000000000411040    55 FUNC    GLOBAL DEFAULT    7 __libc_valloc
+  1251: 00000000004891c0   168 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_map_tolower
+  1252: 0000000000455240   669 FUNC    GLOBAL HIDDEN     7 __strrchr_sse2
+  1253: 0000000000469a80   362 FUNC    GLOBAL HIDDEN     7 __wcslen_evex
+  1254: 0000000000430290   543 FUNC    GLOBAL HIDDEN     7 _nl_locale_subfreeres
+  1255: 00000000004b08c0     8 OBJECT  WEAK   DEFAULT   22 environ
+  1256: 00000000004b0a20   520 OBJECT  GLOBAL HIDDEN    22 _dl_x86_cpu_features
+  1257: 00000000004610e0  2271 FUNC    GLOBAL HIDDEN     7 __dcigettext
+  1258: 0000000000419170    42 FUNC    WEAK   DEFAULT    7 fstat
+  1259: 000000000041f0f0   165 FUNC    GLOBAL HIDDEN     7 _dl_add_to_namespace_list
+  1260: 000000000040b540    63 FUNC    GLOBAL DEFAULT    7 _IO_str_finish
+  1261: 00000000004478f0  2562 FUNC    GLOBAL HIDDEN     7 __strcasecmp_l_avx2_rtm
+  1262: 0000000000433a20   291 FUNC    GLOBAL DEFAULT    7 _nl_normalize_codeset
+  1263: 00000000004171a0    48 FUNC    GLOBAL HIDDEN     7 __memset_evex_unaligned
+  1264: 00000000004ac7f0     1 OBJECT  GLOBAL HIDDEN    22 __exit_funcs_done
+  1265: 0000000000460230    19 FUNC    WEAK   DEFAULT    7 dcgettext
+  1266: 00000000004abb68     8 OBJECT  GLOBAL HIDDEN    22 _dl_tls_static_size
+  1267: 000000000041fd80   159 FUNC    GLOBAL HIDDEN     7 _dl_debug_printf_c
+  1268: 000000000040aad0    10 FUNC    GLOBAL DEFAULT    7 _IO_default_showmanyc
+  1269: 0000000000419bb0    58 FUNC    GLOBAL HIDDEN     7 __get_nprocs
+  1270: 0000000000456a10    66 FUNC    GLOBAL HIDDEN     7 __isatty
+  1271: 00000000004b1020    56 OBJECT  GLOBAL HIDDEN    22 _nl_state_lock
+  1272: 00000000004b0c58     4 OBJECT  GLOBAL HIDDEN    22 _dl_lazy
+  1273: 000000000041a650     5 FUNC    GLOBAL DEFAULT    7 _dl_debug_state
+  1274: 000000000049b174     1 NOTYPE  WEAK   HIDDEN    10 _.stapsdt.base
+  1275: 0000000000428990  3448 FUNC    GLOBAL DEFAULT    7 __gconv_transform_internal_ascii
+  1276: 0000000000443ff0   112 IFUNC   GLOBAL DEFAULT    7 __stpcpy
+  1277: 0000000000419d80   184 FUNC    GLOBAL HIDDEN     7 __mmap64
+  1278: 0000000000416900    37 FUNC    GLOBAL DEFAULT    7 __wmemset_avx2_unaligned
+  1279: 0000000000442cf0    21 FUNC    WEAK   DEFAULT    7 pthread_once
+  1280: 000000000040b010   504 FUNC    GLOBAL HIDDEN     7 _IO_str_overflow
+  1281: 000000000047d740    27 FUNC    GLOBAL HIDDEN     7 __deregister_frame_info
+  1282: 0000000000461f10   107 FUNC    GLOBAL DEFAULT    7 __grouping_iterator_next
+  1283: 0000000000419d50    37 FUNC    WEAK   DEFAULT    7 madvise
+  1284: 000000000044df80  5193 FUNC    GLOBAL HIDDEN     7 __strcmp_sse2
+  1285: 000000000040ffc0   796 FUNC    GLOBAL DEFAULT    7 __malloc
+  1286: 0000000000456bb0   144 FUNC    GLOBAL HIDDEN     7 __openat64_nocancel
+  1287: 000000000041c170   964 FUNC    GLOBAL HIDDEN     7 _dl_init_paths
+  1288: 000000000040fde0   142 FUNC    GLOBAL HIDDEN     7 __malloc_fork_lock_parent
+  1289: 0000000000413390    49 FUNC    GLOBAL HIDDEN     7 __memmove_avx_unaligned_rtm
+  1290: 0000000000469860   494 FUNC    GLOBAL HIDDEN     7 __wcslen_avx2_rtm
+  1291: 0000000000407690   561 FUNC    GLOBAL HIDDEN     7 _IO_file_xsgetn
+  1292: 0000000000435e70    81 FUNC    GLOBAL HIDDEN     7 __hash_string
+  1293: 000000000040a2b0   916 FUNC    GLOBAL HIDDEN     7 _IO_cleanup
+  1294: 00000000004a9a50     8 OBJECT  GLOBAL HIDDEN    18 _dl_argv
+  1295: 0000000000409670   104 FUNC    GLOBAL DEFAULT    7 _IO_default_seekpos
+  1296: 000000000046fee0  1107 FUNC    GLOBAL HIDDEN     7 __gconv_open
+  1297: 0000000000410690   269 FUNC    GLOBAL DEFAULT    7 __free
+  1298: 000000000047ac90   521 FUNC    GLOBAL HIDDEN     7 _Unwind_Resume
+  1299: 0000000000472fd0    29 FUNC    GLOBAL DEFAULT    7 __dlclose
+  1300: 000000000047aff0    33 FUNC    GLOBAL HIDDEN     7 _Unwind_DeleteException
+  1301: 000000000042bf00  3592 FUNC    GLOBAL DEFAULT    7 __gconv_transform_internal_ucs2
+  1302: 0000000000419f30   138 FUNC    WEAK   DEFAULT    7 mremap
+  1303: 0000000000456d40    50 FUNC    GLOBAL HIDDEN     7 __getrlimit
+  1304: 00000000004054c0   370 FUNC    GLOBAL DEFAULT    7 _IO_new_do_write
+  1305: 0000000000000000     8 TLS     GLOBAL HIDDEN    14 _nl_current_LC_CTYPE
+  1306: 0000000000455fb0   227 FUNC    GLOBAL HIDDEN     7 __readdir64
+  1307: 0000000000458bc0    68 FUNC    GLOBAL DEFAULT    7 __nptl_change_stack_perm
+  1308: 0000000000405fd0   810 FUNC    WEAK   HIDDEN     7 _IO_file_underflow
+  1309: 000000000043df90   900 FUNC    WEAK   DEFAULT    7 getdelim
+  1310: 000000000042f530    26 FUNC    GLOBAL HIDDEN     7 __gconv_release_shlib
+  1311: 00000000004a6d00   424 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_MONETARY
+  1312: 0000000000419620    44 FUNC    GLOBAL HIDDEN     7 __read_nocancel
+  1313: 0000000000433470  1441 FUNC    GLOBAL DEFAULT    7 _nl_make_l10nflist
+  1314: 00000000004b0c28     4 OBJECT  GLOBAL HIDDEN    22 _dl_x86_feature_control
+  1315: 000000000043d9e0   252 FUNC    GLOBAL HIDDEN     7 __fopen_internal
+  1316: 0000000000409930   199 FUNC    GLOBAL DEFAULT    7 _IO_no_init
+  1317: 0000000000412230   112 IFUNC   GLOBAL HIDDEN     7 __strchrnul
+  1318: 000000000046d680   117 FUNC    GLOBAL HIDDEN     7 _dl_find_object_freeres
+  1319: 00000000004117e0   295 FUNC    GLOBAL DEFAULT    7 __mallinfo2
+  1320: 0000000000406760   536 FUNC    WEAK   HIDDEN     7 _IO_file_overflow
+  1321: 0000000000451100  1644 FUNC    GLOBAL HIDDEN     7 __strncmp_evex
+  1322: 0000000000443f00   125 IFUNC   GLOBAL HIDDEN     7 memchr
+  1323: 000000000041c540   478 FUNC    GLOBAL HIDDEN     7 _dl_process_pt_gnu_property
+  1324: 0000000000466a00   409 FUNC    GLOBAL HIDDEN     7 _IO_getline_info
+  1325: 000000000041a4d0    20 FUNC    GLOBAL HIDDEN     7 __chk_fail
+  1326: 0000000000446ed0    16 FUNC    GLOBAL DEFAULT    7 __strcasecmp_avx2
+  1327: 00000000004abab0     4 OBJECT  GLOBAL DEFAULT   21 __nptl_stack_hugetlb
+  1328: 0000000000455fb0   227 FUNC    GLOBAL DEFAULT    7 __readdir
+  1329: 000000000043ca40  2921 FUNC    GLOBAL HIDDEN     7 __parse_one_specmb
+  1330: 0000000000464c90   303 FUNC    GLOBAL HIDDEN     7 __wprintf_fp_l_buffer
+  1331: 00000000004aa6d8     8 OBJECT  GLOBAL DEFAULT   21 stdin
+  1332: 0000000000457500   128 FUNC    WEAK   DEFAULT    7 tfind
+  1333: 0000000000414300  1984 FUNC    GLOBAL HIDDEN     7 __memcpy_avx512_unaligned_erms
+  1334: 00000000004aba84     4 OBJECT  GLOBAL HIDDEN    21 __sched_fifo_max_prio
+  1335: 00000000004191d0   280 FUNC    GLOBAL DEFAULT    7 __libc_open64
+  1336: 000000000040aeb0   171 FUNC    GLOBAL DEFAULT    7 _IO_str_init_static
+  1337: 000000000041ba20   387 FUNC    GLOBAL HIDDEN     7 _dl_dst_substitute
+  1338: 0000000000497580   360 OBJECT  GLOBAL HIDDEN     9 _fpioconst_pow10
+  1339: 0000000000472ee0   162 FUNC    GLOBAL HIDDEN     7 __wprintf_buffer_flush
+  1340: 0000000000404d30   550 FUNC    GLOBAL HIDDEN     7 _IO_puts
+  1341: 00000000004abb78     8 OBJECT  GLOBAL DEFAULT   22 _dl_tls_dtv_slotinfo_list
+  1342: 0000000000437850    28 FUNC    WEAK   DEFAULT    7 __isoc23_strtoumax
+  1343: 000000000044da20  1363 FUNC    GLOBAL HIDDEN     7 __strcmp_evex
+  1344: 00000000004205f0   648 FUNC    GLOBAL DEFAULT    7 _dl_allocate_tls_init
+  1345: 0000000000473ee0   715 FUNC    GLOBAL HIDDEN     7 __wmemchr_avx2_rtm
+  1346: 000000000045e340   110 FUNC    GLOBAL HIDDEN     7 __gconv_close
+  1347: 0000000000455710   449 FUNC    GLOBAL HIDDEN     7 __wcrtomb
+  1348: 00000000004746b0   915 FUNC    GLOBAL HIDDEN     7 __wmemchr_sse2
+  1349: 00000000004aba90     8 OBJECT  GLOBAL HIDDEN    21 __progname
+  1350: 0000000000466f20    48 FUNC    GLOBAL HIDDEN     7 __printf_buffer_snprintf_init
+  1351: 00000000004b0948     8 OBJECT  GLOBAL HIDDEN    22 _dl_sysinfo_map
+  1352: 0000000000401790    38 FUNC    GLOBAL HIDDEN     7 _start
+  1353: 0000000000456a60    25 FUNC    WEAK   DEFAULT    7 lstat
+  1354: 000000000047d720    27 FUNC    GLOBAL HIDDEN     7 __deregister_frame_info_bases
+  1355: 0000000000409bd0   836 FUNC    GLOBAL HIDDEN     7 _IO_flush_all
+  1356: 0000000000412ba0    66 IFUNC   GLOBAL HIDDEN     7 strstr
+  1357: 000000000043d720   622 FUNC    GLOBAL DEFAULT    7 _IO_new_fclose
+  1358: 000000000040ab20     8 FUNC    GLOBAL HIDDEN     7 _IO_iter_file
+  1359: 000000000046a700   541 FUNC    GLOBAL HIDDEN     7 __wcsnlen_evex
+  1360: 0000000000409ba0    47 FUNC    GLOBAL HIDDEN     7 _IO_adjust_column
+  1361: 0000000000467890   346 FUNC    WEAK   DEFAULT    7 pthread_kill
+  1362: 0000000000000018     4 TLS     GLOBAL HIDDEN    15 __libc_errno
+  1363: 00000000004418f0    14 FUNC    GLOBAL DEFAULT    7 _dl_tunable_set_elision_skip_trylock_internal_abort
+  1364: 0000000000437dd0   920 FUNC    GLOBAL HIDDEN     7 __correctly_grouped_prefixmb
+  1365: 00000000004771e0   745 FUNC    GLOBAL HIDDEN     7 __lttf2
+  1366: 00000000004a9a68     8 OBJECT  GLOBAL HIDDEN    18 _dl_vdso_getcpu
+  1367: 0000000000423d60    73 FUNC    GLOBAL HIDDEN     7 __libc_init_first
+  1368: 00000000004051b0    31 FUNC    GLOBAL HIDDEN     7 _IO_vtable_check
+  1369: 00000000004192f0   149 FUNC    WEAK   HIDDEN     7 read
+  1370: 00000000004b0a08     4 OBJECT  GLOBAL HIDDEN    22 _dl_inhibit_cache
+  1371: 0000000000413b00    13 FUNC    GLOBAL DEFAULT    7 __memmove_chk_avx512_no_vzeroupper
+  1372: 00000000004449c0   591 FUNC    GLOBAL HIDDEN     7 __memchr_evex
+  1373: 0000000000466db0   302 FUNC    GLOBAL DEFAULT    7 __vasprintf
+  1374: 0000000000472730   144 FUNC    GLOBAL HIDDEN     7 __mpn_extract_double
+  1375: 0000000000456d40    50 FUNC    GLOBAL DEFAULT    7 __GI___getrlimit
+  1376: 0000000000444220   128 IFUNC   GLOBAL HIDDEN     7 strncmp
+  1377: 00000000004a6780   208 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_COLLATE
+  1378: 0000000000473760    92 FUNC    WEAK   DEFAULT    7 dlopen
+  1379: 00000000004415f0    38 FUNC    GLOBAL HIDDEN     7 __libio_codecvt_encoding
+  1380: 000000000046d5b0   201 FUNC    GLOBAL HIDDEN     7 _dl_find_object_dlclose
+  1381: 0000000000433b50   492 FUNC    GLOBAL DEFAULT    7 _nl_explode_name
+  1382: 000000000043ed00   144 FUNC    GLOBAL HIDDEN     7 _IO_wdefault_doallocate
+  1383: 00000000004558e0   782 FUNC    WEAK   DEFAULT    7 wcsrtombs
+  1384: 0000000000455f70    52 FUNC    WEAK   DEFAULT    7 getdents64
+  1385: 00000000004047f0   703 FUNC    GLOBAL HIDDEN     7 __run_exit_handlers
+  1386: 000000000040ffc0   796 FUNC    GLOBAL HIDDEN     7 __libc_malloc
+  1387: 00000000004aa0f0     8 OBJECT  GLOBAL HIDDEN    21 __x86_data_cache_size
+  1388: 0000000000443110  1045 FUNC    WEAK   DEFAULT    7 pthread_rwlock_wrlock
+  1389: 0000000000414af0    13 FUNC    GLOBAL DEFAULT    7 __memcpy_chk_erms
+  1390: 0000000000446440   736 FUNC    GLOBAL HIDDEN     7 __stpcpy_evex
+  1391: 0000000000419cc0   137 FUNC    WEAK   DEFAULT    7 get_avphys_pages
+  1392: 000000000040ff10   175 FUNC    GLOBAL HIDDEN     7 __malloc_fork_unlock_child
+  1393: 000000000040a790    55 FUNC    GLOBAL DEFAULT    7 _IO_marker_delta
+  1394: 0000000000410690   269 FUNC    GLOBAL HIDDEN     7 __libc_free
+  1395: 0000000000414ac0    13 FUNC    GLOBAL DEFAULT    7 __mempcpy_chk_erms
+  1396: 0000000000436ed0   110 FUNC    WEAK   DEFAULT    7 setenv
+  1397: 0000000000406300   655 FUNC    GLOBAL DEFAULT    7 _IO_file_underflow_mmap
+  1398: 000000000045d610   205 FUNC    GLOBAL HIDDEN     7 _dl_runtime_resolve_xsave
+  1399: 000000000043f570   111 FUNC    GLOBAL DEFAULT    7 _IO_sungetwc
+  1400: 00000000004aba90     8 OBJECT  WEAK   DEFAULT   21 program_invocation_short_name
+  1401: 00000000004371e0    28 FUNC    WEAK   DEFAULT    7 __isoc23_strtoimax
+  1402: 0000000000455d40   279 FUNC    GLOBAL HIDDEN     7 __opendir
+  1403: 000000000046cdd0   696 FUNC    GLOBAL HIDDEN     7 _dl_find_object_init
+  1404: 000000000040b270    24 FUNC    GLOBAL DEFAULT    7 _IO_str_count
+  1405: 0000000000456150    37 FUNC    WEAK   DEFAULT    7 sched_get_priority_max
+  1406: 00000000004b10f0     8 OBJECT  GLOBAL HIDDEN    22 __printf_arginfo_table
+  1407: 0000000000467050   188 FUNC    GLOBAL DEFAULT    7 ___vsnprintf
+  1408: 0000000000461db0    84 FUNC    WEAK   DEFAULT    7 funlockfile
+  1409: 000000000046dbc0   458 FUNC    GLOBAL HIDDEN     7 _dl_open
+  1410: 0000000000406590   462 FUNC    GLOBAL DEFAULT    7 _IO_file_underflow_maybe_mmap
+  1411: 0000000000469bf0   574 FUNC    GLOBAL HIDDEN     7 __wcslen_sse2
+  1412: 000000000041a510   188 FUNC    GLOBAL DEFAULT    7 ___fprintf_chk
+  1413: 0000000000415380    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_sse2_unaligned
+  1414: 00000000004418e0    14 FUNC    GLOBAL DEFAULT    7 _dl_tunable_set_elision_retry_try_xbegin
+  1415: 0000000000411080    93 FUNC    GLOBAL DEFAULT    7 __pvalloc
+  1416: 0000000000443530   223 FUNC    WEAK   DEFAULT    7 pthread_sigmask
+  1417: 00000000004109f0  1445 FUNC    GLOBAL DEFAULT    7 realloc
+  1418: 0000000000489580    68 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_space
+  1419: 0000000000466f50    46 FUNC    GLOBAL HIDDEN     7 __printf_buffer_snprintf_done
+  1420: 0000000000412ba0    66 IFUNC   GLOBAL DEFAULT    7 __libc_strstr
+  1421: 0000000000457f80   188 FUNC    GLOBAL DEFAULT    7 ___asprintf_chk
+  1422: 000000000046fcc0   127 FUNC    GLOBAL HIDDEN     7 _dl_check_all_versions
+  1423: 000000000041a6b0   146 FUNC    GLOBAL HIDDEN     7 _dl_debug_initialize
+  1424: 0000000000443e20   216 FUNC    GLOBAL HIDDEN     7 __argz_create_sep
+  1425: 00000000004441e0    64 FUNC    GLOBAL HIDDEN     7 __strdup
+  1426: 00000000004abb80     1 OBJECT  GLOBAL DEFAULT   22 _dl_tls_dtv_gaps
+  1427: 0000000000412c10    51 FUNC    GLOBAL HIDDEN     7 __memcpy_avx_unaligned
+  1428: 0000000000423db0    15 FUNC    GLOBAL HIDDEN     7 __gconv_alias_compare
+  1429: 00000000004078d0   885 FUNC    GLOBAL HIDDEN     7 _IO_file_xsgetn_mmap
+  1430: 0000000000404700   235 FUNC    GLOBAL HIDDEN     7 __cxa_atexit
+  1431: 0000000000461e10    28 FUNC    GLOBAL HIDDEN     7 __grouping_iterator_init_none
+  1432: 0000000000455c00    13 FUNC    GLOBAL HIDDEN     7 __wmemmove
+  1433: 0000000000407350   827 FUNC    WEAK   HIDDEN     7 _IO_file_xsputn
+  1434: 0000000000419680    52 FUNC    GLOBAL HIDDEN     7 __brk
+  1435: 0000000000455fb0   227 FUNC    WEAK   DEFAULT    7 readdir64
+  1436: 00000000004a9e20   104 OBJECT  GLOBAL HIDDEN    18 _nl_C
+  1437: 000000000043f690    68 FUNC    GLOBAL DEFAULT    7 _IO_wmarker_delta
+  1438: 00000000004b09c8     8 OBJECT  GLOBAL HIDDEN    22 _dl_hwcap2
+  1439: 0000000000456d40    50 FUNC    GLOBAL DEFAULT    7 __GI_getrlimit
+  1440: 00000000004695f0   112 IFUNC   WEAK   DEFAULT    7 wcsnlen
+  1441: 00000000004663f0   229 FUNC    WEAK   DEFAULT    7 register_printf_specifier
+  1442: 0000000000411bd0   400 FUNC    GLOBAL HIDDEN     7 __libc_mallopt
+  1443: 0000000000455530   471 FUNC    GLOBAL HIDDEN     7 __wcrtomb_internal
+  1444: 0000000000467160    34 FUNC    GLOBAL HIDDEN     7 __pthread_cleanup_push
+  1445: 000000000040aaa0    10 FUNC    GLOBAL DEFAULT    7 _IO_default_stat
+  1446: 0000000000406980   223 FUNC    GLOBAL DEFAULT    7 _IO_new_file_sync
+  1447: 0000000000443f80   112 IFUNC   GLOBAL DEFAULT    7 memcmp
+  1448: 00000000004561b0    37 FUNC    GLOBAL HIDDEN     7 __sched_setscheduler
+  1449: 0000000000466920   166 FUNC    GLOBAL HIDDEN     7 __wprintf_buffer_to_file_done
+  1450: 0000000000456180    37 FUNC    WEAK   DEFAULT    7 sched_get_priority_min
+  1451: 0000000000476dc0   173 FUNC    GLOBAL HIDDEN     7 __mpn_add_n
+  1452: 00000000004114e0   702 FUNC    WEAK   DEFAULT    7 malloc_trim
+  1453: 00000000004b0970     8 OBJECT  GLOBAL HIDDEN    22 _dl_stack_cache_actsize
+  1454: 0000000000000010     8 TLS     GLOBAL HIDDEN    14 _nl_current_LC_NUMERIC
+  1455: 0000000000437870  1303 FUNC    GLOBAL HIDDEN     7 ____strtoul_l_internal
+  1456: 0000000000489dc0  1536 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_toupper
+  1457: 000000000047a6e0   927 FUNC    GLOBAL HIDDEN     7 _Unwind_RaiseException
+  1458: 0000000000456a60    25 FUNC    WEAK   DEFAULT    7 lstat64
+  1459: 0000000000444060   128 IFUNC   GLOBAL HIDDEN     7 __strcasecmp_l
+  1460: 000000000040a780    11 FUNC    GLOBAL DEFAULT    7 _IO_marker_difference
+  1461: 0000000000416930    46 FUNC    GLOBAL HIDDEN     7 __memset_avx2_unaligned
+  1462: 000000000041f490   357 FUNC    GLOBAL HIDDEN     7 _dl_get_origin
+  1463: 00000000004621b0    49 FUNC    GLOBAL DEFAULT    7 __printf_buffer_to_file_switch
+  1464: 0000000000461b90    52 FUNC    WEAK   DEFAULT    7 sigaction
+  1465: 00000000004254a0   579 FUNC    GLOBAL DEFAULT    7 __gconv_db_freemem
+  1466: 00000000004b09e0     8 OBJECT  GLOBAL HIDDEN    22 _dl_phdr
+  1467: 000000000043f480   108 FUNC    GLOBAL HIDDEN     7 _IO_free_wbackup_area
+  1468: 000000000041ee60    95 FUNC    GLOBAL HIDDEN     7 _dl_name_match_p
+  1469: 0000000000441900    35 FUNC    GLOBAL DEFAULT    7 _dl_tunable_set_elision_enable
+  1470: 000000000045ec30    81 FUNC    GLOBAL HIDDEN     7 _nl_remove_locale
+  1471: 00000000004196c0    52 FUNC    GLOBAL HIDDEN     7 __getpagesize
+  1472: 0000000000417180    29 FUNC    GLOBAL DEFAULT    7 __wmemset_evex_unaligned
+  1473: 0000000000417140    29 FUNC    GLOBAL HIDDEN     7 __memset_erms
+  1474: 00000000004089a0    83 FUNC    GLOBAL HIDDEN     7 _IO_free_backup_area
+  1475: 0000000000473700    88 FUNC    GLOBAL DEFAULT    7 __dlopen
+  1476: 0000000000450a80  1662 FUNC    GLOBAL HIDDEN     7 __strncmp_avx2_rtm
+  1477: 0000000000457c80   197 FUNC    WEAK   DEFAULT    7 twalk_r
+  1478: 00000000004a7080  1328 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_TIME
+  1479: 00000000004371e0    28 FUNC    WEAK   DEFAULT    7 __isoc23_strtoll
+  1480: 0000000000405210    51 FUNC    WEAK   DEFAULT    7 _IO_file_init
+  1481: 0000000000413ae0    13 FUNC    GLOBAL DEFAULT    7 __mempcpy_chk_avx512_no_vzeroupper
+  1482: 0000000000473870   126 FUNC    WEAK   DEFAULT    7 dlsym
+  1483: 0000000000419ea0   132 FUNC    WEAK   HIDDEN     7 sbrk
+  1484: 0000000000465d50    17 FUNC    GLOBAL HIDDEN     7 __printf_fphex_l_buffer
+  1485: 00000000004856e0    36 OBJECT  GLOBAL HIDDEN     9 _itoa_lower_digits
+  1486: 00000000004441e0    64 FUNC    WEAK   DEFAULT    7 strdup
+  1487: 00000000004a9d20   232 OBJECT  GLOBAL HIDDEN    18 _nl_C_locobj
+  1488: 0000000000408a70   474 FUNC    GLOBAL HIDDEN     7 __underflow
+  1489: 0000000000456d40    50 FUNC    GLOBAL HIDDEN     7 __getrlimit64
+  1490: 0000000000426730   526 FUNC    GLOBAL HIDDEN     7 __gconv_get_builtin_trans
+  1491: 00000000004ab128     8 OBJECT  GLOBAL HIDDEN    21 _dl_nns
+  1492: 00000000004aa0e0     8 OBJECT  GLOBAL HIDDEN    21 __x86_shared_cache_size
+  1493: 000000000047a570    12 FUNC    GLOBAL HIDDEN     7 _Unwind_SetIP
+  1494: 000000000046abe0   116 FUNC    GLOBAL HIDDEN     7 __rewinddir
+  1495: 0000000000457f80   188 FUNC    GLOBAL HIDDEN     7 __asprintf_chk
+  1496: 00000000004a9a48     8 OBJECT  GLOBAL HIDDEN    18 _dl_random
+  1497: 00000000004b0de0     8 OBJECT  GLOBAL HIDDEN    22 __abort_msg
+  1498: 000000000046fd40    29 FUNC    GLOBAL HIDDEN     7 _dl_unmap
+  1499: 00000000004681b0   561 FUNC    GLOBAL HIDDEN     7 __strcpy_avx2
+  1500: 00000000004b0958     8 OBJECT  GLOBAL HIDDEN    22 _dl_scope_free_list
+  1501: 0000000000416f60    51 FUNC    GLOBAL HIDDEN     7 __memset_avx512_unaligned
+  1502: 0000000000419bf0    58 FUNC    GLOBAL HIDDEN     7 __get_nprocs_conf
+  1503: 0000000000424fa0    92 FUNC    GLOBAL HIDDEN     7 __gconv_release_step
+  1504: 0000000000417d00   370 FUNC    GLOBAL HIDDEN     7 __strlen_avx2
+  1505: 0000000000437830    25 FUNC    WEAK   DEFAULT    7 strtoull
+  1506: 00000000004440e0   112 IFUNC   WEAK   DEFAULT    7 index
+  1507: 0000000000426700    41 FUNC    GLOBAL DEFAULT    7 __gconv_conf_freemem
+  1508: 0000000000421740   275 FUNC    GLOBAL HIDDEN     7 __tunables_print
+  1509: 0000000000472d60   282 FUNC    GLOBAL HIDDEN     7 __printf_buffer_flush
+  1510: 0000000000473ba0   125 IFUNC   GLOBAL HIDDEN     7 __wmemchr
+  1511: 00000000004418d0    14 FUNC    GLOBAL DEFAULT    7 _dl_tunable_set_elision_skip_lock_internal_abort
+  1512: 0000000000448300    16 FUNC    GLOBAL DEFAULT    7 __strcasecmp_evex
+  1513: 000000000043dae0   246 FUNC    WEAK   DEFAULT    7 fopen
+  1514: 00000000004abac0     0 NOTYPE  GLOBAL DEFAULT   22 __bss_start
+  1515: 0000000000457c80   197 FUNC    GLOBAL HIDDEN     7 __twalk_r
+  1516: 00000000004191d0   280 FUNC    GLOBAL HIDDEN     7 __libc_open
+  1517: 000000000042f230    61 FUNC    GLOBAL DEFAULT    7 __gconv_cache_freemem
+  1518: 000000000043e9d0   627 FUNC    GLOBAL HIDDEN     7 _IO_wdefault_xsputn
+  1519: 0000000000429710  3743 FUNC    GLOBAL DEFAULT    7 __gconv_transform_internal_utf8
+  1520: 0000000000408f60    87 FUNC    GLOBAL HIDDEN     7 _IO_default_uflow
+  1521: 0000000000412140   237 IFUNC   GLOBAL DEFAULT    7 memset
+  1522: 00000000004b0968     8 OBJECT  GLOBAL HIDDEN    22 _dl_in_flight_stack
+  1523: 00000000004071b0   110 FUNC    GLOBAL HIDDEN     7 _IO_file_seekoff_maybe_mmap
+  1524: 0000000000455c10    13 FUNC    GLOBAL HIDDEN     7 __wmempcpy
+  1525: 00000000004377d0    17 FUNC    WEAK   HIDDEN     7 __strtol_l
+  1526: 00000000004418c0    14 FUNC    GLOBAL DEFAULT    7 _dl_tunable_set_elision_skip_lock_busy
+  1527: 00000000004018b5    41 FUNC    GLOBAL DEFAULT    7 main
+  1528: 0000000000448310  2555 FUNC    GLOBAL HIDDEN     7 __strcasecmp_l_evex
+  1529: 0000000000474b40   187 FUNC    GLOBAL HIDDEN     7 _dl_call_fini
+  1530: 00000000004b0c38     8 OBJECT  GLOBAL HIDDEN    22 _dl_origin_path
+  1531: 00000000004695f0   112 IFUNC   GLOBAL DEFAULT    7 __wcsnlen
+  1532: 0000000000411df0    70 FUNC    GLOBAL DEFAULT    7 __malloc_info
+  1533: 00000000004a5f80    32 OBJECT  GLOBAL HIDDEN    18 __wcsmbs_gconv_fcts_c
+  1534: 0000000000456c40    52 FUNC    GLOBAL HIDDEN     7 __pread64_nocancel
+  1535: 0000000000405f30   151 FUNC    GLOBAL DEFAULT    7 _IO_new_file_finish
+  1536: 000000000041a610    18 FUNC    GLOBAL DEFAULT    7 __memmove_chk
+  1537: 0000000000474ab0   131 FUNC    GLOBAL HIDDEN     7 _dl_call_libc_early_init
+  1538: 00000000004abb40     8 OBJECT  GLOBAL DEFAULT   22 _dl_tls_generation
+  1539: 00000000004b0c88     4 OBJECT  GLOBAL HIDDEN    22 __gconv_lock
+  1540: 0000000000419c30   137 FUNC    WEAK   DEFAULT    7 get_phys_pages
+  1541: 00000000004560b0    63 FUNC    GLOBAL HIDDEN     7 __sched_cpucount
+  1542: 00000000004117e0   295 FUNC    WEAK   DEFAULT    7 mallinfo2
+  1543: 0000000000405340   175 FUNC    GLOBAL DEFAULT    7 _IO_new_file_attach
+  1544: 00000000004aa6e0     4 OBJECT  GLOBAL HIDDEN    21 __nptl_nthreads
+  1545: 00000000004972a0    31 OBJECT  GLOBAL HIDDEN     9 ___m128i_shift_right
+  1546: 0000000000411bd0   400 FUNC    WEAK   DEFAULT    7 mallopt
+  1547: 0000000000413af0    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_avx512_no_vzeroupper
+  1548: 000000000043d720   622 FUNC    WEAK   DEFAULT    7 fclose
+  1549: 000000000041a4f0    25 FUNC    GLOBAL HIDDEN     7 __fortify_fail
+  1550: 00000000004b0940     4 OBJECT  GLOBAL HIDDEN    22 _dl_clktck
+  1551: 0000000000421930   217 FUNC    GLOBAL HIDDEN     7 _dl_cache_libcmp
+  1552: 00000000004191d0   280 FUNC    WEAK   DEFAULT    7 open64
+  1553: 00000000004a8430    16 OBJECT  GLOBAL HIDDEN    18 __rtld_search_dirs
+  1554: 000000000045a800 11026 FUNC    GLOBAL HIDDEN     7 _dl_relocate_object
+  1555: 0000000000411df0    70 FUNC    WEAK   DEFAULT    7 malloc_info
+  1556: 0000000000456c80   184 FUNC    WEAK   DEFAULT    7 tcgetattr
+  1557: 00000000004b0c54     4 OBJECT  GLOBAL HIDDEN    22 _dl_dynamic_weak
+  1558: 0000000000455d40   279 FUNC    WEAK   DEFAULT    7 opendir
+  1559: 000000000043efa0   362 FUNC    GLOBAL HIDDEN     7 __wunderflow
+  1560: 000000000041a5f0    18 FUNC    GLOBAL DEFAULT    7 __memcpy_chk
+  1561: 0000000000408c50   474 FUNC    GLOBAL HIDDEN     7 __uflow
+  1562: 000000000047d5a0   109 FUNC    GLOBAL HIDDEN     7 __register_frame_info_table_bases
+  1563: 0000000000414280    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_avx512_unaligned
+  1564: 000000000041b970   174 FUNC    GLOBAL HIDDEN     7 _dl_dst_count
+  1565: 0000000000412c50    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_avx_unaligned_erms
+  1566: 000000000047fdd0     2 OBJECT  GLOBAL HIDDEN     9 _nl_C_name
+  1567: 00000000004604e0  3067 FUNC    GLOBAL HIDDEN     7 _nl_find_msg
+  1568: 0000000000408860    44 FUNC    GLOBAL DEFAULT    7 _IO_least_marker
+  1569: 000000000043e600    54 FUNC    GLOBAL HIDDEN     7 _IO_switch_to_wbackup_area
+  1570: 000000000040ac30    27 FUNC    GLOBAL HIDDEN     7 _IO_list_resetlock
+  1571: 00000000004860d0    27 OBJECT  GLOBAL HIDDEN     9 _dl_x86_hwcap_flags
+  1572: 0000000000441700   168 FUNC    GLOBAL HIDDEN     7 __fgets_unlocked
+  1573: 0000000000423c80   209 FUNC    GLOBAL HIDDEN     7 __libc_early_init
+  1574: 00000000004b09b8     8 OBJECT  GLOBAL HIDDEN    22 _dl_hwcap4
+  1575: 0000000000467db0   744 FUNC    GLOBAL HIDDEN     7 __memmem
+  1576: 0000000000473920   128 FUNC    GLOBAL DEFAULT    7 __dlvsym
+  1577: 00000000004191a0    44 FUNC    WEAK   HIDDEN     7 __lseek
+  1578: 0000000000485310    18 OBJECT  GLOBAL HIDDEN     9 _nl_default_dirname
+  1579: 0000000000480153     6 OBJECT  GLOBAL HIDDEN     9 _nl_POSIX_name
+  1580: 0000000000457bd0   170 FUNC    GLOBAL HIDDEN     7 __twalk
+  1581: 0000000000466ba0    12 FUNC    GLOBAL HIDDEN     7 _IO_getline
+  1582: 0000000000422440   144 FUNC    GLOBAL HIDDEN     7 _dl_early_allocate
+  1583: 000000000045a5f0   189 FUNC    GLOBAL HIDDEN     7 _dl_allocate_static_tls
+  1584: 00000000004117e0   295 FUNC    GLOBAL HIDDEN     7 __libc_mallinfo2
+  1585: 0000000000444150   136 IFUNC   GLOBAL HIDDEN     7 strcmp
+  1586: 000000000043e8f0   103 FUNC    GLOBAL HIDDEN     7 _IO_wdefault_uflow
+  1587: 0000000000472480   259 FUNC    GLOBAL HIDDEN     7 __mpn_rshift
+  1588: 00000000004a6c40    72 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_MEASUREMENT
+  1589: 0000000000414b90    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_evex_unaligned_erms
+  1590: 0000000000424f90    12 FUNC    GLOBAL DEFAULT    7 __gconv_get_alias_db
+  1591: 0000000000442a00   270 FUNC    WEAK   DEFAULT    7 pthread_mutex_unlock
+  1592: 00000000004aa0c0     0 NOTYPE  WEAK   DEFAULT   21 data_start
+  1593: 0000000000443b50   181 FUNC    GLOBAL HIDDEN     7 __libc_scratch_buffer_grow_preserve
+  1594: 0000000000448d20  7638 FUNC    GLOBAL HIDDEN     7 __strcasecmp_l_sse2
+  1595: 000000000045e3b0  2164 FUNC    GLOBAL HIDDEN     7 _nl_find_locale
+  1596: 0000000000443f00   125 IFUNC   GLOBAL DEFAULT    7 __memchr
+  1597: 00000000004142d0    12 FUNC    GLOBAL HIDDEN     7 __mempcpy_avx512_unaligned_erms
+  1598: 00000000004664e0   229 FUNC    WEAK   DEFAULT    7 register_printf_function
+  1599: 00000000004b10e8     8 OBJECT  GLOBAL HIDDEN    22 __printf_function_table
+  1600: 0000000000437d90    17 FUNC    WEAK   DEFAULT    7 strtoul_l
+  1601: 000000000043d990    66 FUNC    GLOBAL HIDDEN     7 __fopen_maybe_mmap
+  1602: 000000000041eaf0   692 FUNC    GLOBAL DEFAULT    7 _dl_rtld_di_serinfo
+  1603: 00000000004561e0  2094 FUNC    WEAK   DEFAULT    7 getcwd
+  1604: 0000000000456a80   264 FUNC    GLOBAL DEFAULT    7 __libc_openat64
+  1605: 00000000004b0950     8 OBJECT  GLOBAL HIDDEN    22 _dl_sysinfo_dso
+  1606: 00000000004a7020    96 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_TELEPHONE
+  1607: 0000000000489340    76 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_alnum
+  1608: 000000000047d760    34 FUNC    GLOBAL HIDDEN     7 __deregister_frame
+  1609: 0000000000408e30    89 FUNC    GLOBAL HIDDEN     7 _IO_setb
+  1610: 0000000000412c10    51 FUNC    GLOBAL HIDDEN     7 __memmove_avx_unaligned
+  1611: 000000000047e860     0 FUNC    GLOBAL HIDDEN     8 _fini
+  1612: 00000000004665d0   232 FUNC    GLOBAL DEFAULT    7 __register_printf_type
+  1613: 00000000004057b0  1920 FUNC    WEAK   HIDDEN     7 _IO_file_fopen
+  1614: 000000000046ec80  1307 FUNC    GLOBAL HIDDEN     7 _dl_sort_maps
+  1615: 000000000046b4c0    50 FUNC    WEAK   DEFAULT    7 fstatat64
+  1616: 0000000000419650    44 FUNC    GLOBAL HIDDEN     7 __write_nocancel
+  1617: 0000000000472fa0    39 FUNC    GLOBAL DEFAULT    7 __dladdr1
+  1618: 0000000000446810  1719 FUNC    GLOBAL HIDDEN     7 __stpcpy_sse2_unaligned
+  1619: 0000000000436750  1280 FUNC    GLOBAL HIDDEN     7 __qsort_r
+  1620: 0000000000410fa0    59 FUNC    WEAK   DEFAULT    7 memalign
+  1621: 0000000000442f40   459 FUNC    GLOBAL DEFAULT    7 ___pthread_rwlock_unlock
+  1622: 0000000000412040   246 IFUNC   GLOBAL DEFAULT    7 __mempcpy
+  1623: 00000000004220b0    61 FUNC    GLOBAL HIDDEN     7 _dl_unload_cache
+  1624: 0000000000437200  1479 FUNC    GLOBAL DEFAULT    7 ____strtoll_l_internal
+  1625: 0000000000476f60   181 FUNC    WEAK   DEFAULT    7 asprintf
+  1626: 0000000000469010   283 FUNC    GLOBAL HIDDEN     7 __strcspn_sse42
+  1627: 00000000004053f0    56 FUNC    GLOBAL DEFAULT    7 _IO_new_file_setbuf
+  1628: 0000000000443cd0   136 FUNC    WEAK   DEFAULT    7 strerror_r
+  1629: 0000000000416ac0    37 FUNC    GLOBAL DEFAULT    7 __wmemset_avx2_unaligned_rtm
+  1630: 00000000004407a0  2271 FUNC    GLOBAL HIDDEN     7 _IO_wfile_seekoff
+  1631: 0000000000466850   131 FUNC    GLOBAL HIDDEN     7 __wprintf_buffer_flush_to_file
+  1632: 000000000043faf0  1694 FUNC    GLOBAL HIDDEN     7 _IO_wfile_underflow
+  1633: 00000000004b0a10     8 OBJECT  GLOBAL HIDDEN    22 _dl_minsigstacksize
+  1634: 0000000000419d50    37 FUNC    GLOBAL HIDDEN     7 __madvise
+  1635: 0000000000445cc0   720 FUNC    GLOBAL HIDDEN     7 __memcmp_sse2
+  1636: 0000000000441930   178 FUNC    GLOBAL HIDDEN     7 __lll_elision_init
+  1637: 00000000004558e0   782 FUNC    GLOBAL HIDDEN     7 __wcsrtombs
+  1638: 000000000043d5b0   359 FUNC    GLOBAL HIDDEN     7 _IO_file_doallocate
+  1639: 0000000000468110    30 IFUNC   GLOBAL HIDDEN     7 strcspn
+  1640: 0000000000480600     5 OBJECT  GLOBAL HIDDEN     9 _libc_intl_domainname
+  1641: 000000000042ec80   153 FUNC    GLOBAL HIDDEN     7 __gconv_compare_alias_cache
+  1642: 00000000004b0cb8     8 OBJECT  GLOBAL DEFAULT   22 __gconv_path_elem
+  1643: 0000000000497700 13800 OBJECT  GLOBAL HIDDEN     9 __tens
+  1644: 00000000004377f0    20 FUNC    GLOBAL HIDDEN     7 __isoc23_strtol_l
+  1645: 000000000043f620   108 FUNC    GLOBAL DEFAULT    7 _IO_init_wmarker
+  1646: 000000000042f940  2369 FUNC    GLOBAL HIDDEN     7 setlocale
+  1647: 00000000004abb50     8 OBJECT  GLOBAL DEFAULT   22 _dl_tls_static_surplus
+  1648: 0000000000000048     8 TLS     GLOBAL DEFAULT   15 __libc_tsd_CTYPE_B
+  1649: 00000000004ac860     4 OBJECT  GLOBAL HIDDEN    22 __pthread_force_elision
+  1650: 000000000046b500    21 FUNC    GLOBAL HIDDEN     7 __getclktck
+  1651: 000000000047a5e0    12 FUNC    GLOBAL HIDDEN     7 _Unwind_GetTextRelBase
+  1652: 0000000000407220    29 FUNC    GLOBAL HIDDEN     7 _IO_file_read
+  1653: 00000000004683f0   568 FUNC    GLOBAL HIDDEN     7 __strcpy_avx2_rtm
+  1654: 00000000004aa6c8     8 OBJECT  GLOBAL DEFAULT   21 stderr
+  1655: 0000000000469e30   416 FUNC    GLOBAL HIDDEN     7 __wcslen_sse4_1
+  1656: 0000000000407c50   492 FUNC    GLOBAL HIDDEN     7 _IO_file_xsgetn_maybe_mmap
+  1657: 0000000000416c80    13 FUNC    GLOBAL DEFAULT    7 __memset_chk_avx512_no_vzeroupper
+  1658: 000000000041a090   177 FUNC    GLOBAL HIDDEN     7 __malloc_default_thp_pagesize
+  1659: 0000000000419d80   184 FUNC    WEAK   DEFAULT    7 mmap64
+  1660: 00000000004667f0    96 FUNC    GLOBAL HIDDEN     7 __wprintf_buffer_putc_1
+  1661: 0000000000467700    52 FUNC    GLOBAL HIDDEN     7 __pthread_get_minstack
+  1662: 0000000000489460    68 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_blank
+  1663: 0000000000418000   349 FUNC    GLOBAL HIDDEN     7 __strlen_evex
+  1664: 0000000000437db0    20 FUNC    WEAK   DEFAULT    7 __isoc23_strtoull_l
+  1665: 0000000000419170    42 FUNC    GLOBAL HIDDEN     7 __fstat64
+  1666: 00000000004041d0   697 FUNC    GLOBAL HIDDEN     7 __libc_setup_tls
+  1667: 00000000004a7b50   168 OBJECT  GLOBAL DEFAULT   18 _IO_file_jumps
+  1668: 0000000000476f60   181 FUNC    GLOBAL DEFAULT    7 ___asprintf
+  1669: 0000000000444380    79 FUNC    WEAK   DEFAULT    7 strsep
+  1670: 0000000000464980   534 FUNC    GLOBAL HIDDEN     7 __printf_fp_l_buffer
+  1671: 0000000000419430    42 FUNC    GLOBAL HIDDEN     7 __close_nocancel
+  1672: 000000000046ab50    55 FUNC    GLOBAL HIDDEN     7 __wcsnlen_generic
+  1673: 0000000000420d70   322 FUNC    GLOBAL HIDDEN     7 _dl_init_static_tls
+  1674: 0000000000416b40   317 FUNC    GLOBAL HIDDEN     7 __memset_avx2_unaligned_erms_rtm
+  1675: 00000000004ac3c0     8 OBJECT  GLOBAL HIDDEN    22 __new_exitfn_called
+  1676: 000000000047a5a0    36 FUNC    GLOBAL HIDDEN     7 _Unwind_FindEnclosingFunction
+  1677: 0000000000444380    79 FUNC    GLOBAL HIDDEN     7 __strsep_g
+  1678: 0000000000430860    79 FUNC    GLOBAL HIDDEN     7 _nl_finddomain_subfreeres
+  1679: 0000000000411040    55 FUNC    WEAK   DEFAULT    7 valloc
+  1680: 000000000040ae10   155 FUNC    GLOBAL DEFAULT    7 _IO_str_init_static_internal
+  1681: 00000000004ab108     4 OBJECT  GLOBAL HIDDEN    21 _dl_stack_flags
+  1682: 0000000000483430    13 OBJECT  GLOBAL HIDDEN     9 _nl_category_name_sizes
+  1683: 0000000000411e40   246 IFUNC   GLOBAL DEFAULT    7 __new_memcpy
+  1684: 00000000004739a0   130 FUNC    WEAK   DEFAULT    7 dlvsym
+  1685: 00000000004191a0    44 FUNC    GLOBAL DEFAULT    7 __libc_lseek
+  1686: 00000000004661e0   215 FUNC    GLOBAL HIDDEN     7 __handle_registered_modifier_mb
+  1687: 0000000000414af0    13 FUNC    GLOBAL DEFAULT    7 __memmove_chk_erms
+  1688: 000000000043dae0   246 FUNC    WEAK   DEFAULT    7 _IO_fopen
+  1689: 000000000043e870   126 FUNC    GLOBAL HIDDEN     7 _IO_wdefault_finish
+  1690: 00000000004665d0   232 FUNC    WEAK   DEFAULT    7 register_printf_type
+  1691: 00000000004072b0   156 FUNC    GLOBAL DEFAULT    7 _IO_new_file_write
+  1692: 0000000000411910   110 FUNC    WEAK   DEFAULT    7 mallinfo
+  1693: 0000000000430530    21 FUNC    GLOBAL DEFAULT    7 __ctype_b_loc
+  1694: 0000000000442180   756 FUNC    GLOBAL DEFAULT    7 ___pthread_mutex_lock
+  1695: 0000000000419f30   138 FUNC    GLOBAL HIDDEN     7 __mremap
+  1696: 000000000047a580    12 FUNC    GLOBAL HIDDEN     7 _Unwind_GetLanguageSpecificData
+  1697: 0000000000468130    86 FUNC    GLOBAL HIDDEN     7 __strndup
+  1698: 000000000047f004     4 OBJECT  GLOBAL DEFAULT    9 __rseq_flags
+  1699: 0000000000467160    34 FUNC    WEAK   DEFAULT    7 _pthread_cleanup_push
+  1700: 00000000004679f0    14 FUNC    WEAK   DEFAULT    7 pthread_self
+  1701: 00000000004b09f8     8 OBJECT  GLOBAL HIDDEN    22 _dl_init_all_dirs
+  1702: 0000000000446720   236 FUNC    GLOBAL HIDDEN     7 __stpcpy_sse2
+  1703: 0000000000420880   723 FUNC    GLOBAL DEFAULT    7 _dl_allocate_tls
+  1704: 00000000004abb70     8 OBJECT  GLOBAL DEFAULT   22 _dl_tls_static_nelem
+  1705: 00000000004b0e20     8 OBJECT  GLOBAL HIDDEN    22 __fork_generation
+  1706: 0000000000424f80    12 FUNC    GLOBAL DEFAULT    7 __gconv_get_modules_db
+  1707: 000000000043f4f0   125 FUNC    GLOBAL HIDDEN     7 _IO_sputbackwc
+  1708: 0000000000455c20   279 FUNC    GLOBAL HIDDEN     7 __opendirat
+  1709: 000000000045dfa0   129 FUNC    GLOBAL HIDDEN     7 __libc_dlclose
+  1710: 0000000000457bd0   170 FUNC    WEAK   DEFAULT    7 twalk
+  1711: 00000000004266e0    23 FUNC    GLOBAL HIDDEN     7 __gconv_load_conf
+  1712: 000000000045d590   127 FUNC    GLOBAL HIDDEN     7 _dl_runtime_resolve_fxsave
+  1713: 00000000004253a0   241 FUNC    GLOBAL HIDDEN     7 __gconv_close_transform
+  1714: 000000000041a660    72 FUNC    GLOBAL HIDDEN     7 _dl_debug_update
+  1715: 000000000041a230   666 FUNC    GLOBAL HIDDEN     7 __malloc_hugepage_config
+  1716: 0000000000420bf0   125 FUNC    GLOBAL HIDDEN     7 _dl_tls_get_addr_soft
+  1717: 00000000004173a0    53 FUNC    GLOBAL HIDDEN     7 __memset_sse2_unaligned
+  1718: 0000000000405340   175 FUNC    WEAK   HIDDEN     7 _IO_file_attach
+  1719: 0000000000443e20   216 FUNC    WEAK   DEFAULT    7 argz_create_sep
+  1720: 0000000000474440   619 FUNC    GLOBAL HIDDEN     7 __wmemchr_evex_rtm
+  1721: 0000000000470980    27 FUNC    GLOBAL HIDDEN     7 __libc_secure_getenv
+  1722: 00000000004a6f40   104 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_NUMERIC
+  1723: 0000000000456b90    22 FUNC    WEAK   DEFAULT    7 stat
+  1724: 0000000000455c00    13 FUNC    WEAK   DEFAULT    7 wmemmove
+  1725: 000000000043f790   138 FUNC    GLOBAL DEFAULT    7 _IO_unsave_wmarkers
+  1726: 000000000046b4c0    50 FUNC    GLOBAL HIDDEN     7 __fstatat64
+  1727: 0000000000405250   231 FUNC    GLOBAL HIDDEN     7 _IO_file_open
+  1728: 0000000000419fc0   149 FUNC    GLOBAL HIDDEN     7 __set_vma_name
+  1729: 00000000004a8440    16 OBJECT  GLOBAL HIDDEN    18 __rtld_env_path_list
+  1730: 000000000041ddf0  3324 FUNC    GLOBAL HIDDEN     7 _dl_map_object
+  1731: 00000000004ac880 16384 OBJECT  GLOBAL HIDDEN    22 __pthread_keys
+  1732: 000000000045f340   252 FUNC    GLOBAL HIDDEN     7 _nl_archive_subfreeres
+  1733: 0000000000000008     8 TLS     GLOBAL DEFAULT   14 __libc_tsd_LOCALE
+  1734: 000000000043dd90   510 FUNC    WEAK   HIDDEN     7 fwrite
+  1735: 000000000040abc0    98 FUNC    GLOBAL HIDDEN     7 _IO_list_unlock
+  1736: 0000000000433440    33 FUNC    GLOBAL DEFAULT    7 __libc_localealias_freemem
+  1737: 00000000004715e0   281 FUNC    GLOBAL HIDDEN     7 __mpn_mul_1
+  1738: 0000000000485720    36 OBJECT  GLOBAL HIDDEN     9 _itoa_upper_digits
+  1739: 000000000047aa80   525 FUNC    GLOBAL HIDDEN     7 _Unwind_ForcedUnwind
+  1740: 00000000004abac0     0 NOTYPE  GLOBAL DEFAULT   21 _edata
+  1741: 00000000004666c0   175 FUNC    GLOBAL HIDDEN     7 __snprintf
+  1742: 0000000000416fc0   360 FUNC    GLOBAL HIDDEN     7 __memset_avx512_unaligned_erms
+  1743: 00000000004ab0e0    40 OBJECT  GLOBAL HIDDEN    21 _dl_load_lock
+  1744: 0000000000436750  1280 FUNC    WEAK   DEFAULT    7 qsort_r
+  1745: 0000000000415400  1362 FUNC    GLOBAL HIDDEN     7 __memcpy_sse2_unaligned_erms
+  1746: 0000000000456180    37 FUNC    GLOBAL HIDDEN     7 __sched_get_priority_min
+  1747: 00000000004619c0   188 FUNC    GLOBAL DEFAULT    7 __intl_freemem
+  1748: 0000000000408900   151 FUNC    GLOBAL HIDDEN     7 _IO_switch_to_get_mode
+  1749: 00000000004b1248     0 NOTYPE  GLOBAL DEFAULT   22 _end
+  1750: 00000000004b09a0    16 OBJECT  GLOBAL HIDDEN    22 _dl_stack_used
+  1751: 00000000004417b0   118 FUNC    GLOBAL HIDDEN     7 __pthread_enable_asynccancel
+  1752: 000000000046e9a0   452 FUNC    GLOBAL HIDDEN     7 _dl_fixup
+  1753: 00000000004054c0   370 FUNC    WEAK   HIDDEN     7 _IO_do_write
+  1754: 0000000000404bc0   357 FUNC    GLOBAL HIDDEN     7 _fitoa_word
+  1755: 0000000000464ba0   228 FUNC    GLOBAL HIDDEN     7 __printf_buffer_flush_fp_to_wide
+  1756: 000000000046ac60   223 FUNC    GLOBAL HIDDEN     7 __fdopendir
+  1757: 00000000004190d0   111 FUNC    GLOBAL HIDDEN     7 __clock_gettime
+  1758: 0000000000444460   663 FUNC    GLOBAL HIDDEN     7 __memchr_avx2
+  1759: 0000000000421860    73 FUNC    GLOBAL HIDDEN     7 __tunable_get_default
+  1760: 00000000004b08d0    48 OBJECT  GLOBAL HIDDEN    22 _r_debug_extended
+  1761: 00000000004b0ec0   104 OBJECT  GLOBAL HIDDEN    22 _nl_locale_file_list
+  1762: 00000000004688f0   236 FUNC    GLOBAL HIDDEN     7 __strcpy_sse2
+  1763: 000000000042f210    25 FUNC    GLOBAL HIDDEN     7 __gconv_release_cache
+  1764: 00000000004b0908     1 OBJECT  GLOBAL DEFAULT   22 __nptl_initial_report_events
+  1765: 0000000000437830    25 FUNC    WEAK   DEFAULT    7 strtouq
+  1766: 000000000043d720   622 FUNC    GLOBAL DEFAULT    7 __new_fclose
+  1767: 0000000000473a30   124 FUNC    GLOBAL DEFAULT    7 __libc_dlerror_result_free
+  1768: 00000000004ab10c     2 OBJECT  GLOBAL HIDDEN    21 _dl_fpu_control
+  1769: 0000000000453fc0   718 FUNC    GLOBAL HIDDEN     7 __strnlen_avx2
+  1770: 000000000043ee20   378 FUNC    GLOBAL HIDDEN     7 __wuflow
+  1771: 000000000046ae80  1598 FUNC    GLOBAL HIDDEN     7 __sysconf
+  1772: 00000000004aa0e8     8 OBJECT  GLOBAL HIDDEN    21 __x86_shared_cache_size_half
+  1773: 0000000000442180   756 FUNC    WEAK   DEFAULT    7 pthread_mutex_lock
+  1774: 0000000000461b90    52 FUNC    GLOBAL HIDDEN     7 __sigaction
+  1775: 00000000004a7a00  2352 OBJECT  GLOBAL HIDDEN    18 __io_vtables
+  1776: 00000000004110e0  1011 FUNC    GLOBAL DEFAULT    7 __libc_calloc
+  1777: 00000000004b0e40     4 OBJECT  GLOBAL HIDDEN    22 __default_pthread_attr_lock
+  1778: 000000000044d4b0  1365 FUNC    GLOBAL HIDDEN     7 __strcmp_avx2_rtm
+  1779: 00000000004b08c8     8 OBJECT  GLOBAL HIDDEN    22 __curbrk
+  1780: 0000000000425000   242 FUNC    GLOBAL HIDDEN     7 __gconv_compare_alias
+  1781: 00000000004abb10     4 OBJECT  GLOBAL HIDDEN    22 __x86_string_control
+  1782: 0000000000457500   128 FUNC    GLOBAL HIDDEN     7 __tfind
+  1783: 00000000004ab980   232 OBJECT  GLOBAL HIDDEN    21 _nl_global_locale
+  1784: 00000000004b0c50     4 OBJECT  GLOBAL HIDDEN    22 _dl_verbose
+  1785: 0000000000409aa0    12 FUNC    GLOBAL DEFAULT    7 _IO_default_seekoff
+  1786: 000000000041fe20   143 FUNC    GLOBAL HIDDEN     7 _dl_dprintf
+  1787: 0000000000408e90   183 FUNC    GLOBAL HIDDEN     7 _IO_doallocbuf
+  1788: 0000000000458330    88 FUNC    GLOBAL DEFAULT    7 _dl_signal_error
+  1789: 00000000004b09d8     8 OBJECT  GLOBAL HIDDEN    22 _dl_phnum
+  1790: 0000000000409f20   820 FUNC    WEAK   DEFAULT    7 _flushlbf
+  1791: 00000000004585e0  1064 FUNC    GLOBAL DEFAULT    7 _dl_exception_create_format
+  1792: 00000000004873e0    35 OBJECT  GLOBAL HIDDEN     9 __strtol_ul_rem_tab
+  1793: 00000000004a8450     4 OBJECT  GLOBAL HIDDEN    18 __stack_prot
+  1794: 000000000046c9f0   811 FUNC    GLOBAL DEFAULT    7 _dl_find_object
+  1795: 0000000000472b30   240 FUNC    GLOBAL DEFAULT    7 __printf_buffer_as_file_xsputn
+  1796: 0000000000455f30    57 FUNC    GLOBAL HIDDEN     7 __closedir
+  1797: 0000000000419bb0    58 FUNC    WEAK   DEFAULT    7 get_nprocs
+  1798: 0000000000467050   188 FUNC    WEAK   DEFAULT    7 __vsnprintf
+  1799: 00000000004741c0   618 FUNC    GLOBAL HIDDEN     7 __wmemchr_evex
+  1800: 00000000004b0c40     8 OBJECT  GLOBAL HIDDEN    22 _dl_profile_map
+  1801: 00000000004088d0    48 FUNC    GLOBAL DEFAULT    7 _IO_switch_to_backup_area
+  1802: 0000000000467890   346 FUNC    GLOBAL HIDDEN     7 __pthread_kill
+  1803: 0000000000472ff0   431 FUNC    GLOBAL DEFAULT    7 __dlerror
+  1804: 00000000004428e0   281 FUNC    GLOBAL HIDDEN     7 __pthread_mutex_unlock_usercnt
+  1805: 0000000000404ab0    30 FUNC    GLOBAL HIDDEN     7 exit
+  1806: 000000000047a4f0    69 FUNC    GLOBAL HIDDEN     7 _Unwind_SetGR
+  1807: 0000000000472c90   196 FUNC    GLOBAL HIDDEN     7 __printf_buffer_as_file_terminate
+  1808: 00000000004276d0  1529 FUNC    GLOBAL DEFAULT    7 __gconv_transform_internal_ucs4le
+  1809: 00000000004051d0    51 FUNC    GLOBAL HIDDEN     7 _IO_new_file_init_internal
+  1810: 0000000000437870  1303 FUNC    GLOBAL DEFAULT    7 ____strtoull_l_internal
+  1811: 00000000004674f0    57 FUNC    GLOBAL HIDDEN     7 __nptl_stack_list_add
+  1812: 0000000000419e70    37 FUNC    GLOBAL HIDDEN     7 __munmap
+  1813: 0000000000000040     8 TLS     GLOBAL DEFAULT   15 __libc_tsd_CTYPE_TOUPPER
+  1814: 00000000004117a0    51 FUNC    GLOBAL DEFAULT    7 __malloc_usable_size
+  1815: 000000000042e3b0  1128 FUNC    GLOBAL HIDDEN     7 __gconv_transliterate
+  1816: 0000000000456a80   264 FUNC    GLOBAL HIDDEN     7 __openat
+  1817: 000000000044cc30   789 FUNC    GLOBAL HIDDEN     7 __strchr_sse2_no_bsf
+  1818: 00000000004455c0  1023 FUNC    GLOBAL HIDDEN     7 __memcmp_avx2_movbe_rtm
+  1819: 00000000004a75c0  1072 OBJECT  GLOBAL HIDDEN    18 _sys_errlist_internal
+  1820: 0000000000448d10    16 FUNC    GLOBAL DEFAULT    7 __strcasecmp_sse2
+  1821: 0000000000437d90    17 FUNC    WEAK   HIDDEN     7 __strtoul_l
+  1822: 0000000000473610    96 FUNC    GLOBAL DEFAULT    7 ___dlmopen
+  1823: 000000000043e640   108 FUNC    GLOBAL HIDDEN     7 _IO_wsetb
+  1824: 00000000004aa108     8 OBJECT  WEAK   HIDDEN    21 DW.ref.__gcc_personality_v0
+  1825: 0000000000472c20   109 FUNC    GLOBAL HIDDEN     7 __printf_buffer_as_file_init
+  1826: 0000000000415390    44 FUNC    GLOBAL HIDDEN     7 __memcpy_sse2_unaligned
+  1827: 0000000000419680    52 FUNC    WEAK   DEFAULT    7 brk
+  1828: 00000000004a6ca0    96 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_MESSAGES
+  1829: 00000000004679f0    14 FUNC    GLOBAL HIDDEN     7 __pthread_self
+  1830: 0000000000418f70   248 FUNC    GLOBAL HIDDEN     7 __wcsmbs_named_conv
+  1831: 0000000000461e30   211 FUNC    GLOBAL HIDDEN     7 __grouping_iterator_init
+  1832: 00000000004224d0   444 FUNC    GLOBAL HIDDEN     7 _dl_aux_init
+  1833: 0000000000441830   131 FUNC    GLOBAL HIDDEN     7 __pthread_disable_asynccancel
+  1834: 00000000004b09d0     8 OBJECT  GLOBAL HIDDEN    22 _dl_hwcap
+  1835: 0000000000417400   249 FUNC    GLOBAL HIDDEN     7 __memset_sse2_unaligned_erms
+  1836: 0000000000466390    94 FUNC    GLOBAL DEFAULT    7 __libc_printf_freemem
+  1837: 00000000004865e0   137 OBJECT  GLOBAL HIDDEN     9 _nl_category_names
+  1838: 0000000000456a80   264 FUNC    WEAK   DEFAULT    7 openat
+  1839: 0000000000419170    42 FUNC    GLOBAL DEFAULT    7 __fstat
+  1840: 0000000000419580   152 FUNC    GLOBAL HIDDEN     7 __open64_nocancel
+  1841: 0000000000470680   678 FUNC    GLOBAL HIDDEN     7 __gconv_create_spec
+  1842: 0000000000483440    15 OBJECT  GLOBAL HIDDEN     9 _nl_C_codeset
+  1843: 00000000004b09f0     8 OBJECT  GLOBAL HIDDEN    22 _dl_initfirst
+  1844: 0000000000417700   485 FUNC    GLOBAL HIDDEN     7 __strchrnul_avx2_rtm
+  1845: 0000000000456a60    25 FUNC    GLOBAL DEFAULT    7 __lstat
+  1846: 0000000000435f80    41 FUNC    GLOBAL HIDDEN     7 __sigprocmask
+  1847: 000000000040b210    86 FUNC    GLOBAL HIDDEN     7 _IO_str_underflow
+  1848: 00000000004044f0    11 FUNC    GLOBAL HIDDEN     7 _setjmp
+  1849: 0000000000441700   168 FUNC    WEAK   HIDDEN     7 fgets_unlocked
+  1850: 0000000000430550    21 FUNC    GLOBAL DEFAULT    7 __ctype_toupper_loc
+  1851: 00000000004621f0   405 FUNC    GLOBAL HIDDEN     7 __printf_buffer_flush_to_file
+  1852: 00000000004aa0d8     8 OBJECT  GLOBAL HIDDEN    21 __x86_rep_movsb_threshold
+  1853: 0000000000461db0    84 FUNC    GLOBAL HIDDEN     7 __funlockfile
+  1854: 0000000000417ae0   522 FUNC    GLOBAL HIDDEN     7 __strchrnul_sse2
+  1855: 0000000000416f40    29 FUNC    GLOBAL DEFAULT    7 __wmemset_avx512_unaligned
+  1856: 000000000047f000     4 OBJECT  GLOBAL DEFAULT    9 _IO_stdin_used
+  1857: 0000000000419140    44 FUNC    GLOBAL HIDDEN     7 _exit
+  1858: 0000000000412c80  1758 FUNC    GLOBAL HIDDEN     7 __memcpy_avx_unaligned_erms
+  1859: 00000000004ab0a0    40 OBJECT  GLOBAL HIDDEN    21 _dl_load_write_lock
+  1860: 000000000045d7a0     9 FUNC    GLOBAL HIDDEN     7 _dl_tlsdesc_return
+  1861: 0000000000443610    42 FUNC    GLOBAL HIDDEN     7 __init_sched_fifo_prio
+  1862: 0000000000455e60   198 FUNC    GLOBAL HIDDEN     7 __alloc_dir
+  1863: 000000000044ab00    16 FUNC    GLOBAL DEFAULT    7 __strcasecmp_sse42
+  1864: 0000000000468190    30 IFUNC   GLOBAL HIDDEN     7 strspn
+  1865: 0000000000442cf0    21 FUNC    GLOBAL DEFAULT    7 ___pthread_once
+  1866: 0000000000455f70    52 FUNC    GLOBAL HIDDEN     7 __getdents64
+  1867: 0000000000467340   268 FUNC    GLOBAL HIDDEN     7 __futex_abstimed_wait_cancelable64
+  1868: 0000000000417e80   363 FUNC    GLOBAL HIDDEN     7 __strlen_avx2_rtm
+  1869: 000000000047a4a0    60 FUNC    GLOBAL HIDDEN     7 _Unwind_GetGR
+  1870: 000000000044c5a0   559 FUNC    GLOBAL HIDDEN     7 __strchr_avx2_rtm
+  1871: 0000000000483f18     9 OBJECT  GLOBAL HIDDEN     9 _nl_default_default_domain
+  1872: 00000000004b0c78     8 OBJECT  GLOBAL HIDDEN    22 __libc_argv
+  1873: 0000000000403d60   689 FUNC    GLOBAL HIDDEN     7 __libc_start_main
+  1874: 000000000040b650    81 FUNC    GLOBAL HIDDEN     7 __lll_lock_wait_private
+  1875: 00000000004122a0   112 IFUNC   GLOBAL HIDDEN     7 strlen
+  1876: 00000000004191a0    44 FUNC    WEAK   DEFAULT    7 lseek64
+  1877: 0000000000442a00   270 FUNC    GLOBAL DEFAULT    7 ___pthread_mutex_unlock
+  1878: 0000000000409760   129 FUNC    GLOBAL HIDDEN     7 _IO_init_internal
+  1879: 00000000004191d0   280 FUNC    WEAK   DEFAULT    7 open
+  1880: 000000000046b4c0    50 FUNC    GLOBAL DEFAULT    7 __GI___fstatat
+  1881: 00000000004aba98     8 OBJECT  WEAK   DEFAULT   21 program_invocation_name
+  1882: 000000000045dd70   177 FUNC    GLOBAL HIDDEN     7 __libc_dlsym
+  1883: 000000000040fe70   150 FUNC    GLOBAL HIDDEN     7 __malloc_fork_unlock_parent
+  1884: 000000000046dd90   345 FUNC    GLOBAL HIDDEN     7 _dl_show_scope
+  1885: 0000000000419390   157 FUNC    GLOBAL HIDDEN     7 __libc_write
+  1886: 00000000004a9a70     8 OBJECT  GLOBAL HIDDEN    18 _dl_vdso_time
+  1887: 0000000000443640   984 FUNC    GLOBAL HIDDEN     7 __pthread_tpp_change_priority
+  1888: 00000000004aba80     4 OBJECT  GLOBAL HIDDEN    21 __mutex_aconf
+  1889: 00000000004a8460     4 OBJECT  GLOBAL DEFAULT   18 __rseq_size
+  1890: 00000000004097f0   129 FUNC    GLOBAL DEFAULT    7 _IO_init
+  1891: 000000000046ec50    45 FUNC    GLOBAL HIDDEN     7 _dl_sort_maps_init
+  1892: 0000000000437830    25 FUNC    GLOBAL DEFAULT    7 __strtoul
+  1893: 0000000000458510    25 FUNC    GLOBAL HIDDEN     7 _dl_error_free
+  1894: 000000000042d5b0  3582 FUNC    GLOBAL DEFAULT    7 __gconv_transform_internal_ucs2reverse
+  1895: 0000000000414290    59 FUNC    GLOBAL HIDDEN     7 __memcpy_avx512_unaligned
+  1896: 0000000000489700    72 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_lower
+  1897: 00000000004b0a00     8 OBJECT  GLOBAL HIDDEN    22 _dl_all_dirs
+  1898: 0000000000469130   277 FUNC    GLOBAL HIDDEN     7 __strspn_sse42
+  1899: 00000000004b09b0     4 OBJECT  GLOBAL HIDDEN    22 _dl_dso_sort_algo
+  1900: 0000000000436ed0   110 FUNC    GLOBAL HIDDEN     7 __setenv
+  1901: 0000000000437050   142 FUNC    GLOBAL HIDDEN     7 __clearenv
+  1902: 00000000004440e0   112 IFUNC   GLOBAL HIDDEN     7 strchr
+  1903: 0000000000454a00   662 FUNC    GLOBAL HIDDEN     7 __strrchr_avx2
+  1904: 0000000000420c70   241 FUNC    GLOBAL HIDDEN     7 _dl_add_to_slotinfo
+  1905: 0000000000411f40   246 IFUNC   GLOBAL DEFAULT    7 __libc_memmove
+  1906: 00000000004109f0  1445 FUNC    GLOBAL DEFAULT    7 __realloc
+  1907: 00000000004b0c98     8 OBJECT  GLOBAL HIDDEN    22 __gconv_alias_db
+  1908: 000000000040ab00     7 FUNC    GLOBAL HIDDEN     7 _IO_iter_end
+  1909: 0000000000411bd0   400 FUNC    GLOBAL DEFAULT    7 __mallopt
+  1910: 000000000046b570    18 FUNC    GLOBAL DEFAULT    7 __mempcpy_chk
+  1911: 000000000043dbe0   422 FUNC    WEAK   HIDDEN     7 fputs
+  1912: 000000000047a5d0    12 FUNC    GLOBAL HIDDEN     7 _Unwind_GetDataRelBase
+  1913: 0000000000405fd0   810 FUNC    GLOBAL DEFAULT    7 _IO_new_file_underflow
+  1914: 00000000004aa0c0     0 NOTYPE  GLOBAL DEFAULT   21 __data_start
+  1915: 00000000004731a0   505 FUNC    GLOBAL HIDDEN     7 _dlerror_run
+  1916: 0000000000476b80   566 FUNC    GLOBAL HIDDEN     7 _dl_sym
+  1917: 0000000000405190    25 FUNC    GLOBAL HIDDEN     7 __libc_fatal
+  1918: 0000000000419c30   137 FUNC    GLOBAL HIDDEN     7 __get_phys_pages
+  1919: 0000000000419ea0   132 FUNC    GLOBAL HIDDEN     7 __sbrk
+  1920: 0000000000419e40    37 FUNC    WEAK   DEFAULT    7 mprotect
+  1921: 000000000040aa90    12 FUNC    GLOBAL DEFAULT    7 _IO_default_seek
+  1922: 0000000000457580  1609 FUNC    GLOBAL HIDDEN     7 __tdelete
+  1923: 0000000000423150    12 FUNC    GLOBAL HIDDEN     7 _dl_get_dl_main_map
+  1924: 00000000004b1100     8 OBJECT  GLOBAL HIDDEN    22 __printf_va_arg_table
+  1925: 00000000004b08d0    40 OBJECT  GLOBAL DEFAULT   22 _r_debug
+  1926: 0000000000411980   591 FUNC    GLOBAL DEFAULT    7 __malloc_stats
+  1927: 0000000000455f30    57 FUNC    WEAK   DEFAULT    7 closedir
+  1928: 0000000000442d10    62 FUNC    GLOBAL DEFAULT    7 ___pthread_rwlock_init
+  1929: 000000000043e6b0   434 FUNC    GLOBAL HIDDEN     7 _IO_wdefault_pbackfail
+  1930: 000000000043c750   673 FUNC    GLOBAL HIDDEN     7 __vfprintf_internal
+  1931: 00000000004aa120     8 OBJECT  GLOBAL HIDDEN    21 _IO_list_all
+  1932: 00000000004370e0   177 FUNC    GLOBAL DEFAULT    7 __libc_setenv_freemem
+  1933: 0000000000443d60   192 FUNC    GLOBAL HIDDEN     7 __argz_add_sep
+  1934: 0000000000406760   536 FUNC    GLOBAL DEFAULT    7 _IO_new_file_overflow
+  1935: 000000000044f680  3497 FUNC    GLOBAL HIDDEN     7 __strcmp_sse42
+  1936: 000000000045dc10   146 FUNC    GLOBAL HIDDEN     7 __libc_dlopen_mode
+  1937: 0000000000436f40   269 FUNC    GLOBAL HIDDEN     7 __unsetenv
+  1938: 0000000000406ad0  1448 FUNC    GLOBAL DEFAULT    7 _IO_new_file_seekoff
+  1939: 0000000000467450   102 FUNC    GLOBAL DEFAULT    7 __futex_lock_pi64
+  1940: 0000000000466db0   302 FUNC    WEAK   DEFAULT    7 vasprintf
+  1941: 000000000041edb0   162 FUNC    GLOBAL HIDDEN     7 _dl_sysdep_read_whole_file
+  1942: 0000000000412230   112 IFUNC   WEAK   DEFAULT    7 strchrnul
+  1943: 0000000000465f20   350 FUNC    GLOBAL HIDDEN     7 __printf_function_invoke
+  1944: 0000000000406a60   106 FUNC    GLOBAL HIDDEN     7 _IO_file_sync_mmap
+  1945: 0000000000456bb0   144 FUNC    GLOBAL HIDDEN     7 __openat_nocancel
+  1946: 000000000046d090  1309 FUNC    GLOBAL HIDDEN     7 _dl_find_object_update
+  1947: 0000000000476480   917 FUNC    GLOBAL HIDDEN     7 _dl_addr
+  1948: 0000000000419cc0   137 FUNC    GLOBAL HIDDEN     7 __get_avphys_pages
+  1949: 000000000046a360   879 FUNC    GLOBAL HIDDEN     7 __wcsnlen_avx2_rtm
+  1950: 00000000004662c0   207 FUNC    GLOBAL HIDDEN     7 __handle_registered_modifier_wc
+  1951: 000000000044f3d0   675 FUNC    GLOBAL HIDDEN     7 __strcmp_sse2_unaligned
+  1952: 00000000004191d0   280 FUNC    GLOBAL HIDDEN     7 __open64
+  1953: 00000000004a6fc0    80 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_PAPER
+  1954: 00000000004584a0    75 FUNC    GLOBAL HIDDEN     7 _dl_catch_error
+  1955: 00000000004461f0   589 FUNC    GLOBAL HIDDEN     7 __stpcpy_avx2_rtm
+  1956: 00000000004084e0    21 FUNC    GLOBAL HIDDEN     7 _IO_un_link
+  1957: 000000000047d610   113 FUNC    GLOBAL HIDDEN     7 __register_frame_info_table
+  1958: 000000000043a370  9180 FUNC    GLOBAL DEFAULT    7 __printf_buffer
+  1959: 0000000000405430   133 FUNC    GLOBAL DEFAULT    7 _IO_file_setbuf_mmap
+  1960: 00000000004b0c48     8 OBJECT  GLOBAL HIDDEN    22 _dl_inhibit_rpath
+  1961: 0000000000419bf0    58 FUNC    WEAK   DEFAULT    7 get_nprocs_conf
+  1962: 0000000000410fe0    95 FUNC    WEAK   DEFAULT    7 aligned_alloc
+  1963: 000000000040a8f0   407 FUNC    GLOBAL HIDDEN     7 _IO_default_pbackfail
+  1964: 00000000004a9a78     8 OBJECT  GLOBAL HIDDEN    18 _dl_vdso_gettimeofday
+  1965: 000000000045d7b0    18 FUNC    GLOBAL HIDDEN     7 _dl_tlsdesc_undefweak
+  1966: 0000000000411d60   135 FUNC    WEAK   DEFAULT    7 posix_memalign
+  1967: 000000000047d490   125 FUNC    GLOBAL HIDDEN     7 __register_frame_info
+  1968: 0000000000455710   449 FUNC    WEAK   HIDDEN     7 wcrtomb
+  1969: 00000000004620f0   178 FUNC    GLOBAL HIDDEN     7 __printf_buffer_puts_1
+  1970: 000000000041a060    37 FUNC    GLOBAL HIDDEN     7 __sysinfo
+  1971: 000000000043dae0   246 FUNC    GLOBAL DEFAULT    7 __new_fopen
+  1972: 0000000000416af0    47 FUNC    GLOBAL HIDDEN     7 __memset_avx2_unaligned_rtm
+  1973: 00000000004202d0   276 FUNC    GLOBAL HIDDEN     7 _dl_assign_tls_modid
+  1974: 0000000000455bf0    13 FUNC    GLOBAL HIDDEN     7 __wmemcpy
+  1975: 000000000040ab10     9 FUNC    GLOBAL HIDDEN     7 _IO_iter_next
+  1976: 000000000046c4c0   108 FUNC    GLOBAL HIDDEN     7 _dl_close_worker
+  1977: 0000000000444c40   591 FUNC    GLOBAL HIDDEN     7 __memchr_evex_rtm
+  1978: 0000000000412c80  1758 FUNC    GLOBAL HIDDEN     7 __memmove_avx_unaligned_erms
+  1979: 0000000000420230   154 FUNC    GLOBAL HIDDEN     7 _dl_tls_static_surplus_init
+  1980: 00000000004ab118     8 OBJECT  GLOBAL HIDDEN    21 _dl_pagesize
+  1981: 0000000000411040    55 FUNC    GLOBAL DEFAULT    7 __valloc
+  1982: 00000000004aa140   224 OBJECT  GLOBAL DEFAULT   21 _IO_2_1_stderr_
+  1983: 00000000004aba98     8 OBJECT  GLOBAL DEFAULT   21 __progname_full
+  1984: 000000000041a630    18 FUNC    GLOBAL DEFAULT    7 __memset_chk
+  1985: 0000000000423170  2539 FUNC    GLOBAL HIDDEN     7 _dl_tunable_set_hwcaps
+  1986: 0000000000408890    53 FUNC    GLOBAL DEFAULT    7 _IO_switch_to_main_get_area
+  1987: 0000000000414b50    56 FUNC    GLOBAL HIDDEN     7 __memcpy_evex_unaligned
+  1988: 0000000000461b40    65 FUNC    GLOBAL HIDDEN     7 raise
+  1989: 000000000040b5d0   116 FUNC    GLOBAL HIDDEN     7 __libc_cleanup_pop_restore
+  1990: 0000000000466c80   294 FUNC    GLOBAL HIDDEN     7 __vasprintf_internal
+  1991: 000000000040a7d0   166 FUNC    GLOBAL DEFAULT    7 _IO_seekmark
+  1992: 00000000004896a0    72 OBJECT  GLOBAL HIDDEN     9 _nl_C_LC_CTYPE_class_alpha
+  1993: 0000000000410690   269 FUNC    GLOBAL DEFAULT    7 free
+  1994: 00000000004a9a60     8 OBJECT  GLOBAL HIDDEN    18 _dl_vdso_clock_getres_time64
+  1995: 0000000000435f80    41 FUNC    WEAK   DEFAULT    7 sigprocmask
+  1996: 00000000004098c0   104 FUNC    GLOBAL DEFAULT    7 _IO_old_init
+  1997: 0000000000416c90   628 FUNC    GLOBAL HIDDEN     7 __memset_avx512_no_vzeroupper
+  1998: 0000000000474c50  4498 FUNC    GLOBAL HIDDEN     7 _dl_map_object_deps
+  1999: 00000000004a6b80   184 OBJECT  GLOBAL HIDDEN    18 _nl_C_LC_IDENTIFICATION
+  2000: 00000000004ab160   160 OBJECT  GLOBAL HIDDEN    21 _dl_ns
+  2001: 000000000045ec90  1698 FUNC    GLOBAL HIDDEN     7 _nl_load_locale_from_archive
+  2002: 0000000000473ab0   232 FUNC    GLOBAL HIDDEN     7 __cache_sysconf
+  2003: 000000000043dae0   246 FUNC    WEAK   DEFAULT    7 fopen64
+
+No version information found in this file.
+
+Displaying notes found in: .note.gnu.property
+  Owner                Data size 	Description
+  GNU                  0x00000020	NT_GNU_PROPERTY_TYPE_0	      Properties: x86 feature: IBT, SHSTK, x86 ISA needed: x86-64-baseline
+
+Displaying notes found in: .note.gnu.build-id
+  Owner                Data size 	Description
+  GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)	    Build ID: 1d2a16c677d8af9fc295d59868d13696c39949be
+
+Displaying notes found in: .note.ABI-tag
+  Owner                Data size 	Description
+  GNU                  0x00000010	NT_GNU_ABI_TAG (ABI version tag)	    OS: Linux, ABI: 3.2.0
+
+Displaying notes found in: .note.stapsdt
+  Owner                Data size 	Description
+  stapsdt              0x0000003a	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: lll_lock_wait_private
+    Location: 0x000000000040b666, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x00000032	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: lll_lock_wait
+    Location: 0x000000000040b6c9, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x0000004c	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_arena_max
+    Location: 0x000000000040b8b7, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@32+mp_(%rip)
+  stapsdt              0x0000004d	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_arena_test
+    Location: 0x000000000040b8c7, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@24+mp_(%rip)
+  stapsdt              0x00000054	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_tunable_tcache_max_bytes
+    Location: 0x000000000040b8e0, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@112+mp_(%rip)
+  stapsdt              0x00000050	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_tunable_tcache_count
+    Location: 0x000000000040b920, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@120+mp_(%rip)
+  stapsdt              0x00000059	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_tunable_tcache_unsorted_limit
+    Location: 0x000000000040b937, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@128+mp_(%rip)
+  stapsdt              0x00000041	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_mxfast
+    Location: 0x000000000040ba97, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@%rdx
+  stapsdt              0x0000005e	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_trim_threshold
+    Location: 0x000000000040bac7, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x00000059	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_top_pad
+    Location: 0x000000000040bae7, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@8+mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x00000061	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_mmap_threshold
+    Location: 0x000000000040bb07, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@16+mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x0000005d	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_mmap_max
+    Location: 0x000000000040bb27, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -4@%eax -4@64+mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x00000052	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_perturb
+    Location: 0x000000000040bb47, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -4@%eax -4@perturb_byte(%rip)
+  stapsdt              0x00000041	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_arena_reuse_free_list
+    Location: 0x000000000040bc9e, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rbx
+  stapsdt              0x0000003d	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_sbrk_less
+    Location: 0x000000000040c4da, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax -8@%rbx
+  stapsdt              0x0000003c	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_heap_free
+    Location: 0x000000000040c949, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi 8@%rax
+  stapsdt              0x0000003c	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_heap_less
+    Location: 0x000000000040ca45, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@%r10
+  stapsdt              0x00000061	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_mmap_threshold
+    Location: 0x000000000040ce59, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@16+mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x00000045	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_tcache_double_free
+    Location: 0x000000000040d390, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r10 8@%rax
+  stapsdt              0x0000003b	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_heap_new
+    Location: 0x000000000040d562, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r14 8@%rbx
+  stapsdt              0x0000003e	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_arena_reuse
+    Location: 0x000000000040d8c5, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rbx 8@%r12
+  stapsdt              0x0000004a	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_arena_reuse_wait
+    Location: 0x000000000040d950, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rbx 8@%rbx 8@%r12
+  stapsdt              0x0000003c	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_arena_new
+    Location: 0x000000000040dad4, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@%r13
+  stapsdt              0x0000003e	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_arena_retry
+    Location: 0x000000000040dc97, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rsi 8@%rdi
+  stapsdt              0x0000003a	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_heap_more
+    Location: 0x000000000040efe3, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r8 8@%r9
+  stapsdt              0x0000003c	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_sbrk_more
+    Location: 0x000000000040f223, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rcx -8@%r8
+  stapsdt              0x00000038	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_malloc_retry
+    Location: 0x0000000000410238, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rbx
+  stapsdt              0x00000041	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_memalign_retry
+    Location: 0x00000000004105a0, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@%rbx
+  stapsdt              0x0000004e	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_free_dyn_thresholds
+    Location: 0x0000000000410751, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@%rdx
+  stapsdt              0x0000004e	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_free_dyn_thresholds
+    Location: 0x000000000041086e, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdx 8@%rax
+  stapsdt              0x00000040	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_realloc_retry
+    Location: 0x0000000000410ebc, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@%rbx
+  stapsdt              0x00000038	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_calloc_retry
+    Location: 0x0000000000411290, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rbx
+  stapsdt              0x0000003d	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt
+    Location: 0x0000000000411c0b, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -4@%ebx -4@%r12d
+  stapsdt              0x0000004c	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_arena_max
+    Location: 0x0000000000411c75, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@32+mp_(%rip)
+  stapsdt              0x0000005e	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_mmap_max
+    Location: 0x0000000000411c90, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -4@%r12d -4@64+mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x00000061	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_mmap_threshold
+    Location: 0x0000000000411ca8, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@16+mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x0000004d	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_arena_test
+    Location: 0x0000000000411cc5, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@24+mp_(%rip)
+  stapsdt              0x00000053	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_perturb
+    Location: 0x0000000000411cd0, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -4@%r12d -4@perturb_byte(%rip)
+  stapsdt              0x00000059	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_top_pad
+    Location: 0x0000000000411ce0, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@8+mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x0000005e	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_trim_threshold
+    Location: 0x0000000000411cf8, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r12 8@mp_(%rip) -4@72+mp_(%rip)
+  stapsdt              0x00000041	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: memory_mallopt_mxfast
+    Location: 0x0000000000411d3f, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rax 8@%rdx
+  stapsdt              0x0000003a	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: map_start
+    Location: 0x000000000041d7df, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -8@32(%rbp) 8@%rbx
+  stapsdt              0x0000003a	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: setjmp
+    Location: 0x0000000000435f15, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi -4@%esi 8@%rax
+  stapsdt              0x00000033	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: mutex_acquired
+    Location: 0x0000000000441b8d, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rbx
+  stapsdt              0x00000030	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: mutex_entry
+    Location: 0x000000000044218f, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x00000033	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: mutex_acquired
+    Location: 0x00000000004421f5, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x00000031	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: mutex_release
+    Location: 0x00000000004425c6, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r8
+  stapsdt              0x00000031	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: mutex_release
+    Location: 0x0000000000442631, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%r8
+  stapsdt              0x00000032	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: mutex_release
+    Location: 0x0000000000442924, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x00000032	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: mutex_release
+    Location: 0x0000000000442a44, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x00000031	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: rdlock_entry
+    Location: 0x0000000000442d64, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x00000038	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: rdlock_acquire_read
+    Location: 0x0000000000442d98, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rbx
+  stapsdt              0x00000032	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: rwlock_unlock
+    Location: 0x0000000000442f4e, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x00000031	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: wrlock_entry
+    Location: 0x0000000000443128, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi
+  stapsdt              0x00000039	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: wrlock_acquire_write
+    Location: 0x0000000000443193, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rbx
+  stapsdt              0x0000003b	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: longjmp
+    Location: 0x0000000000461b17, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi -4@%esi 8@%rdx
+  stapsdt              0x00000042	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: longjmp_target
+    Location: 0x0000000000461b33, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: 8@%rdi -4@%eax 8@%rdx
+  stapsdt              0x00000037	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: unmap_start
+    Location: 0x000000000046bda0, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -8@%r8 8@%rbx
+  stapsdt              0x0000003a	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: unmap_complete
+    Location: 0x000000000046c0ab, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -8@%r8 8@%rbx
+  stapsdt              0x00000044	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: map_complete
+    Location: 0x000000000046e0d6, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -8@32(%rbx) 8@%r14 8@%r15
+  stapsdt              0x00000041	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: reloc_start
+    Location: 0x000000000046e1f0, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -8@32(%r12) 8@-56(%rbp)
+  stapsdt              0x0000004b	NT_STAPSDT (SystemTap probe descriptors)	    Provider: libc
+    Name: reloc_complete
+    Location: 0x000000000046e356, Base: 0x000000000049b174, Semaphore: 0x0000000000000000
+    Arguments: -8@32(%rbx) 8@-56(%rbp) 8@%r15

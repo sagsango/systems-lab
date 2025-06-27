@@ -1,0 +1,97 @@
+
+uic:     file format elf64-x86-64
+
+
+Disassembly of section .note.gnu.property:
+
+00000000004001c8 <.note.gnu.property>:
+  4001c8:	04 00                	add    $0x0,%al
+  4001ca:	00 00                	add    %al,(%rax)
+  4001cc:	10 00                	adc    %al,(%rax)
+  4001ce:	00 00                	add    %al,(%rax)
+  4001d0:	05 00 00 00 47       	add    $0x47000000,%eax
+  4001d5:	4e 55                	rex.WRX push %rbp
+  4001d7:	00 02                	add    %al,(%rdx)
+  4001d9:	00 00                	add    %al,(%rax)
+  4001db:	c0 04 00 00          	rolb   $0x0,(%rax,%rax,1)
+  4001df:	00 03                	add    %al,(%rbx)
+  4001e1:	00 00                	add    %al,(%rax)
+  4001e3:	00 00                	add    %al,(%rax)
+  4001e5:	00 00                	add    %al,(%rax)
+	...
+
+Disassembly of section .note.gnu.build-id:
+
+00000000004001e8 <.note.gnu.build-id>:
+  4001e8:	04 00                	add    $0x0,%al
+  4001ea:	00 00                	add    %al,(%rax)
+  4001ec:	14 00                	adc    $0x0,%al
+  4001ee:	00 00                	add    %al,(%rax)
+  4001f0:	03 00                	add    (%rax),%eax
+  4001f2:	00 00                	add    %al,(%rax)
+  4001f4:	47                   	rex.RXB
+  4001f5:	4e 55                	rex.WRX push %rbp
+  4001f7:	00 c4                	add    %al,%ah
+  4001f9:	34 4c                	xor    $0x4c,%al
+  4001fb:	95                   	xchg   %eax,%ebp
+  4001fc:	2d 7c 14 9f 6d       	sub    $0x6d9f147c,%eax
+  400201:	66 a8 a7             	data16 test $0xa7,%al
+  400204:	45                   	rex.RB
+  400205:	66 f5                	data16 cmc
+  400207:	4a                   	rex.WX
+  400208:	bd                   	.byte 0xbd
+  400209:	09 5b 96             	or     %ebx,-0x6a(%rbx)
+
+Disassembly of section .text:
+
+0000000000401000 <_start>:
+  401000:	f3 0f 1e fa          	endbr64
+  401004:	90                   	nop
+  401005:	eb fd                	jmp    401004 <_start+0x4>
+
+Disassembly of section .eh_frame:
+
+0000000000402000 <__bss_start-0x1000>:
+  402000:	14 00                	adc    $0x0,%al
+  402002:	00 00                	add    %al,(%rax)
+  402004:	00 00                	add    %al,(%rax)
+  402006:	00 00                	add    %al,(%rax)
+  402008:	01 7a 52             	add    %edi,0x52(%rdx)
+  40200b:	00 01                	add    %al,(%rcx)
+  40200d:	78 10                	js     40201f <_start+0x101f>
+  40200f:	01 1b                	add    %ebx,(%rbx)
+  402011:	0c 07                	or     $0x7,%al
+  402013:	08 90 01 00 00 10    	or     %dl,0x10000001(%rax)
+  402019:	00 00                	add    %al,(%rax)
+  40201b:	00 1c 00             	add    %bl,(%rax,%rax,1)
+  40201e:	00 00                	add    %al,(%rax)
+  402020:	e0 ef                	loopne 402011 <_start+0x1011>
+  402022:	ff                   	(bad)
+  402023:	ff 07                	incl   (%rdi)
+  402025:	00 00                	add    %al,(%rax)
+  402027:	00 00                	add    %al,(%rax)
+  402029:	00 00                	add    %al,(%rax)
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	47                   	rex.RXB
+   1:	43                   	rex.XB
+   2:	43 3a 20             	rex.XB cmp (%r8),%spl
+   5:	28 55 62             	sub    %dl,0x62(%rbp)
+   8:	75 6e                	jne    78 <_start-0x400f88>
+   a:	74 75                	je     81 <_start-0x400f7f>
+   c:	20 31                	and    %dh,(%rcx)
+   e:	33 2e                	xor    (%rsi),%ebp
+  10:	33 2e                	xor    (%rsi),%ebp
+  12:	30 2d 36 75 62 75    	xor    %ch,0x75627536(%rip)        # 7562754e <__bss_start+0x7522454e>
+  18:	6e                   	outsb  %ds:(%rsi),(%dx)
+  19:	74 75                	je     90 <_start-0x400f70>
+  1b:	32 7e 32             	xor    0x32(%rsi),%bh
+  1e:	34 2e                	xor    $0x2e,%al
+  20:	30 34 29             	xor    %dh,(%rcx,%rbp,1)
+  23:	20 31                	and    %dh,(%rcx)
+  25:	33 2e                	xor    (%rsi),%ebp
+  27:	33 2e                	xor    (%rsi),%ebp
+  29:	30 00                	xor    %al,(%rax)

@@ -1,0 +1,23 @@
+6037d04be000-6037d04bf000 r--p 00000000 103:02 6695935                   /home/sagar/tmp/elf-test/uic
+6037d04bf000-6037d04c0000 r-xp 00001000 103:02 6695935                   /home/sagar/tmp/elf-test/uic
+6037d04c0000-6037d04c1000 r--p 00002000 103:02 6695935                   /home/sagar/tmp/elf-test/uic
+6037d04c1000-6037d04c2000 r--p 00002000 103:02 6695935                   /home/sagar/tmp/elf-test/uic
+6037d04c2000-6037d04c3000 rw-p 00003000 103:02 6695935                   /home/sagar/tmp/elf-test/uic
+6037e2a56000-6037e2a77000 rw-p 00000000 00:00 0                          [heap]
+75a4b2c00000-75a4b2c28000 r--p 00000000 103:02 1584336                   /usr/lib/x86_64-linux-gnu/libc.so.6
+75a4b2c28000-75a4b2db0000 r-xp 00028000 103:02 1584336                   /usr/lib/x86_64-linux-gnu/libc.so.6
+75a4b2db0000-75a4b2dff000 r--p 001b0000 103:02 1584336                   /usr/lib/x86_64-linux-gnu/libc.so.6
+75a4b2dff000-75a4b2e03000 r--p 001fe000 103:02 1584336                   /usr/lib/x86_64-linux-gnu/libc.so.6
+75a4b2e03000-75a4b2e05000 rw-p 00202000 103:02 1584336                   /usr/lib/x86_64-linux-gnu/libc.so.6
+75a4b2e05000-75a4b2e12000 rw-p 00000000 00:00 0 
+75a4b2f14000-75a4b2f17000 rw-p 00000000 00:00 0 
+75a4b2f2f000-75a4b2f31000 rw-p 00000000 00:00 0 
+75a4b2f31000-75a4b2f35000 r--p 00000000 00:00 0                          [vvar]
+75a4b2f35000-75a4b2f37000 r-xp 00000000 00:00 0                          [vdso]
+75a4b2f37000-75a4b2f38000 r--p 00000000 103:02 1584154                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+75a4b2f38000-75a4b2f63000 r-xp 00001000 103:02 1584154                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+75a4b2f63000-75a4b2f6d000 r--p 0002c000 103:02 1584154                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+75a4b2f6d000-75a4b2f6f000 r--p 00036000 103:02 1584154                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+75a4b2f6f000-75a4b2f71000 rw-p 00038000 103:02 1584154                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffcc14c0000-7ffcc14e1000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
