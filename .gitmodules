@@ -28,3 +28,9 @@
 [submodule "sdyninst"]
 	path = sdyninst
 	url = https://github.com/sagsango/sdyninst.git
+[submodule "sobjdump"]
+	path = sobjdump
+	url = https://github.com/sagsango/sobjdump.git
+[submodule "sreadelf"]
+	path = sreadelf
+	url = https://github.com/sagsango/sreadelf.git
