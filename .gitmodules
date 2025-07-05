@@ -34,3 +34,6 @@
 [submodule "sreadelf"]
 	path = sreadelf
 	url = https://github.com/sagsango/sreadelf.git
+[submodule "scriu"]
+	path = scriu
+	url = https://github.com/sagsango/scriu.git
