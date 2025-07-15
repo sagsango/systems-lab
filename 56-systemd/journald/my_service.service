@@ -1,0 +1,12 @@
+[Unit]
+Description=My Example Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/my_service
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
