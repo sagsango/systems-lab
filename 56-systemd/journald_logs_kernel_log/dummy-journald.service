@@ -1,0 +1,12 @@
+[Unit]
+Description=Dummy Journald Service for Kernel Logs
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/dummy-journald
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
