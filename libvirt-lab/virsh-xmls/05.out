@@ -1,0 +1,9 @@
+virsh # define 05-a-name-uuid-hwuuid-diffGenid.xml
+Domain 'testvm1' defined from 05-a-name-uuid-hwuuid-diffGenid.xml
+
+virsh # define 05-b-name-uuid-hwuuid-diffGenid.xml
+error: Failed to define domain from 05-b-name-uuid-hwuuid-diffGenid.xml
+error: operation failed: domain 'testvm1' is already defined with uuid c60cb91a-1b8f-413e-9632-c511de181592
+
+virsh # ls
+
