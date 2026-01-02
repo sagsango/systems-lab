@@ -1,0 +1,63 @@
+66-qemu-linux-user ❱❱❱ which gcc
+/usr/bin/gcc
+66-qemu-linux-user ❱❱❱ ls -l /usr/bin/gcc
+lrwxrwxrwx 1 root root 6 Jan 31  2024 /usr/bin/gcc -> gcc-13
+66-qemu-linux-user ❱❱❱ ls -l /usr/bin/gcc-13
+lrwxrwxrwx 1 root root 23 Sep  4  2024 /usr/bin/gcc-13 -> x86_64-linux-gnu-gcc-13
+66-qemu-linux-user ❱❱❱ file x86_64-linux-gnu-gcc-13
+x86_64-linux-gnu-gcc-13: cannot open `x86_64-linux-gnu-gcc-13' (No such file or directory)
+66-qemu-linux-user ❱❱❱ file /usr/bin/x86_64-linux-gnu-gcc-13
+/usr/bin/x86_64-linux-gnu-gcc-13: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=ae14c7eee78e5a9399f369cea79657f21b73aead, for GNU/Linux 3.2.0, stripped
+66-qemu-linux-user ❱❱❱
+
+
+# riscv64 backend tool
+66-qemu-linux-user ❱❱❱ riscv64-linux-gnu-
+riscv64-linux-gnu-addr2line      riscv64-linux-gnu-gcov-13
+riscv64-linux-gnu-ar             riscv64-linux-gnu-gcov-dump
+riscv64-linux-gnu-as             riscv64-linux-gnu-gcov-dump-13
+riscv64-linux-gnu-c++filt        riscv64-linux-gnu-gcov-tool
+riscv64-linux-gnu-cpp            riscv64-linux-gnu-gcov-tool-13
+riscv64-linux-gnu-cpp-13         riscv64-linux-gnu-gprof
+riscv64-linux-gnu-elfedit        riscv64-linux-gnu-ld
+riscv64-linux-gnu-g++            riscv64-linux-gnu-ld.bfd
+riscv64-linux-gnu-g++-13         riscv64-linux-gnu-lto-dump
+riscv64-linux-gnu-gcc            riscv64-linux-gnu-lto-dump-13
+riscv64-linux-gnu-gcc-13         riscv64-linux-gnu-nm
+riscv64-linux-gnu-gcc-ar         riscv64-linux-gnu-objcopy
+riscv64-linux-gnu-gcc-ar-13      riscv64-linux-gnu-objdump
+riscv64-linux-gnu-gcc-nm         riscv64-linux-gnu-ranlib
+riscv64-linux-gnu-gcc-nm-13      riscv64-linux-gnu-readelf
+riscv64-linux-gnu-gcc-ranlib     riscv64-linux-gnu-size
+riscv64-linux-gnu-gcc-ranlib-13  riscv64-linux-gnu-strings
+riscv64-linux-gnu-gcov           riscv64-linux-gnu-strip
+
+# x86_64 backend tool
+66-qemu-linux-user ❱❱❱ x86_
+x86_64                                  x86_64-linux-gnu-gi-inspect-typelib
+x86_64-linux-gnu-addr2line              x86_64-linux-gnu-gold
+x86_64-linux-gnu-ar                     x86_64-linux-gnu-gp-archive
+x86_64-linux-gnu-as                     x86_64-linux-gnu-gp-collect-app
+x86_64-linux-gnu-c++filt                x86_64-linux-gnu-gp-display-html
+x86_64-linux-gnu-cpp                    x86_64-linux-gnu-gp-display-src
+x86_64-linux-gnu-cpp-13                 x86_64-linux-gnu-gp-display-text
+x86_64-linux-gnu-dwp                    x86_64-linux-gnu-gprof
+x86_64-linux-gnu-elfedit                x86_64-linux-gnu-gprofng
+x86_64-linux-gnu-g++                    x86_64-linux-gnu-ld
+x86_64-linux-gnu-g++-13                 x86_64-linux-gnu-ld.bfd
+x86_64-linux-gnu-gcc                    x86_64-linux-gnu-ld.gold
+x86_64-linux-gnu-gcc-13                 x86_64-linux-gnu-lto-dump
+x86_64-linux-gnu-gcc-ar                 x86_64-linux-gnu-lto-dump-13
+x86_64-linux-gnu-gcc-ar-13              x86_64-linux-gnu-nm
+x86_64-linux-gnu-gcc-nm                 x86_64-linux-gnu-objcopy
+x86_64-linux-gnu-gcc-nm-13              x86_64-linux-gnu-objdump
+x86_64-linux-gnu-gcc-ranlib             x86_64-linux-gnu-pkgconf
+x86_64-linux-gnu-gcc-ranlib-13          x86_64-linux-gnu-pkg-config
+x86_64-linux-gnu-gcov                   x86_64-linux-gnu-python3.12-config
+x86_64-linux-gnu-gcov-13                x86_64-linux-gnu-python3-config
+x86_64-linux-gnu-gcov-dump              x86_64-linux-gnu-ranlib
+x86_64-linux-gnu-gcov-dump-13           x86_64-linux-gnu-readelf
+x86_64-linux-gnu-gcov-tool              x86_64-linux-gnu-size
+x86_64-linux-gnu-gcov-tool-13           x86_64-linux-gnu-strings
+x86_64-linux-gnu-gi-compile-repository  x86_64-linux-gnu-strip
+x86_64-linux-gnu-gi-decompile-typelib   x86_energy_perf_policy
