@@ -1,0 +1,36 @@
+71-share-library-init ❱❱❱ lldb ./main
+(lldb) target create "./main"
+Current executable set to '/Volumes/case-sensitive/groot/systems-lab/71-share-library-init/main' (arm64).
+(lldb) b lib_init
+Breakpoint 1: where = libmylib.so`lib_init + 12 at mylib.c:12:5, address = 0x00000000000004fc
+(lldb) r
+Process 1868 launched: '/Volumes/case-sensitive/groot/systems-lab/71-share-library-init/main' (arm64)
+Process 1868 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+    frame #0: 0x00000001000184fc libmylib.so`lib_init at mylib.c:12:5
+   9   	static void lib_init(void)
+   10  	{
+   11  	    int i;
+-> 12
+   13  	    printf("[mylib] constructor: lib_init()\n");
+   14
+   15  	    init = malloc(10 * sizeof(int));
+warning: mylib.c: source file checksum mismatch between line table (71cd66508d94e501dd8e0b938848a029) and file on disk (479a5e00288a406d9103208fdc111814)
+(lldb) bt
+* thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+  * frame #0: 0x00000001000184fc libmylib.so`lib_init at mylib.c:12:5
+    frame #1: 0x000000018c8eacb0 dyld`invocation function for block in dyld4::Loader::findAndRunAllInitializers(dyld4::RuntimeState&) const + 444
+    frame #2: 0x000000018c928730 dyld`invocation function for block in dyld3::MachOAnalyzer::forEachInitializer(Diagnostics&, dyld3::MachOAnalyzer::VMAddrConverter const&, void (unsigned int) block_pointer, void const*) const + 324
+    frame #3: 0x000000018c947534 dyld`invocation function for block in mach_o::Header::forEachSection(void (mach_o::Header::SectionInfo const&, bool&) block_pointer) const + 312
+    frame #4: 0x000000018c944158 dyld`mach_o::Header::forEachLoadCommand(void (load_command const*, bool&) block_pointer) const + 208
+    frame #5: 0x000000018c9459f0 dyld`mach_o::Header::forEachSection(void (mach_o::Header::SectionInfo const&, bool&) block_pointer) const + 124
+    frame #6: 0x000000018c928220 dyld`dyld3::MachOAnalyzer::forEachInitializer(Diagnostics&, dyld3::MachOAnalyzer::VMAddrConverter const&, void (unsigned int) block_pointer, void const*) const + 516
+    frame #7: 0x000000018c8eaa68 dyld`dyld4::Loader::findAndRunAllInitializers(dyld4::RuntimeState&) const + 172
+    frame #8: 0x000000018c8f28b0 dyld`dyld4::JustInTimeLoader::runInitializers(dyld4::RuntimeState&) const + 36
+    frame #9: 0x000000018c8eb214 dyld`dyld4::Loader::runInitializersBottomUp(dyld4::RuntimeState&, dyld3::Array<dyld4::Loader const*>&, dyld3::Array<dyld4::Loader const*>&) const + 308
+    frame #10: 0x000000018c8eb1b4 dyld`dyld4::Loader::runInitializersBottomUp(dyld4::RuntimeState&, dyld3::Array<dyld4::Loader const*>&, dyld3::Array<dyld4::Loader const*>&) const + 212
+    frame #11: 0x000000018c8efe50 dyld`dyld4::Loader::runInitializersBottomUpPlusUpwardLinks(dyld4::RuntimeState&) const::$_0::operator()() const + 180
+    frame #12: 0x000000018c8eb530 dyld`dyld4::Loader::runInitializersBottomUpPlusUpwardLinks(dyld4::RuntimeState&) const + 716
+    frame #13: 0x000000018c90d04c dyld`dyld4::APIs::runAllInitializersForMain() + 400
+    frame #14: 0x000000018c8cf158 dyld`dyld4::prepare(dyld4::APIs&, mach_o::Header const*) + 3112
+    frame #15: 0x000000018c8cdd04 dyld`start + 7104
